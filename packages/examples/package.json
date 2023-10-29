@@ -10,6 +10,7 @@
     "lint": "tsc --noEmit && eslint --max-warnings=0 src"
   },
   "dependencies": {
+    "@fontsource-variable/figtree": "^5.0.18",
     "@theomer77/react-transition-switch": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
