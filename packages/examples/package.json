@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@fontsource-variable/figtree": "^5.0.18",
+    "@radix-ui/react-presence": "^1.0.1",
+    "@radix-ui/react-slot": "^1.0.2",
     "@theomer77/react-transition-switch": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
