@@ -1,0 +1,43 @@
+{
+  "name": "react-transition-switch-monorepo",
+  "version": "1.0.0",
+  "author": "TheOmer77",
+  "license": "ISC",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"bun --silent dev:package\" \"bun --silent dev:examples\"",
+    "dev:package": "bun --silent --cwd packages/react-transition-switch build:watch",
+    "dev:examples": "bun --silent --cwd packages/examples dev",
+    "lint": "bun --silent lint:package && bun --silent lint:examples",
+    "lint:package": "bun --silent --cwd packages/react-transition-switch lint",
+    "lint:examples": "bun --silent --cwd packages/examples lint",
+    "format": "prettier --write packages/**/*.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.9",
+    "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.14",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "@vitejs/plugin-react": "^4.1.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jest": "^27.6.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.0.3",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0",
+    "vite-plugin-checker": "^0.6.2",
+    "vite-plugin-svgr": "^4.1.0",
+    "vite-tsconfig-paths": "^4.2.1"
+  }
+}

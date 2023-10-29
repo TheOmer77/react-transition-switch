@@ -1,0 +1,25 @@
+{
+  "name": "@theomer77/react-transition-switch",
+  "description": "TODO this description",
+  "version": "1.0.0",
+  "author": "TheOmer77",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "require": {
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "import": {
+      "default": "./dist/index.mjs",
+      "types": "./dist/index.d.mts"
+    }
+  },
+  "scripts": {
+    "build": "bun run lint -s && tsup",
+    "build:watch": "tsup --watch",
+    "lint": "tsc && eslint --max-warnings=0 src"
+  }
+}
