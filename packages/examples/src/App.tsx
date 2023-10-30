@@ -10,16 +10,20 @@ const TEST_ITEMS_COUNT = 10;
 const Button = ({
   onClick,
   disabled,
+  className,
   children,
 }: Pick<
   ComponentPropsWithoutRef<'button'>,
-  'onClick' | 'disabled' | 'children'
+  'onClick' | 'disabled' | 'className' | 'children'
 >) => (
   <button
-    className='flex h-10 w-10 cursor-default items-center justify-center rounded
+    className={cn(
+      `flex h-10 w-10 cursor-default items-center justify-center rounded
 bg-slate-200 text-slate-800 enabled:active:bg-slate-300 disabled:bg-slate-50
 disabled:text-slate-500 dark:bg-slate-800 dark:text-slate-200
-dark:enabled:active:bg-slate-700 dark:disabled:bg-slate-900'
+dark:enabled:active:bg-slate-700 dark:disabled:bg-slate-900`,
+      className
+    )}
     onClick={onClick}
     disabled={disabled}
   >
@@ -84,7 +88,7 @@ const App = () => {
   return (
     <div
       dir={rtl ? 'rtl' : 'ltr'}
-      className='flex min-h-screen w-full flex-col bg-white text-slate-800
+      className='flex min-h-[100dvh] w-full flex-col bg-white text-slate-800
 dark:bg-slate-950 dark:text-slate-200'
     >
       <div className='flex w-full flex-grow items-center justify-center p-4'>
@@ -115,19 +119,27 @@ text-slate-50 transition-[width,height,background-color]`,
         </SharedAxis>
       </div>
 
-      <div className='flex w-full flex-row items-center justify-center gap-2 p-8'>
-        <Button
-          onClick={() => setActiveIndex(prev => prev - 1)}
-          disabled={activeIndex <= 0}
-        >
-          {rtl ? <ChevronRight /> : <ChevronLeft />}
-        </Button>
+      <Button
+        onClick={() => setActiveIndex(prev => prev - 1)}
+        disabled={activeIndex <= 0}
+        className='fixed start-4 top-1/2 -translate-y-1/2'
+      >
+        {rtl ? <ChevronRight /> : <ChevronLeft />}
+      </Button>
+      <Button
+        onClick={() => setActiveIndex(prev => prev + 1)}
+        disabled={activeIndex >= TEST_ITEMS_COUNT - 1}
+        className='fixed end-4 top-1/2 -translate-y-1/2'
+      >
+        {rtl ? <ChevronLeft /> : <ChevronRight />}
+      </Button>
 
-        <div className='flex flex-grow flex-col items-center justify-center'>
-          <span className='text-xl font-bold'>
-            Current index: {activeIndex}
-          </span>
-          <div className='flex flex-row items-center gap-6'>
+      <div className='fixed bottom-0 flex w-full flex-col items-center justify-center gap-2 p-4 md:p-8'>
+        <span className='mb-2 text-xl font-bold md:mb-0'>
+          Current index: {activeIndex}
+        </span>
+        <div className='flex flex-col items-center gap-2 md:flex-row md:gap-6'>
+          <div className='flex flex-row items-center gap-4'>
             <span>Axis:</span>
             <Radio
               name='axis-x'
@@ -143,41 +155,33 @@ text-slate-50 transition-[width,height,background-color]`,
               checked={axis === 'y'}
               onChange={e => e.target.checked && setAxis('y')}
             />
-            <Separator
-              className='h-10 w-px bg-slate-400 dark:bg-slate-600'
-              decorative
-              orientation='vertical'
-            />
-            <Checkbox
-              name='variations'
-              id='checkbox-variations'
-              label='Item variations'
-              checked={variations}
-              onChange={() => setVariations(prev => !prev)}
-            />
-            <Checkbox
-              name='rtl'
-              id='checkbox-rtl'
-              label='RTL'
-              checked={rtl}
-              onChange={() => setRtl(prev => !prev)}
-            />
-            <Checkbox
-              name='debug'
-              id='checkbox-debug'
-              label='Debug ring'
-              checked={debug}
-              onChange={() => setDebug(prev => !prev)}
-            />
           </div>
+          <Separator
+            className='h-px w-full bg-slate-400 dark:bg-slate-600 md:h-10 md:w-px'
+            decorative
+          />
+          <Checkbox
+            name='variations'
+            id='checkbox-variations'
+            label='Item variations'
+            checked={variations}
+            onChange={() => setVariations(prev => !prev)}
+          />
+          <Checkbox
+            name='rtl'
+            id='checkbox-rtl'
+            label='RTL'
+            checked={rtl}
+            onChange={() => setRtl(prev => !prev)}
+          />
+          <Checkbox
+            name='debug'
+            id='checkbox-debug'
+            label='Debug ring'
+            checked={debug}
+            onChange={() => setDebug(prev => !prev)}
+          />
         </div>
-
-        <Button
-          onClick={() => setActiveIndex(prev => prev + 1)}
-          disabled={activeIndex >= TEST_ITEMS_COUNT - 1}
-        >
-          {rtl ? <ChevronLeft /> : <ChevronRight />}
-        </Button>
       </div>
     </div>
   );
