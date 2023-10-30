@@ -54,7 +54,6 @@ export const TransitionSwitchItem = forwardRef<
             : 'closed'
           : 'initial-open'
       }
-      className='absolute'
     >
       {children}
     </Slot>

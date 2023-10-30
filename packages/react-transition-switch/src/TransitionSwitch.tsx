@@ -3,7 +3,7 @@ import { Presence } from '@radix-ui/react-presence';
 
 import { TransitionSwitchItem } from './TransitionSwitchItem';
 import { TransitionSwitchContext } from './context';
-import usePrevious from 'hooks/usePrevious';
+import usePrevious from './usePrevious';
 
 export interface TransitionSwitchProps extends ComponentPropsWithoutRef<'div'> {
   activeIndex: number;

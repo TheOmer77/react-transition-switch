@@ -3,7 +3,7 @@ import { useMemo } from 'react';
 import {
   TransitionSwitch,
   type TransitionSwitchProps,
-} from './TransitionSwitch';
+} from '@theomer77/react-transition-switch';
 import usePrevious from 'hooks/usePrevious';
 import { cn } from 'utils/cn';
 
@@ -37,7 +37,7 @@ const SharedAxis = ({
       {...props}
       activeIndex={activeIndex}
       className={cn(
-        'relative transition-[width,height] duration-300',
+        'relative transition-[width,height] duration-300 [&>*]:absolute',
         axis === 'y'
           ? `data-[state=closed]:[&>*]:data-[direction=backward]:animate-sharedAxis-down-out
 data-[state=closed]:[&>*]:data-[direction=forward]:animate-sharedAxis-up-out

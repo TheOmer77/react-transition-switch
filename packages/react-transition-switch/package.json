@@ -30,5 +30,9 @@
   "peerDependencies": {
     "react": ">=17",
     "react-dom": ">=17"
+  },
+  "dependencies": {
+    "@radix-ui/react-presence": "^1.0.1",
+    "@radix-ui/react-slot": "^1.0.2"
   }
 }
