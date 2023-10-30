@@ -13,8 +13,10 @@
     "directory": "packages/react-transition-switch"
   },
   "scripts": {
-    "build": "bun --silent lint && tsup",
+    "build": "bun --silent lint && bun --silent build:dts && tsup && bun --silent build:cleanup",
     "build:watch": "tsup --watch",
+    "build:dts": "tsc -p tsconfig.build.json",
+    "build:cleanup": "rimraf dts tsconfig.build.tsbuildinfo",
     "lint": "tsc && eslint --max-warnings=0 src"
   },
   "exports": {
@@ -24,7 +26,7 @@
     },
     "import": {
       "default": "./dist/index.mjs",
-      "types": "./dist/index.d.mts"
+      "types": "./dist/index.d.ts"
     }
   }
 }
