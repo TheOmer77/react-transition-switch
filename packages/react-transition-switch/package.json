@@ -7,6 +7,16 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheOmer77/react-transition-switch.git",
+    "directory": "packages/react-transition-switch"
+  },
+  "scripts": {
+    "build": "bun run lint -s && tsup",
+    "build:watch": "tsup --watch",
+    "lint": "tsc && eslint --max-warnings=0 src"
+  },
   "exports": {
     "require": {
       "default": "./dist/index.js",
@@ -16,10 +26,5 @@
       "default": "./dist/index.mjs",
       "types": "./dist/index.d.mts"
     }
-  },
-  "scripts": {
-    "build": "bun run lint -s && tsup",
-    "build:watch": "tsup --watch",
-    "lint": "tsc && eslint --max-warnings=0 src"
   }
 }
