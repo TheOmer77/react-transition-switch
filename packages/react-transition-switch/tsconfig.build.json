@@ -1,10 +1,4 @@
 {
   "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "declaration": true,
-    "declarationDir": "dts",
-    "emitDeclarationOnly": true,
-    "noEmit": false,
-    "rootDir": "src"
-  }
+  "compilerOptions": { "composite": false }
 }
