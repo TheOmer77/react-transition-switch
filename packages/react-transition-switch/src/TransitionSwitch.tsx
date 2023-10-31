@@ -1,5 +1,4 @@
 import { useEffect, useRef, type ComponentPropsWithoutRef } from 'react';
-import { Presence } from '@radix-ui/react-presence';
 
 import { TransitionSwitchItem } from './TransitionSwitchItem';
 import { TransitionSwitchProvider } from './context';
@@ -39,12 +38,12 @@ export const TransitionSwitch = ({
     >
       <div {...props} ref={ref}>
         {items.map((child, index) => (
-          <Presence
-            key={`sharedAxis-item-${index}`}
-            present={activeIndex === index}
+          <TransitionSwitchItem
+            key={`transitionSwitch-item-${index}`}
+            index={index}
           >
-            <TransitionSwitchItem index={index}>{child}</TransitionSwitchItem>
-          </Presence>
+            {child}
+          </TransitionSwitchItem>
         ))}
       </div>
     </TransitionSwitchProvider>

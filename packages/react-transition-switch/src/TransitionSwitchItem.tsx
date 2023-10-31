@@ -7,6 +7,7 @@ import {
   useImperativeHandle,
 } from 'react';
 import { Slot } from '@radix-ui/react-slot';
+import { Presence } from '@radix-ui/react-presence';
 
 import { TransitionSwitchContext } from './context';
 
@@ -16,6 +17,21 @@ interface TransitionSwitchItemProps {
 }
 
 export const TransitionSwitchItem = forwardRef<
+  HTMLElement,
+  TransitionSwitchItemProps
+>(({ index, children }, ref) => {
+  const { activeIndex } = useContext(TransitionSwitchContext);
+  return (
+    <Presence key={`sharedAxis-item-${index}`} present={activeIndex === index}>
+      <TransitionSwitchItemContent index={index} ref={ref}>
+        {children}
+      </TransitionSwitchItemContent>
+    </Presence>
+  );
+});
+TransitionSwitchItem.displayName = 'TransitionSwitchItem';
+
+const TransitionSwitchItemContent = forwardRef<
   HTMLElement,
   TransitionSwitchItemProps
 >(({ index, children }, ref) => {
@@ -59,4 +75,4 @@ export const TransitionSwitchItem = forwardRef<
     </Slot>
   );
 });
-TransitionSwitchItem.displayName = 'TransitionSwitchItem';
+TransitionSwitchItemContent.displayName = 'TransitionSwitchItemContent';
