@@ -1,81 +1,12 @@
-import { useState, type ComponentPropsWithoutRef } from 'react';
+import { useState } from 'react';
 import { Separator } from '@radix-ui/react-separator';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import SharedAxis, { type Axis } from 'components/SharedAxis';
+import { Button, Checkbox, Radio } from 'components/general';
 import { cn } from 'utils/cn';
 
 const TEST_ITEMS_COUNT = 10;
-
-const Button = ({
-  onClick,
-  disabled,
-  className,
-  children,
-}: Pick<
-  ComponentPropsWithoutRef<'button'>,
-  'onClick' | 'disabled' | 'className' | 'children'
->) => (
-  <button
-    className={cn(
-      `flex h-10 w-10 cursor-default items-center justify-center rounded
-bg-slate-200 text-slate-800 enabled:active:bg-slate-300 disabled:bg-slate-50
-disabled:text-slate-500 dark:bg-slate-800 dark:text-slate-200
-dark:enabled:active:bg-slate-700 dark:disabled:bg-slate-900`,
-      className
-    )}
-    onClick={onClick}
-    disabled={disabled}
-  >
-    {children}
-  </button>
-);
-
-const Checkbox = ({
-  name,
-  id,
-  label,
-  checked,
-  onChange,
-}: Pick<
-  ComponentPropsWithoutRef<'input'>,
-  'name' | 'id' | 'checked' | 'onChange' | 'disabled'
-> & { label: string }) => (
-  <div className='flex select-none flex-row items-center gap-1'>
-    <input
-      type='checkbox'
-      name={name}
-      id={id}
-      checked={checked}
-      onChange={onChange}
-      className='h-4 w-4 accent-blue-600 dark:accent-blue-300'
-    />
-    <label htmlFor={id}>{label}</label>
-  </div>
-);
-
-const Radio = ({
-  id,
-  label,
-  checked,
-  onChange,
-  ...props
-}: Pick<
-  ComponentPropsWithoutRef<'input'>,
-  'id' | 'name' | 'value' | 'checked' | 'onChange' | 'disabled'
-> & { label: string }) => (
-  <div className='flex select-none flex-row items-center gap-1'>
-    <input
-      {...props}
-      id={id}
-      type='radio'
-      checked={checked}
-      onChange={onChange}
-      className='h-4 w-4 accent-blue-600 dark:accent-blue-300'
-    />
-    <label htmlFor={id}>{label}</label>
-  </div>
-);
 
 const App = () => {
   const [activeIndex, setActiveIndex] = useState(0);
