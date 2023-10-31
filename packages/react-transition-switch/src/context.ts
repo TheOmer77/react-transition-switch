@@ -15,3 +15,5 @@ const initialState: TransitionSwitchContextValue = {
 
 export const TransitionSwitchContext =
   createContext<TransitionSwitchContextValue>(initialState);
+
+export const TransitionSwitchProvider = TransitionSwitchContext.Provider;

@@ -2,7 +2,7 @@ import { useEffect, useRef, type ComponentPropsWithoutRef } from 'react';
 import { Presence } from '@radix-ui/react-presence';
 
 import { TransitionSwitchItem } from './TransitionSwitchItem';
-import { TransitionSwitchContext } from './context';
+import { TransitionSwitchProvider } from './context';
 import usePrevious from './usePrevious';
 
 export interface TransitionSwitchProps extends ComponentPropsWithoutRef<'div'> {
@@ -28,9 +28,8 @@ export const TransitionSwitch = ({
     ref.current.style.width = width;
     ref.current.style.height = height;
   }, []);
-
   return (
-    <TransitionSwitchContext.Provider
+    <TransitionSwitchProvider
       value={{
         activeIndex,
         prevIndex,
@@ -48,6 +47,6 @@ export const TransitionSwitch = ({
           </Presence>
         ))}
       </div>
-    </TransitionSwitchContext.Provider>
+    </TransitionSwitchProvider>
   );
 };
