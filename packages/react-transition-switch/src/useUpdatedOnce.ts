@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react';
 
-const usePrevious = <T>(value: T) => {
+const useUpdatedOnce = <T>(value: T) => {
   const ref = useRef<T>();
   useEffect(() => {
     ref.current = value;
   }, [value]);
-  return ref.current;
+  return typeof ref.current === 'undefined';
 };
 
-export default usePrevious;
+export default useUpdatedOnce;

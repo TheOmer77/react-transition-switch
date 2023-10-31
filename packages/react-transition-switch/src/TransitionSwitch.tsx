@@ -8,7 +8,7 @@ import {
 
 import { TransitionSwitchItem } from './TransitionSwitchItem';
 import { TransitionSwitchProvider } from './context';
-import usePrevious from './usePrevious';
+import useUpdatedOnce from './useUpdatedOnce';
 
 export interface TransitionSwitchProps extends ComponentPropsWithoutRef<'div'> {
   activeIndex: number;
@@ -19,7 +19,7 @@ export const TransitionSwitch = forwardRef<
   HTMLDivElement,
   TransitionSwitchProps
 >(({ activeIndex = 0, animateInitial = false, children, ...props }, ref) => {
-  const prevIndex = usePrevious(activeIndex);
+  const updatedOnce = useUpdatedOnce(activeIndex);
   const items = Array.isArray(children) ? children : [children];
 
   const innerRef = useRef<HTMLDivElement>(null);
@@ -33,12 +33,13 @@ export const TransitionSwitch = forwardRef<
     innerRef.current.style.width = width;
     innerRef.current.style.height = height;
   }, []);
+
   return (
     <TransitionSwitchProvider
       value={{
         activeIndex,
-        prevIndex,
         animateInitial,
+        updatedOnce,
         containerEl: innerRef.current,
       }}
     >

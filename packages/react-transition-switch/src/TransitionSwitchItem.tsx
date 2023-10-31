@@ -35,7 +35,7 @@ const TransitionSwitchItemContent = forwardRef<
   HTMLElement,
   TransitionSwitchItemProps
 >(({ index, children }, ref) => {
-  const { activeIndex, prevIndex, animateInitial, containerEl } = useContext(
+  const { activeIndex, animateInitial, updatedOnce, containerEl } = useContext(
     TransitionSwitchContext
   );
 
@@ -64,11 +64,11 @@ const TransitionSwitchItemContent = forwardRef<
     <Slot
       ref={innerRef}
       data-state={
-        typeof prevIndex === 'number' || animateInitial
-          ? activeIndex === index
+        activeIndex === index
+          ? animateInitial || !updatedOnce
             ? 'open'
-            : 'closed'
-          : 'initial-open'
+            : 'initial-open'
+          : 'closed'
       }
     >
       {children}

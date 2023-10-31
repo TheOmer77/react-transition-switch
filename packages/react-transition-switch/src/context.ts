@@ -2,8 +2,8 @@ import { createContext } from 'react';
 
 export interface TransitionSwitchContextValue {
   activeIndex: number;
-  prevIndex?: number;
   animateInitial?: boolean;
+  updatedOnce?: boolean;
   containerEl: HTMLElement | null;
 }
 
