@@ -35,9 +35,7 @@ const TransitionSwitchItemContent = forwardRef<
   HTMLElement,
   TransitionSwitchItemProps
 >(({ index, children }, ref) => {
-  const { activeIndex, animateInitial, updatedOnce, containerEl } = useContext(
-    TransitionSwitchContext
-  );
+  const { activeIndex, containerEl } = useContext(TransitionSwitchContext);
 
   const innerRef = useRef<HTMLElement>(null);
   useImperativeHandle(ref, () => innerRef.current!, []);
@@ -63,13 +61,7 @@ const TransitionSwitchItemContent = forwardRef<
   return (
     <Slot
       ref={innerRef}
-      data-state={
-        activeIndex === index
-          ? animateInitial || !updatedOnce
-            ? 'active'
-            : 'initial-active'
-          : 'inactive'
-      }
+      data-state={activeIndex === index ? 'active' : 'inactive'}
     >
       {children}
     </Slot>

@@ -8,18 +8,15 @@ import {
 
 import { TransitionSwitchItem } from './TransitionSwitchItem';
 import { TransitionSwitchProvider } from './context';
-import useUpdatedOnce from './useUpdatedOnce';
 
 export interface TransitionSwitchProps extends ComponentPropsWithoutRef<'div'> {
   activeIndex: number;
-  animateInitial?: boolean;
 }
 
 export const TransitionSwitch = forwardRef<
   HTMLDivElement,
   TransitionSwitchProps
->(({ activeIndex = 0, animateInitial = false, children, ...props }, ref) => {
-  const updatedOnce = useUpdatedOnce(activeIndex);
+>(({ activeIndex = 0, children, ...props }, ref) => {
   const items = Array.isArray(children) ? children : [children];
 
   const innerRef = useRef<HTMLDivElement>(null);
@@ -36,12 +33,7 @@ export const TransitionSwitch = forwardRef<
 
   return (
     <TransitionSwitchProvider
-      value={{
-        activeIndex,
-        animateInitial,
-        updatedOnce,
-        containerEl: innerRef.current,
-      }}
+      value={{ activeIndex, containerEl: innerRef.current }}
     >
       <div {...props} ref={innerRef}>
         {items.map((child, index) => (
