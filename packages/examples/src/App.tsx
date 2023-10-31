@@ -55,20 +55,20 @@ const Checkbox = ({
 );
 
 const Radio = ({
-  name,
   id,
   label,
   checked,
   onChange,
+  ...props
 }: Pick<
   ComponentPropsWithoutRef<'input'>,
-  'name' | 'id' | 'checked' | 'onChange' | 'disabled'
+  'id' | 'name' | 'value' | 'checked' | 'onChange' | 'disabled'
 > & { label: string }) => (
   <div className='flex select-none flex-row items-center gap-1'>
     <input
-      type='radio'
-      name={name}
+      {...props}
       id={id}
+      type='radio'
       checked={checked}
       onChange={onChange}
       className='h-4 w-4 accent-blue-600 dark:accent-blue-300'
@@ -139,23 +139,25 @@ text-slate-50 transition-[width,height,background-color]`,
           Current index: {activeIndex}
         </span>
         <div className='flex flex-col items-center gap-2 md:flex-row md:gap-6'>
-          <div className='flex flex-row items-center gap-4'>
+          <fieldset className='flex flex-row items-center gap-4'>
             <span>Axis:</span>
             <Radio
-              name='axis-x'
               id='radio-axis-x'
+              name='axis'
+              value='axis-x'
               label='X'
               checked={axis === 'x'}
               onChange={e => e.target.checked && setAxis('x')}
             />
             <Radio
-              name='axis-y'
               id='radio-axis-y'
+              name='axis'
+              value='axis-y'
               label='Y'
               checked={axis === 'y'}
               onChange={e => e.target.checked && setAxis('y')}
             />
-          </div>
+          </fieldset>
           <Separator
             className='h-px w-full bg-slate-400 dark:bg-slate-600 md:h-10 md:w-px'
             decorative
