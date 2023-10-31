@@ -66,9 +66,9 @@ const TransitionSwitchItemContent = forwardRef<
       data-state={
         activeIndex === index
           ? animateInitial || !updatedOnce
-            ? 'open'
-            : 'initial-open'
-          : 'closed'
+            ? 'active'
+            : 'initial-active'
+          : 'inactive'
       }
     >
       {children}
