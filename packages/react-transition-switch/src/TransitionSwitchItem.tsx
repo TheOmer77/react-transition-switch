@@ -11,7 +11,7 @@ import { Presence } from '@radix-ui/react-presence';
 
 import { TransitionSwitchContext } from './context';
 
-interface TransitionSwitchItemProps {
+export interface TransitionSwitchItemProps {
   value: number;
   children?: ReactNode;
 }
