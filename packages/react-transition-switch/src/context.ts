@@ -1,12 +1,12 @@
 import { createContext } from 'react';
 
 export interface TransitionSwitchContextValue {
-  value: number;
+  value: string;
   containerEl: HTMLElement | null;
 }
 
 const initialState: TransitionSwitchContextValue = {
-  value: 0,
+  value: '',
   containerEl: null,
 };
 

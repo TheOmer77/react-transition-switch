@@ -9,13 +9,13 @@ import {
 import { TransitionSwitchProvider } from './context';
 
 export interface TransitionSwitchProps extends ComponentPropsWithoutRef<'div'> {
-  value: number;
+  value: string;
 }
 
 export const TransitionSwitch = forwardRef<
   HTMLDivElement,
   TransitionSwitchProps
->(({ value = 0, children, ...props }, ref) => {
+>(({ value = '', children, ...props }, ref) => {
   const innerRef = useRef<HTMLDivElement>(null);
   useImperativeHandle(ref, () => innerRef.current!, []);
 
