@@ -6,7 +6,6 @@ import {
   type ComponentPropsWithoutRef,
 } from 'react';
 
-import { TransitionSwitchItem } from './TransitionSwitchItem';
 import { TransitionSwitchProvider } from './context';
 
 export interface TransitionSwitchProps extends ComponentPropsWithoutRef<'div'> {
@@ -17,8 +16,6 @@ export const TransitionSwitch = forwardRef<
   HTMLDivElement,
   TransitionSwitchProps
 >(({ value = 0, children, ...props }, ref) => {
-  const items = Array.isArray(children) ? children : [children];
-
   const innerRef = useRef<HTMLDivElement>(null);
   useImperativeHandle(ref, () => innerRef.current!, []);
 
@@ -34,14 +31,7 @@ export const TransitionSwitch = forwardRef<
   return (
     <TransitionSwitchProvider value={{ value, containerEl: innerRef.current }}>
       <div {...props} ref={innerRef}>
-        {items.map((child, index) => (
-          <TransitionSwitchItem
-            key={`transitionSwitch-item-${index}`}
-            value={index}
-          >
-            {child}
-          </TransitionSwitchItem>
-        ))}
+        {children}
       </div>
     </TransitionSwitchProvider>
   );
