@@ -16,26 +16,26 @@ export interface SharedAxisProps extends TransitionSwitchProps {
 
 const SharedAxis = ({
   axis = 'x',
-  activeIndex,
+  value,
   className,
   children,
   ...props
 }: SharedAxisProps) => {
-  const prevIndex = usePrevious(activeIndex);
+  const prevValue = usePrevious(value);
   const direction = useMemo(
     (): Direction | undefined =>
-      typeof prevIndex !== 'number' || activeIndex === prevIndex
+      typeof prevValue !== 'number' || value === prevValue
         ? undefined
-        : activeIndex < prevIndex
+        : value < prevValue
         ? 'backward'
         : 'forward',
-    [activeIndex, prevIndex]
+    [value, prevValue]
   );
 
   return (
     <TransitionSwitch
       {...props}
-      activeIndex={activeIndex}
+      value={value}
       className={cn(
         'relative transition-[width,height] duration-300 [&>*]:absolute',
         axis === 'y'

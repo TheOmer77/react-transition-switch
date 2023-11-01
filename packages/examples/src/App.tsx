@@ -25,7 +25,7 @@ dark:bg-slate-950 dark:text-slate-200'
       <div className='flex w-full flex-grow items-center justify-center p-4'>
         <SharedAxis
           axis={axis}
-          activeIndex={activeIndex}
+          value={activeIndex}
           className={
             debug
               ? `ring-2 ring-red-600 ring-offset-4 ring-offset-white
