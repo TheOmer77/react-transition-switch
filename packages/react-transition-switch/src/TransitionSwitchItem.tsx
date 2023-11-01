@@ -12,18 +12,18 @@ import { Presence } from '@radix-ui/react-presence';
 import { TransitionSwitchContext } from './context';
 
 interface TransitionSwitchItemProps {
-  index: number;
+  value: number;
   children?: ReactNode;
 }
 
 export const TransitionSwitchItem = forwardRef<
   HTMLElement,
   TransitionSwitchItemProps
->(({ index, children }, ref) => {
-  const { activeIndex } = useContext(TransitionSwitchContext);
+>(({ value, children }, ref) => {
+  const { value: activeValue } = useContext(TransitionSwitchContext);
   return (
-    <Presence key={`sharedAxis-item-${index}`} present={activeIndex === index}>
-      <TransitionSwitchItemContent index={index} ref={ref}>
+    <Presence key={`sharedAxis-item-${value}`} present={activeValue === value}>
+      <TransitionSwitchItemContent value={value} ref={ref}>
         {children}
       </TransitionSwitchItemContent>
     </Presence>
@@ -34,14 +34,16 @@ TransitionSwitchItem.displayName = 'TransitionSwitchItem';
 const TransitionSwitchItemContent = forwardRef<
   HTMLElement,
   TransitionSwitchItemProps
->(({ index, children }, ref) => {
-  const { activeIndex, containerEl } = useContext(TransitionSwitchContext);
+>(({ value, children }, ref) => {
+  const { value: activeValue, containerEl } = useContext(
+    TransitionSwitchContext
+  );
 
   const innerRef = useRef<HTMLElement>(null);
   useImperativeHandle(ref, () => innerRef.current!, []);
 
   useLayoutEffect(() => {
-    if (innerRef.current === null || activeIndex !== index) return;
+    if (innerRef.current === null || activeValue !== value) return;
     const observer = new ResizeObserver(([entry]) => {
       if (!entry) return;
       const { clientWidth, clientHeight } = entry.target,
@@ -56,12 +58,12 @@ const TransitionSwitchItemContent = forwardRef<
     observer.observe(innerRef.current);
 
     return () => observer.disconnect();
-  }, [activeIndex, containerEl, index, ref]);
+  }, [activeValue, containerEl, value, ref]);
 
   return (
     <Slot
       ref={innerRef}
-      data-state={activeIndex === index ? 'active' : 'inactive'}
+      data-state={activeValue === value ? 'active' : 'inactive'}
     >
       {children}
     </Slot>

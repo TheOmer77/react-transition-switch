@@ -10,13 +10,13 @@ import { TransitionSwitchItem } from './TransitionSwitchItem';
 import { TransitionSwitchProvider } from './context';
 
 export interface TransitionSwitchProps extends ComponentPropsWithoutRef<'div'> {
-  activeIndex: number;
+  value: number;
 }
 
 export const TransitionSwitch = forwardRef<
   HTMLDivElement,
   TransitionSwitchProps
->(({ activeIndex = 0, children, ...props }, ref) => {
+>(({ value = 0, children, ...props }, ref) => {
   const items = Array.isArray(children) ? children : [children];
 
   const innerRef = useRef<HTMLDivElement>(null);
@@ -32,14 +32,12 @@ export const TransitionSwitch = forwardRef<
   }, []);
 
   return (
-    <TransitionSwitchProvider
-      value={{ activeIndex, containerEl: innerRef.current }}
-    >
+    <TransitionSwitchProvider value={{ value, containerEl: innerRef.current }}>
       <div {...props} ref={innerRef}>
         {items.map((child, index) => (
           <TransitionSwitchItem
             key={`transitionSwitch-item-${index}`}
-            index={index}
+            value={index}
           >
             {child}
           </TransitionSwitchItem>
