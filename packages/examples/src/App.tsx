@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Separator } from '@radix-ui/react-separator';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { toWords } from 'number-to-words';
 
 import { TransitionSwitchItem } from '@theomer77/react-transition-switch';
 import SharedAxis, { type Axis } from 'components/SharedAxis';
@@ -10,7 +11,8 @@ import { cn } from 'utils/cn';
 const TEST_ITEMS_COUNT = 10;
 
 const App = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0),
+    value = useMemo(() => toWords(activeIndex), [activeIndex]);
 
   const [axis, setAxis] = useState<Axis>('x'),
     [variations, setVariations] = useState(false),
@@ -26,7 +28,7 @@ dark:bg-slate-950 dark:text-slate-200'
       <div className='flex w-full flex-grow items-center justify-center p-4'>
         <SharedAxis
           axis={axis}
-          value={activeIndex}
+          value={value}
           className={
             debug
               ? `ring-2 ring-red-600 ring-offset-4 ring-offset-white
@@ -35,7 +37,7 @@ dark:ring-offset-slate-950`
           }
         >
           {[...Array(TEST_ITEMS_COUNT).keys()].map(key => (
-            <TransitionSwitchItem key={key} value={key}>
+            <TransitionSwitchItem key={key} value={toWords(key)}>
               <div
                 className={cn(
                   `flex h-32 w-32 items-center justify-center rounded-lg text-6xl
@@ -68,8 +70,9 @@ dark:ring-offset-slate-950`
       </Button>
 
       <div className='fixed bottom-0 flex w-full flex-col items-center justify-center gap-2 p-4 md:p-8'>
-        <span className='mb-2 text-xl font-bold md:mb-0'>
-          Current index: {activeIndex}
+        <span className='mb-2 text-xl md:mb-0'>
+          <span className='font-bold'>Current value: </span>
+          <code>{`"${value}"`}</code>
         </span>
         <div className='flex flex-col items-center gap-2 md:flex-row md:gap-6'>
           <fieldset className='flex flex-row items-center gap-4'>
