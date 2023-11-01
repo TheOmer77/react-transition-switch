@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Separator } from '@radix-ui/react-separator';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
+import { TransitionSwitchItem } from '@theomer77/react-transition-switch';
 import SharedAxis, { type Axis } from 'components/SharedAxis';
 import { Button, Checkbox, Radio } from 'components/general';
 import { cn } from 'utils/cn';
@@ -34,18 +35,19 @@ dark:ring-offset-slate-950`
           }
         >
           {[...Array(TEST_ITEMS_COUNT).keys()].map(key => (
-            <div
-              key={key}
-              className={cn(
-                `flex h-32 w-32 items-center justify-center rounded-lg text-6xl
-text-slate-50 transition-[width,height,background-color]`,
-                variations && key % 2 !== 0
-                  ? cn('bg-green-600', axis === 'y' ? 'w-64' : 'h-64')
-                  : 'bg-blue-600'
-              )}
-            >
-              {key}
-            </div>
+            <TransitionSwitchItem key={key} value={key}>
+              <div
+                className={cn(
+                  `flex h-32 w-32 items-center justify-center rounded-lg text-6xl
+                text-slate-50 transition-[width,height,background-color]`,
+                  variations && key % 2 !== 0
+                    ? cn('bg-green-600', axis === 'y' ? 'w-64' : 'h-64')
+                    : 'bg-blue-600'
+                )}
+              >
+                {key}
+              </div>
+            </TransitionSwitchItem>
           ))}
         </SharedAxis>
       </div>
