@@ -1,7 +1,8 @@
-import { useMemo } from 'react';
+import { Children, useEffect, useState, type ReactElement } from 'react';
 
 import {
   TransitionSwitch,
+  type TransitionSwitchItemProps,
   type TransitionSwitchProps,
 } from '@theomer77/react-transition-switch';
 import usePrevious from 'hooks/usePrevious';
@@ -21,21 +22,36 @@ const SharedAxis = ({
   children,
   ...props
 }: SharedAxisProps) => {
-  const prevValue = usePrevious(value);
-  const direction = useMemo(
-    (): Direction | undefined =>
-      typeof prevValue !== 'number' || value === prevValue
+  const [actualValue, setActualValue] = useState(value);
+  const [direction, setDirection] = useState<Direction>();
+  const prevValue = usePrevious(actualValue);
+
+  useEffect(() => {
+    const childrenArr = Children.toArray(
+      children
+    ) as ReactElement<TransitionSwitchItemProps>[];
+
+    const valueIndex = childrenArr.findIndex(
+        child => child.props.value === value
+      ),
+      prevValueIndex = childrenArr.findIndex(
+        child => child.props.value === prevValue
+      );
+
+    setDirection(
+      valueIndex < 0 || prevValueIndex < 0
         ? undefined
-        : value < prevValue
+        : valueIndex < prevValueIndex
         ? 'backward'
-        : 'forward',
-    [value, prevValue]
-  );
+        : 'forward'
+    );
+    setActualValue(value);
+  }, [children, prevValue, value]);
 
   return (
     <TransitionSwitch
       {...props}
-      value={value}
+      value={actualValue}
       className={cn(
         'relative transition-[width,height] duration-300 [&>*]:absolute',
         axis === 'y'
