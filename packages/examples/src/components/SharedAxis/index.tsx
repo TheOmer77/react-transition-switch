@@ -8,6 +8,8 @@ import {
 import usePrevious from 'hooks/usePrevious';
 import { cn } from 'utils/cn';
 
+import { sharedAxis } from './index.module.css';
+
 export type Axis = 'x' | 'y' | 'z';
 export type Direction = 'backward' | 'forward';
 
@@ -52,23 +54,8 @@ const SharedAxis = ({
     <TransitionSwitch
       {...props}
       value={actualValue}
-      className={cn(
-        'relative transition-[width,height] duration-300 [&>*]:absolute',
-        axis === 'y'
-          ? `data-[state=inactive]:[&>*]:data-[direction=backward]:animate-sharedAxis-down-out
-data-[state=inactive]:[&>*]:data-[direction=forward]:animate-sharedAxis-up-out
-data-[state=active]:[&>*]:data-[direction=backward]:animate-sharedAxis-down-in
-data-[state=active]:[&>*]:data-[direction=forward]:animate-sharedAxis-up-in`
-          : `data-[state=inactive]:[&>*]:data-[direction=backward]:animate-sharedAxis-right-out
-data-[state=inactive]:[&>*]:data-[direction=forward]:animate-sharedAxis-left-out
-data-[state=active]:[&>*]:data-[direction=backward]:animate-sharedAxis-right-in
-data-[state=active]:[&>*]:data-[direction=forward]:animate-sharedAxis-left-in
-rtl:data-[state=inactive]:[&>*]:data-[direction=backward]:animate-sharedAxis-left-out
-rtl:data-[state=inactive]:[&>*]:data-[direction=forward]:animate-sharedAxis-right-out
-rtl:data-[state=active]:[&>*]:data-[direction=backward]:animate-sharedAxis-left-in
-rtl:data-[state=active]:[&>*]:data-[direction=forward]:animate-sharedAxis-right-in`,
-        className
-      )}
+      className={cn(sharedAxis, className)}
+      data-axis={axis}
       data-direction={direction}
     >
       {children}
