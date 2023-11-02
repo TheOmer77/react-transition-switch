@@ -94,7 +94,30 @@
 }
 
 /* Z Axis */
-/* TODO */
+.sharedAxis[data-axis='z'][data-direction='backward']
+  > *[data-state='inactive'] {
+  animation:
+    sharedAxis-fade-out 90ms cubic-bezier(0.4, 0, 1, 1),
+    sharedAxis-scaleDown-out 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sharedAxis[data-axis='z'][data-direction='forward']
+  > *[data-state='inactive'] {
+  animation:
+    sharedAxis-fade-out 90ms cubic-bezier(0.4, 0, 1, 1),
+    sharedAxis-scaleUp-out 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sharedAxis[data-axis='z'][data-direction='backward'] > *[data-state='active'] {
+  animation:
+    sharedAxis-fade-preIn 90ms,
+    sharedAxis-fade-in 210ms cubic-bezier(0, 0, 0.2, 1) 90ms,
+    sharedAxis-scaleDown-in 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sharedAxis[data-axis='z'][data-direction='forward'] > *[data-state='active'] {
+  animation:
+    sharedAxis-fade-preIn 90ms,
+    sharedAxis-fade-in 210ms cubic-bezier(0, 0, 0.2, 1) 90ms,
+    sharedAxis-scaleUp-in 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 /* Animations */
 @keyframes sharedAxis-fade-preIn {
@@ -183,5 +206,37 @@
   }
   to {
     transform: translateY(30px);
+  }
+}
+@keyframes sharedAxis-scaleUp-in {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes sharedAxis-scaleUp-out {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes sharedAxis-scaleDown-in {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes sharedAxis-scaleDown-out {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.8);
   }
 }

@@ -93,6 +93,14 @@ dark:ring-offset-slate-950`
               checked={axis === 'y'}
               onChange={e => e.target.checked && setAxis('y')}
             />
+            <Radio
+              id='radio-axis-z'
+              name='axis'
+              value='axis-z'
+              label='Z'
+              checked={axis === 'z'}
+              onChange={e => e.target.checked && setAxis('z')}
+            />
           </fieldset>
           <Separator
             className='h-px w-full bg-slate-400 dark:bg-slate-600 md:h-10 md:w-px'
