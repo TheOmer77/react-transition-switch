@@ -15,10 +15,12 @@ export type Direction = 'backward' | 'forward';
 
 export interface SharedAxisProps extends TransitionSwitchProps {
   axis?: Axis;
+  fadeVariant?: boolean;
 }
 
 const SharedAxis = ({
   axis = 'x',
+  fadeVariant = false,
   value,
   className,
   children,
@@ -55,8 +57,9 @@ const SharedAxis = ({
       {...props}
       value={actualValue}
       className={cn(sharedAxis, className)}
-      data-axis={axis}
       data-direction={direction}
+      data-axis={axis}
+      {...(fadeVariant ? { 'data-fadevariant': true } : {})}
     >
       {children}
     </TransitionSwitch>

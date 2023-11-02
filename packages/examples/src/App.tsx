@@ -15,6 +15,7 @@ const App = () => {
     value = useMemo(() => toWords(activeIndex), [activeIndex]);
 
   const [axis, setAxis] = useState<Axis>('x'),
+    [fadeVariant, setFadeVariant] = useState(false),
     [variations, setVariations] = useState(false),
     [rtl, setRtl] = useState(false),
     [debug, setDebug] = useState(false);
@@ -28,6 +29,7 @@ dark:bg-slate-950 dark:text-slate-200'
       <div className='flex w-full flex-grow items-center justify-center p-4'>
         <SharedAxis
           axis={axis}
+          fadeVariant={fadeVariant}
           value={value}
           className={
             debug
@@ -105,6 +107,13 @@ dark:ring-offset-slate-950`
           <Separator
             className='h-px w-full bg-slate-400 dark:bg-slate-600 md:h-10 md:w-px'
             decorative
+          />
+          <Checkbox
+            name='fadevariant'
+            id='checkbox-fadevariant'
+            label='Fade variant'
+            checked={fadeVariant}
+            onChange={() => setFadeVariant(prev => !prev)}
           />
           <Checkbox
             name='variations'

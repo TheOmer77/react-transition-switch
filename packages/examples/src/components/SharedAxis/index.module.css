@@ -47,6 +47,25 @@
     sharedAxis-left-in 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.sharedAxis[data-axis='x'][data-direction='forward'][data-fadeVariant='true']
+  > *[data-state='inactive'] {
+  animation: sharedAxis-left-out 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sharedAxis[data-axis='x'][data-direction='backward'][data-fadeVariant='true']
+  > *[data-state='active'] {
+  animation: sharedAxis-right-in 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+[dir='rtl']
+  .sharedAxis[data-axis='x'][data-direction='forward'][data-fadeVariant='true']
+  > *[data-state='inactive'] {
+  animation: sharedAxis-right-out 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+[dir='rtl']
+  .sharedAxis[data-axis='x'][data-direction='backward'][data-fadeVariant='true']
+  > *[data-state='active'] {
+  animation: sharedAxis-left-in 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* Y Axis */
 .sharedAxis[data-axis='y'][data-direction='backward']
   > *[data-state='inactive'] {
@@ -73,6 +92,15 @@
     sharedAxis-up-in 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.sharedAxis[data-axis='y'][data-direction='forward'][data-fadeVariant='true']
+  > *[data-state='inactive'] {
+  animation: sharedAxis-up-out 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sharedAxis[data-axis='y'][data-direction='backward'][data-fadeVariant='true']
+  > *[data-state='active'] {
+  animation: sharedAxis-down-in 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* Z Axis */
 .sharedAxis[data-axis='z'][data-direction='backward']
   > *[data-state='inactive'] {
@@ -97,6 +125,15 @@
     sharedAxis-fade-preIn 90ms,
     sharedAxis-fade-in 210ms cubic-bezier(0, 0, 0.2, 1) 90ms,
     sharedAxis-scaleUp-in 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sharedAxis[data-axis='z'][data-direction='forward'][data-fadeVariant='true']
+  > *[data-state='inactive'] {
+  animation: sharedAxis-scaleUp-out 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sharedAxis[data-axis='z'][data-direction='backward'][data-fadeVariant='true']
+  > *[data-state='active'] {
+  animation: sharedAxis-scaleDown-in 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Animations */
