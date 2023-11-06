@@ -17,6 +17,9 @@
     "build:watch": "tsup --watch",
     "lint": "tsc && eslint --max-warnings=0 src"
   },
+  "files": [
+    "dist/"
+  ],
   "exports": {
     "require": {
       "default": "./dist/index.js",
