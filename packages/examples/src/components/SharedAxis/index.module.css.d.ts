@@ -1,5 +1,4 @@
 declare const styles: {
-  readonly "sharedAxis": string;
+  readonly sharedAxis: string;
 };
 export = styles;
-
