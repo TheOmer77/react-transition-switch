@@ -23,8 +23,8 @@ const App = () => {
   return (
     <div
       dir={rtl ? 'rtl' : 'ltr'}
-      className='flex min-h-[100dvh] w-full flex-col bg-white text-slate-800
-dark:bg-slate-950 dark:text-slate-200'
+      className='flex min-h-[100dvh] w-full flex-col bg-white text-neutral-800
+dark:bg-neutral-950 dark:text-neutral-200'
     >
       <div className='flex w-full flex-grow items-center justify-center p-4'>
         <SharedAxis
@@ -33,8 +33,8 @@ dark:bg-slate-950 dark:text-slate-200'
           value={value}
           className={
             debug
-              ? `ring-2 ring-red-600 ring-offset-4 ring-offset-white
-dark:ring-offset-slate-950`
+              ? `ring-2 ring-danger-600 ring-offset-4 ring-offset-white
+dark:ring-offset-neutral-950`
               : ''
           }
         >
@@ -42,11 +42,17 @@ dark:ring-offset-slate-950`
             <TransitionSwitchItem key={key} value={toWords(key)}>
               <div
                 className={cn(
-                  `flex h-32 w-32 items-center justify-center rounded-lg text-6xl
-                text-slate-50 transition-[width,height,background-color]`,
+                  `flex h-32 w-32 select-none items-center justify-center
+rounded-xl text-6xl text-neutral-50 shadow-lg
+transition-[width,height,background-color,color,box-shadow]`,
                   variations && key % 2 !== 0
-                    ? cn('bg-green-600', axis === 'y' ? 'w-64' : 'h-64')
-                    : 'bg-blue-600'
+                    ? cn(
+                        `bg-secondary-main text-secondary-contrast
+shadow-secondary-main/50`,
+                        axis === 'y' ? 'w-64' : 'h-64'
+                      )
+                    : `bg-primary-main text-primary-contrast
+shadow-primary-main/50`
                 )}
               >
                 {key}
@@ -57,6 +63,7 @@ dark:ring-offset-slate-950`
       </div>
 
       <Button
+        size='icon-lg'
         onClick={() => setActiveIndex(prev => prev - 1)}
         disabled={activeIndex <= 0}
         className='fixed start-4 top-1/2 -translate-y-1/2'
@@ -64,6 +71,7 @@ dark:ring-offset-slate-950`
         {rtl ? <ChevronRight /> : <ChevronLeft />}
       </Button>
       <Button
+        size='icon-lg'
         onClick={() => setActiveIndex(prev => prev + 1)}
         disabled={activeIndex >= TEST_ITEMS_COUNT - 1}
         className='fixed end-4 top-1/2 -translate-y-1/2'
@@ -105,7 +113,7 @@ dark:ring-offset-slate-950`
             />
           </fieldset>
           <Separator
-            className='h-px w-full bg-slate-400 dark:bg-slate-600 md:h-10 md:w-px'
+            className='h-px w-full bg-neutral-400 dark:bg-neutral-600 md:h-10 md:w-px'
             decorative
           />
           <Checkbox

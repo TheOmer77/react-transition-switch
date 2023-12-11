@@ -12,7 +12,10 @@ export const Radio = ({
       {...props}
       id={id}
       type='radio'
-      className={cn('h-4 w-4 accent-blue-600 dark:accent-blue-300', className)}
+      className={cn(
+        'h-4 w-4 accent-primary-600 dark:accent-primary-300',
+        className
+      )}
     />
     {label && <label htmlFor={id}>{label}</label>}
   </div>
