@@ -4,4 +4,100 @@
 
 :root {
   --font-family: 'Figtree Variable';
+
+  /* primary */
+  --color-primary-50: 234 241 255;
+  --color-primary-100: 214 227 254;
+  --color-primary-200: 173 198 254;
+  --color-primary-300: 131 169 254;
+  --color-primary-400: 91 137 252;
+  --color-primary-500: 53 103 248;
+  --color-primary-600: 23 64 234;
+  --color-primary-700: 12 39 188;
+  --color-primary-800: 5 24 131;
+  --color-primary-900: 2 9 73;
+  --color-primary-950: 0 3 40;
+
+  --color-primary-main: var(--color-primary-600);
+  --color-primary-light: var(--color-primary-500);
+  --color-primary-dark: var(--color-primary-700);
+  --color-primary-contrast: var(--color-primary-50);
+
+  /* neutral */
+  --color-neutral-50: 238 241 247;
+  --color-neutral-100: 221 227 238;
+  --color-neutral-200: 188 199 221;
+  --color-neutral-300: 157 172 202;
+  --color-neutral-400: 128 145 180;
+  --color-neutral-500: 102 119 154;
+  --color-neutral-600: 79 94 126;
+  --color-neutral-700: 57 69 95;
+  --color-neutral-800: 37 46 65;
+  --color-neutral-900: 17 22 34;
+  --color-neutral-950: 6 8 15;
+
+  --color-neutral-main: var(--color-neutral-600);
+  --color-neutral-light: var(--color-neutral-500);
+  --color-neutral-dark: var(--color-neutral-700);
+  --color-neutral-contrast: var(--color-neutral-50);
+
+  /* danger */
+  --color-danger-50: 255 236 234;
+  --color-danger-100: 255 216 212;
+  --color-danger-200: 254 175 168;
+  --color-danger-300: 254 128 121;
+  --color-danger-400: 251 66 68;
+  --color-danger-500: 219 24 41;
+  --color-danger-600: 176 14 30;
+  --color-danger-700: 133 8 20;
+  --color-danger-800: 92 4 10;
+  --color-danger-900: 50 1 3;
+  --color-danger-950: 25 0 1;
+
+  --color-danger-main: var(--color-danger-500);
+  --color-danger-light: var(--color-danger-400);
+  --color-danger-dark: var(--color-danger-600);
+  --color-danger-contrast: var(--color-danger-50);
+
+  /* secondary */
+  --color-secondary-50: 211 255 211;
+  --color-secondary-100: 155 254 160;
+  --color-secondary-200: 46 237 82;
+  --color-secondary-300: 42 205 71;
+  --color-secondary-400: 37 173 60;
+  --color-secondary-500: 31 143 49;
+  --color-secondary-600: 23 113 38;
+  --color-secondary-700: 15 85 26;
+  --color-secondary-800: 8 57 15;
+  --color-secondary-900: 2 29 5;
+  --color-secondary-950: 1 12 1;
+
+  --color-secondary-main: var(--color-secondary-500);
+  --color-secondary-light: var(--color-secondary-400);
+  --color-secondary-dark: var(--color-secondary-600);
+  --color-secondary-contrast: var(--color-secondary-50);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary-main: var(--color-primary-300);
+    --color-primary-light: var(--color-primary-200);
+    --color-primary-dark: var(--color-primary-400);
+    --color-primary-contrast: var(--color-primary-950);
+
+    --color-neutral-main: var(--color-neutral-300);
+    --color-neutral-light: var(--color-neutral-200);
+    --color-neutral-dark: var(--color-neutral-400);
+    --color-neutral-contrast: var(--color-neutral-950);
+
+    --color-danger-main: var(--color-danger-300);
+    --color-danger-light: var(--color-danger-200);
+    --color-danger-dark: var(--color-danger-400);
+    --color-danger-contrast: var(--color-danger-950);
+
+    --color-secondary-main: var(--color-secondary-300);
+    --color-secondary-light: var(--color-secondary-200);
+    --color-secondary-dark: var(--color-secondary-400);
+    --color-secondary-contrast: var(--color-secondary-950);
+  }
 }
