@@ -17,7 +17,7 @@
     "lint": "bun --silent lint:package && bun --silent lint:examples",
     "lint:package": "bun --silent --cwd packages/react-transition-switch lint",
     "lint:examples": "bun --silent --cwd packages/examples lint",
-    "format": "prettier --write packages/**/*.ts"
+    "format": "prettier --write packages/**/*"
   },
   "devDependencies": {
     "@types/node": "^20.8.9",
