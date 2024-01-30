@@ -5,7 +5,8 @@ import { toWords } from 'number-to-words';
 
 import { TransitionSwitchItem } from '@theomer77/react-transition-switch';
 import { Button } from '@/components/ui/Button';
-import { Checkbox, Radio } from '@/components/general';
+import { Checkbox } from '@/components/ui/Checkbox';
+import { Radio } from '@/components/ui/Radio';
 import SharedAxis, { type Axis } from '@/components/SharedAxis';
 import { cn } from '@/lib/utils';
 
