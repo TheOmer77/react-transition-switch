@@ -61,7 +61,7 @@ To add transitions between items, you can use CSS animations. Add a CSS class to
 </TransitionSwitch>
 ```
 
-In your CSS file, define your animations for active/incoming and inactive/outgoing items, in the following format:
+In your CSS file, define your animations for active/incoming and inactive/outgoing items, and add them to the correct children by their `data-state` attribute:
 
 ```css
 .my-animation > [data-state='active'] {
@@ -90,3 +90,9 @@ In your CSS file, define your animations for active/incoming and inactive/outgoi
   }
 }
 ```
+
+### The `directional` prop
+
+Setting the `directional` prop on your parent `TransitionSwitch` allows you to apply a different animation based on the transition direction - whether the incoming child comes before or after the outgoing child. This will add a `data-direction` attribute to the parent, which you can target in your CSS.
+
+<!-- TODO: Directional CSS example -->
