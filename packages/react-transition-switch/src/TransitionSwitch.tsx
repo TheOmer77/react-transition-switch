@@ -54,8 +54,8 @@ export const TransitionSwitch = forwardRef<
       valueIndex < 0 || prevValueIndex < 0
         ? undefined
         : valueIndex < prevValueIndex
-        ? 'backward'
-        : 'forward'
+          ? 'backward'
+          : 'forward'
     );
     setDirectionalValue(value);
 

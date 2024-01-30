@@ -47,12 +47,12 @@ rounded-xl text-6xl text-neutral-50 shadow-lg
 transition-[width,height,background-color,color,box-shadow]`,
                   variations && key % 2 !== 0
                     ? cn(
-                        `bg-secondary-main text-secondary-contrast
-shadow-secondary-main/50`,
+                        `bg-secondary text-secondary-foreground
+shadow-secondary/50`,
                         axis === 'y' ? 'w-64' : 'h-64'
                       )
-                    : `bg-primary-main text-primary-contrast
-shadow-primary-main/50`
+                    : `bg-primary text-primary-foreground
+shadow-primary/50`
                 )}
               >
                 {key}
@@ -113,7 +113,7 @@ shadow-primary-main/50`
             />
           </fieldset>
           <Separator
-            className='h-px w-full bg-neutral-400 dark:bg-neutral-600 md:h-10 md:w-px'
+            className='h-px w-full bg-neutral-400 md:h-10 md:w-px dark:bg-neutral-600'
             decorative
           />
           <Checkbox
