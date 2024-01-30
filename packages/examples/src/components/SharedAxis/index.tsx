@@ -2,7 +2,7 @@ import {
   TransitionSwitch,
   type TransitionSwitchProps,
 } from '@theomer77/react-transition-switch';
-import { cn } from 'utils/cn';
+import { cn } from '@/lib/utils';
 
 import { sharedAxis } from './index.module.css';
 

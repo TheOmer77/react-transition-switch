@@ -4,9 +4,9 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { toWords } from 'number-to-words';
 
 import { TransitionSwitchItem } from '@theomer77/react-transition-switch';
-import SharedAxis, { type Axis } from 'components/SharedAxis';
-import { Button, Checkbox, Radio } from 'components/general';
-import { cn } from 'utils/cn';
+import SharedAxis, { type Axis } from '@/components/SharedAxis';
+import { Button, Checkbox, Radio } from '@/components/general';
+import { cn } from '@/lib/utils';
 
 const TEST_ITEMS_COUNT = 10;
 

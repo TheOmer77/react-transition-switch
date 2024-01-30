@@ -1,7 +1,7 @@
 import { forwardRef, type ComponentPropsWithoutRef } from 'react';
 import { Primitive } from '@radix-ui/react-primitive';
 
-import { cn } from 'utils';
+import { cn } from '@/lib/utils';
 
 export type ButtonProps = ComponentPropsWithoutRef<typeof Primitive.button> & {
   variant?: 'default' | 'primary' | 'danger' | 'flat' | 'link';

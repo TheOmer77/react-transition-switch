@@ -10,7 +10,6 @@ const config = defineConfig({
   minify: true,
   splitting: false,
   treeshake: true,
-  tsconfig: './tsconfig.build.json',
 });
 
 export default config;
