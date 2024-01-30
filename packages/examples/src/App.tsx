@@ -4,8 +4,9 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { toWords } from 'number-to-words';
 
 import { TransitionSwitchItem } from '@theomer77/react-transition-switch';
+import { Button } from '@/components/ui/Button';
+import { Checkbox, Radio } from '@/components/general';
 import SharedAxis, { type Axis } from '@/components/SharedAxis';
-import { Button, Checkbox, Radio } from '@/components/general';
 import { cn } from '@/lib/utils';
 
 const TEST_ITEMS_COUNT = 10;
@@ -113,7 +114,7 @@ shadow-primary/50`
             />
           </fieldset>
           <Separator
-            className='h-px w-full bg-neutral-400 md:h-10 md:w-px dark:bg-neutral-600'
+            className='h-px w-full bg-neutral-400 dark:bg-neutral-600 md:h-10 md:w-px'
             decorative
           />
           <Checkbox
