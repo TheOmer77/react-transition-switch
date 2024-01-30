@@ -31,7 +31,6 @@
 [dir='rtl']
   .sharedAxis[data-axis='x'][data-direction='forward']
   > [data-state='active'] {
-  opacity: 0;
   animation:
     sharedAxis-fade-in 210ms cubic-bezier(0, 0, 0.2, 1) 90ms forwards,
     sharedAxis-right-in 300ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -40,7 +39,6 @@
 [dir='rtl']
   .sharedAxis[data-axis='x'][data-direction='backward']
   > [data-state='active'] {
-  opacity: 0;
   animation:
     sharedAxis-fade-in 210ms cubic-bezier(0, 0, 0.2, 1) 90ms forwards,
     sharedAxis-left-in 300ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -78,13 +76,11 @@
     sharedAxis-up-out 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sharedAxis[data-axis='y'][data-direction='backward'] > [data-state='active'] {
-  opacity: 0;
   animation:
     sharedAxis-fade-in 210ms cubic-bezier(0, 0, 0.2, 1) 90ms forwards,
     sharedAxis-down-in 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sharedAxis[data-axis='y'][data-direction='forward'] > [data-state='active'] {
-  opacity: 0;
   animation:
     sharedAxis-fade-in 210ms cubic-bezier(0, 0, 0.2, 1) 90ms forwards,
     sharedAxis-up-in 300ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -112,13 +108,11 @@
     sharedAxis-scaleUp-out 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sharedAxis[data-axis='z'][data-direction='backward'] > [data-state='active'] {
-  opacity: 0;
   animation:
     sharedAxis-fade-in 210ms cubic-bezier(0, 0, 0.2, 1) 90ms forwards,
     sharedAxis-scaleDown-in 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sharedAxis[data-axis='z'][data-direction='forward'] > [data-state='active'] {
-  opacity: 0;
   animation:
     sharedAxis-fade-in 210ms cubic-bezier(0, 0, 0.2, 1) 90ms forwards,
     sharedAxis-scaleUp-in 300ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -131,6 +125,12 @@
 .sharedAxis[data-axis='z'][data-direction='backward'][data-fadeVariant='true']
   > [data-state='active'] {
   animation: sharedAxis-scaleDown-in 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sharedAxis[data-direction='backward']:not([data-fadevariant='true'])
+  > [data-state='active'],
+.sharedAxis[data-direction='forward'] > [data-state='active'] {
+  opacity: 0;
 }
 
 /* Animations */
