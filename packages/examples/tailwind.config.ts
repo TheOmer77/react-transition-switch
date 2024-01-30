@@ -1,5 +1,7 @@
 import { type Config } from 'tailwindcss';
 
+const shades = [50, ...[...Array(9).keys()].map(key => (key + 1) * 100), 950];
+
 const config: Config = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -11,23 +13,20 @@ const config: Config = {
       white: '#fff',
       black: '#000',
       transparent: 'transparent',
+
       ...['primary', 'neutral', 'danger', 'secondary'].reduce(
         (obj, colorName) => ({
           ...obj,
-          [colorName]: [
-            50,
-            ...[...Array(9).keys()].map(key => (key + 1) * 100),
-            950,
-          ].reduce(
+          [colorName]: [...shades].reduce(
             (obj, shade) => ({
               ...obj,
               [shade]: `rgb(var(--color-${colorName}-${shade}) / <alpha-value>)`,
-              main: `rgb(var(--color-${colorName}-main) / <alpha-value>)`,
-              light: `rgb(var(--color-${colorName}-light) / <alpha-value>)`,
-              dark: `rgb(var(--color-${colorName}-dark) / <alpha-value>)`,
-              contrast: `rgb(var(--color-${colorName}-contrast) / <alpha-value>)`,
             }),
-            {}
+            {
+              DEFAULT: `rgb(var(--color-${colorName}-main))`,
+              active: `rgb(var(--color-${colorName}-active))`,
+              foreground: `rgb(var(--color-${colorName}-foreground))`,
+            }
           ),
         }),
         {}
