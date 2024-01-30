@@ -72,6 +72,24 @@
   --color-secondary-main: var(--color-secondary-500);
   --color-secondary-active: var(--color-secondary-400);
   --color-secondary-foreground: var(--color-secondary-50);
+
+  --color-background: 255 255 255;
+  --color-foreground: var(--color-neutral-900);
+  --color-card: var(--color-neutral-50);
+  --color-card-foreground: var(--color-neutral-900);
+  --color-popover: 255 255 255;
+  --color-popover-foreground: var(--color-neutral-900);
+  --color-secondary: var(--color-neutral-100);
+  --color-secondary-foreground: var(--color-neutral-800);
+  --color-muted: var(--color-neutral-300);
+  --color-muted-foreground: var(--color-neutral-600);
+  --color-accent: var(--color-neutral-100);
+  --color-accent-foreground: var(--color-neutral-900);
+  --color-border: var(--color-neutral-200);
+  --color-input: var(--color-neutral-200);
+  --color-ring: var(--color-primary-main);
+
+  --border-radius: 0.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -91,5 +109,37 @@
     --color-secondary-main: var(--color-secondary-200);
     --color-secondary-active: var(--color-secondary-300);
     --color-secondary-foreground: var(--color-secondary-950);
+
+    --color-background: var(--color-neutral-950);
+    --color-foreground: var(--color-neutral-100);
+    --color-card: var(--color-neutral-900);
+    --color-card-foreground: var(--color-neutral-100);
+    --color-popover: var(--color-neutral-900);
+    --color-popover-foreground: var(--color-neutral-100);
+    --color-secondary: var(--color-neutral-800);
+    --color-secondary-foreground: var(--color-neutral-200);
+    --color-muted: var(--color-neutral-700);
+    --color-muted-foreground: var(--color-neutral-400);
+    --color-accent: var(--color-neutral-800);
+    --color-accent-foreground: var(--color-neutral-100);
+    --color-border: var(--color-neutral-800);
+    --color-input: var(--color-neutral-800);
   }
+}
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground
+selection:bg-primary-500/30 selection:text-primary-950
+dark:selection:text-primary-50;
+  }
+}
+.lucide {
+  @apply h-em w-em;
 }

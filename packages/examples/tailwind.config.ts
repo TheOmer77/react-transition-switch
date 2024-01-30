@@ -1,12 +1,34 @@
-import { type Config } from 'tailwindcss';
+import type { Config } from 'tailwindcss';
+import animate from 'tailwindcss-animate';
 
 const shades = [50, ...[...Array(9).keys()].map(key => (key + 1) * 100), 950];
 
-const config: Config = {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+const config = {
+  content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
+    container: { center: true, padding: '2rem', screens: { '2xl': '1400px' } },
     extend: {
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+      },
+      borderRadius: {
+        lg: 'var(--border-radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
+      },
       fontFamily: { sans: ['var(--font-family)', 'sans-serif'] },
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+      },
+      spacing: { em: '1em', inherit: 'inherit' },
     },
     colors: {
       inherit: 'inherit',
@@ -31,8 +53,30 @@ const config: Config = {
         }),
         {}
       ),
+
+      border: 'rgb(var(--color-border))',
+      input: 'rgb(var(--color-input))',
+      ring: 'rgb(var(--color-ring))',
+      background: 'rgb(var(--color-background))',
+      foreground: 'rgb(var(--color-foreground))',
+      muted: {
+        DEFAULT: 'rgb(var(--color-muted))',
+        foreground: 'rgb(var(--color-muted-foreground))',
+      },
+      accent: {
+        DEFAULT: 'rgb(var(--color-accent))',
+        foreground: 'rgb(var(--color-accent-foreground))',
+      },
+      popover: {
+        DEFAULT: 'rgb(var(--color-popover))',
+        foreground: 'rgb(var(--color-popover-foreground))',
+      },
+      card: {
+        DEFAULT: 'rgb(var(--color-card))',
+        foreground: 'rgb(var(--color-card-foreground))',
+      },
     },
   },
-  plugins: [],
-};
+  plugins: [animate],
+} satisfies Config;
 export default config;
