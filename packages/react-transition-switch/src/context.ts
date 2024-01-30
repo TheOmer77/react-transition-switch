@@ -1,9 +1,9 @@
 import { createContext } from 'react';
 
-export interface TransitionSwitchContextValue {
+export type TransitionSwitchContextValue = {
   value: string;
   containerEl: HTMLElement | null;
-}
+};
 
 const initialState: TransitionSwitchContextValue = {
   value: '',

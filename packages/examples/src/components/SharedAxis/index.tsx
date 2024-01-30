@@ -8,11 +8,10 @@ import { sharedAxis } from './index.module.css';
 
 export type Axis = 'x' | 'y' | 'z';
 
-export interface SharedAxisProps
-  extends Omit<TransitionSwitchProps, 'directional'> {
+export type SharedAxisProps = Omit<TransitionSwitchProps, 'directional'> & {
   axis?: Axis;
   fadeVariant?: boolean;
-}
+};
 
 const SharedAxis = ({
   axis = 'x',

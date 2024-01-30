@@ -11,10 +11,10 @@ import { Presence } from '@radix-ui/react-presence';
 
 import { TransitionSwitchContext } from './context';
 
-export interface TransitionSwitchItemProps {
+export type TransitionSwitchItemProps = {
   value: string;
   children?: ReactNode;
-}
+};
 
 export const TransitionSwitchItem = forwardRef<
   HTMLElement,

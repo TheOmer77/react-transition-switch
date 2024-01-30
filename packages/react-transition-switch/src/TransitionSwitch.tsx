@@ -13,10 +13,10 @@ import { TransitionSwitchProvider } from './context';
 import type { TransitionSwitchItemProps } from './TransitionSwitchItem';
 
 export type TransitionSwitchDirection = 'backward' | 'forward';
-export interface TransitionSwitchProps extends ComponentPropsWithoutRef<'div'> {
+export type TransitionSwitchProps = ComponentPropsWithoutRef<'div'> & {
   value: string;
   directional?: boolean;
-}
+};
 
 export const TransitionSwitch = forwardRef<
   HTMLDivElement,
