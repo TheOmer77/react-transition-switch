@@ -10,8 +10,8 @@ disabled:pointer-events-none disabled:text-muted [&>*]:z-10 [&>svg]:text-base`,
     variants: {
       variant: {
         default: `bg-background shadow-sm shadow-neutral-950/20
-dark:bg-neutral-800 dark:active:bg-neutral-700`,
-        flat: 'hover:bg-accent hover:text-accent-foreground',
+dark:bg-neutral-800 dark:active:bg-neutral-700 dark:disabled:bg-neutral-800/50`,
+        flat: '',
       },
       size: {
         sm: 'h-8 px-3 text-xs [&>svg]:text-sm',
