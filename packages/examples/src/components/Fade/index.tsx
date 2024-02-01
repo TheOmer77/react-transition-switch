@@ -11,7 +11,7 @@ const Fade = ({
   children,
   ...props
 }: Omit<TransitionSwitchProps, 'directional'>) => (
-  <TransitionSwitch {...props} directional className={cn(fade, className)}>
+  <TransitionSwitch {...props} className={cn(fade, className)}>
     {children}
   </TransitionSwitch>
 );
