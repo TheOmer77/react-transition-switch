@@ -28,11 +28,14 @@ const SimpleExample = forwardRef<
           <TabsTrigger value='notifications'>Notifications</TabsTrigger>
           <TabsTrigger value='privacy'>Privacy</TabsTrigger>
         </TabsList>
-        <Card>
-          <Fade
-            value={activeTab}
-            className='w-inherit overflow-hidden [&>*]:w-inherit'
-          >
+        <Fade
+          asChild
+          value={activeTab}
+          className='w-inherit max-w-inherit overflow-hidden transition-[height]
+duration-300 [&>*]:w-full'
+          autoAdjustWidth={false}
+        >
+          <Card>
             <TransitionSwitchItem value='account'>
               <AccountTab />
             </TransitionSwitchItem>
@@ -42,8 +45,8 @@ const SimpleExample = forwardRef<
             <TransitionSwitchItem value='privacy'>
               <PrivacyTab />
             </TransitionSwitchItem>
-          </Fade>
-        </Card>
+          </Card>
+        </Fade>
       </Tabs>
     </div>
   );
