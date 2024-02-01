@@ -38,9 +38,12 @@ const TransitionSwitchItemContent = forwardRef<
   HTMLElement,
   TransitionSwitchItemProps
 >(({ value, children }, ref) => {
-  const { value: activeValue, containerEl } = useContext(
-    TransitionSwitchContext
-  );
+  const {
+    value: activeValue,
+    autoAdjustWidth,
+    autoAdjustHeight,
+    containerEl,
+  } = useContext(TransitionSwitchContext);
 
   const innerRef = useRef<HTMLElement>(null);
   useImperativeHandle(ref, () => innerRef.current!, []);
@@ -54,14 +57,15 @@ const TransitionSwitchItemContent = forwardRef<
         height = `${clientHeight}px`;
 
       if (!containerEl) return;
-      if (containerEl.style.width !== width) containerEl.style.width = width;
-      if (containerEl.style.height !== height)
+      if (containerEl.style.width !== width && autoAdjustWidth)
+        containerEl.style.width = width;
+      if (containerEl.style.height !== height && autoAdjustHeight)
         containerEl.style.height = height;
     });
     observer.observe(innerRef.current);
 
     return () => observer.disconnect();
-  }, [activeValue, containerEl, value, ref]);
+  }, [activeValue, autoAdjustHeight, autoAdjustWidth, containerEl, value]);
 
   return (
     <Slot

@@ -33,6 +33,8 @@ export type TransitionSwitchProps = ComponentPropsWithoutRef<'div'> & {
    * @see [Radix UI Composition](https://www.radix-ui.com/primitives/docs/guides/composition)
    */
   asChild?: boolean;
+  autoAdjustWidth?: boolean;
+  autoAdjustHeight?: boolean;
 };
 
 export const TransitionSwitch = forwardRef<
@@ -40,7 +42,15 @@ export const TransitionSwitch = forwardRef<
   TransitionSwitchProps
 >(
   (
-    { value = '', directional = false, asChild = false, children, ...props },
+    {
+      value = '',
+      asChild = false,
+      autoAdjustWidth = true,
+      autoAdjustHeight = true,
+      directional = false,
+      children,
+      ...props
+    },
     ref
   ) => {
     const [directionalValue, setDirectionalValue] = useState(value);
@@ -88,9 +98,9 @@ export const TransitionSwitch = forwardRef<
       if (!innerRef.current || typeof initialChild === 'undefined') return;
 
       const { width, height } = getComputedStyle(initialChild);
-      innerRef.current.style.width = width;
-      innerRef.current.style.height = height;
-    }, []);
+      if (autoAdjustWidth) innerRef.current.style.width = width;
+      if (autoAdjustHeight) innerRef.current.style.height = height;
+    }, [autoAdjustHeight, autoAdjustWidth]);
 
     const Comp = asChild ? Slot : 'div';
 
@@ -98,6 +108,8 @@ export const TransitionSwitch = forwardRef<
       <TransitionSwitchProvider
         value={{
           value: directional ? directionalValue : value,
+          autoAdjustWidth,
+          autoAdjustHeight,
           containerEl: innerRef.current,
         }}
       >

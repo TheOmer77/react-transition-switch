@@ -1,12 +1,18 @@
 import { createContext } from 'react';
 
-export type TransitionSwitchContextValue = {
-  value: string;
+import type { TransitionSwitchProps } from './TransitionSwitch';
+
+export type TransitionSwitchContextValue = Pick<
+  TransitionSwitchProps,
+  'autoAdjustWidth' | 'autoAdjustHeight' | 'value'
+> & {
   containerEl: HTMLElement | null;
 };
 
 const initialState: TransitionSwitchContextValue = {
   value: '',
+  autoAdjustWidth: true,
+  autoAdjustHeight: true,
   containerEl: null,
 };
 
