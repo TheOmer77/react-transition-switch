@@ -79,7 +79,7 @@
   --color-card-foreground: var(--color-neutral-900);
   --color-popover: 255 255 255;
   --color-popover-foreground: var(--color-neutral-900);
-  --color-muted: var(--color-neutral-300);
+  --color-muted: var(--color-neutral-100);
   --color-muted-foreground: var(--color-neutral-600);
   --color-accent: var(--color-neutral-100);
   --color-accent-foreground: var(--color-neutral-900);
@@ -114,7 +114,7 @@
     --color-card-foreground: var(--color-neutral-100);
     --color-popover: var(--color-neutral-900);
     --color-popover-foreground: var(--color-neutral-100);
-    --color-muted: var(--color-neutral-700);
+    --color-muted: var(--color-neutral-800);
     --color-muted-foreground: var(--color-neutral-400);
     --color-accent: var(--color-neutral-800);
     --color-accent-foreground: var(--color-neutral-100);
@@ -130,8 +130,11 @@
   * {
     @apply border-border;
   }
+  html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
   body {
-    @apply bg-background text-foreground
+    @apply min-h-dvh overflow-hidden bg-background text-foreground
 selection:bg-primary-500/30 selection:text-primary-950
 dark:selection:text-primary-50;
   }
