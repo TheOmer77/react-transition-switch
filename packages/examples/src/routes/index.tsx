@@ -6,13 +6,14 @@ import {
 import { TransitionSwitchItem } from '@theomer77/react-transition-switch';
 
 import Root from './Root';
+import SimpleExample from './SimpleExample';
 import SharedAxisExample from './SharedAxisExample';
 import ErrorPage from './Error';
 import SharedAxis from '@/components/SharedAxis';
 
 const routes: RouteObject[] = [
   { index: true, element: <Root /> },
-  // TODO: Simple
+  { path: '/simple', element: <SimpleExample /> },
   // TODO: Advanced
   // TODO: Directional example
   { path: '/directionalAdvanced', element: <SharedAxisExample /> },
