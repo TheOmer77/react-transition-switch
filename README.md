@@ -23,7 +23,7 @@ This package provides a `TransitionSwitch` parent component and `TransitionSwitc
 - The `TransitionSwitch` component accepts a `value` prop, and children which must be `TransitionSwitchItem` components.
 - The `TransitionSwitchItem` component also accepts a `value` prop, and a child which must be a component that accepts a ref, or an element such as a div.
 
-If the value of an item matches the parent's value, only that item's child component will be displayed. The parent container will also adjust its width & height to those of the active item.
+If the value of an item matches the parent's value, only that item's child component will be displayed. By default, the parent container will also adjust its width & height to those of the active item.
 
 ```jsx
 import { useState } from 'react';
@@ -170,3 +170,11 @@ Setting the `directional` prop on your parent `TransitionSwitch` allows you to a
 ```
 
 </details>
+
+### Other `TransitionSwitch` props
+
+| Prop               | Type      | Description                                                                                                                                                                                                                                                                                                                                      |
+| ------------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `asChild`          | `boolean` | Change the default `<div>` element for the one passed as a child, merging their props and behavior.<br>When set to true, this component must have a single child which accepts a ref, and its children should be `<TransitionSwitchItem>` components.<br>See [Radix UI composition](https://www.radix-ui.com/primitives/docs/guides/composition) |
+| `autoAdjustWidth`  | `boolean` | Whether or not the parent container should automatically adjust its width to that of the active child.<br>`true` by default.                                                                                                                                                                                                                     |
+| `autoAdjustHeight` | `boolean` | Whether or not the parent container should automatically adjust its height to that of the active child.<br>`true` by default.                                                                                                                                                                                                                    |
