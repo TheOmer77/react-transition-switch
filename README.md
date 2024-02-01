@@ -54,22 +54,33 @@ const MyComponent = () => {
 To add transitions between items, you can use CSS animations. Add a CSS class to your parent `TransitionSwitch` component:
 
 ```jsx
-<TransitionSwitch value={value} className='my-animation'>
+<TransitionSwitch value={value} className='fade'>
   <TransitionSwitchItem value='item1'>
     <div>Item 1</div>
   </TransitionSwitchItem>
 </TransitionSwitch>
 ```
 
-In your CSS file, define your animations for active/incoming and inactive/outgoing items, and add them to the correct children by their `data-state` attribute:
+In your CSS file, define your animations for active/incoming and inactive/outgoing items, and add them to the correct children by their `data-state` attribute.
+
+<details>
+  <summary>CSS example</summary>
 
 ```css
-.my-animation > [data-state='active'] {
-  animation: fadeIn 300ms ease-in-out;
+.fade {
+  position: relative;
+}
+.fade > * {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
 }
 
-.my-animation > [data-state='inactive'] {
-  animation: fadeOut 300ms ease-in-out;
+.fade > [data-state='active'] {
+  animation: fadeIn 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.fade > [data-state='inactive'] {
+  animation: fadeOut 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes fadeIn {
@@ -91,8 +102,71 @@ In your CSS file, define your animations for active/incoming and inactive/outgoi
 }
 ```
 
+</details>
+
 ### The `directional` prop
 
 Setting the `directional` prop on your parent `TransitionSwitch` allows you to apply a different animation based on the transition direction - whether the incoming child comes before or after the outgoing child. This will add a `data-direction` attribute to the parent, which you can target in your CSS.
 
-<!-- TODO: Directional CSS example -->
+<details>
+  <summary>Directional CSS example</summary>
+
+```css
+.slide {
+  position: relative;
+}
+.slide > * {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+}
+
+.slide[data-direction='forward'] > [data-state='active'] {
+  animation: slideLeftIn 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.slide[data-direction='forward'] > [data-state='inactive'] {
+  animation: slideLeftOut 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide[data-direction='backward'] > [data-state='active'] {
+  animation: slideRightIn 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.slide[data-direction='backward'] > [data-state='inactive'] {
+  animation: slideRightOut 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideLeftIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes slideLeftOut {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slideRightIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes slideRightOut {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+```
+
+</details>
