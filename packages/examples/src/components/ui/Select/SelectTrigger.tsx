@@ -26,7 +26,7 @@ focus:ring-2 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50
   >
     {children}
     <Icon asChild>
-      <ChevronDownIcon className='h-4 w-4 opacity-50' />
+      <ChevronDownIcon className='text-base opacity-50' />
     </Icon>
   </Trigger>
 ));
