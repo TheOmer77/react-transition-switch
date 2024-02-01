@@ -14,7 +14,13 @@ import type { TransitionSwitchItemProps } from './TransitionSwitchItem';
 
 export type TransitionSwitchDirection = 'backward' | 'forward';
 export type TransitionSwitchProps = ComponentPropsWithoutRef<'div'> & {
+  /** The value of the active `<TransitionSwitchItem>` child component. */
   value: string;
+  /**
+   * Allows to apply a different animation based on the transition
+   * direction. This will add a `data-direction` attribute to the parent,
+   * which would have a value of either 'backward' or 'forward'.
+   */
   directional?: boolean;
 };
 
