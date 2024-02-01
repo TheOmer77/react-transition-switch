@@ -1,0 +1,36 @@
+.fade {
+  position: relative;
+  transition:
+    width 300ms cubic-bezier(0.4, 0, 0.2, 1),
+    height 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.fade > * {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+}
+
+.fade > [data-state='active'] {
+  animation: fadeIn 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.fade > [data-state='inactive'] {
+  animation: fadeOut 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
