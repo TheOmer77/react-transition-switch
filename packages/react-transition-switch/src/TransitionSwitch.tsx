@@ -18,12 +18,6 @@ export type TransitionSwitchProps = ComponentPropsWithoutRef<'div'> & {
   /** The value of the active `<TransitionSwitchItem>` child component. */
   value: string;
   /**
-   * Allows to apply a different animation based on the transition
-   * direction. This will add a `data-direction` attribute to the parent,
-   * which would have a value of either 'backward' or 'forward'.
-   */
-  directional?: boolean;
-  /**
    * Change the default `<div>` element for the one passed as a child, merging
    * their props and behavior.
    *
@@ -35,6 +29,13 @@ export type TransitionSwitchProps = ComponentPropsWithoutRef<'div'> & {
   asChild?: boolean;
   autoAdjustWidth?: boolean;
   autoAdjustHeight?: boolean;
+  /**
+   * Add a `data-direction` attribute to the parent element, representing the
+   * transition direction, which would have a value of either 'backward' or
+   * 'forward'. This allows to apply a different animation based on the
+   * transition direction.
+   */
+  directional?: boolean;
 };
 
 export const TransitionSwitch = forwardRef<
