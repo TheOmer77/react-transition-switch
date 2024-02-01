@@ -49,6 +49,7 @@ export const TransitionSwitch = forwardRef<
       autoAdjustWidth = true,
       autoAdjustHeight = true,
       directional = false,
+      style = {},
       children,
       ...props
     },
@@ -99,9 +100,17 @@ export const TransitionSwitch = forwardRef<
       if (!innerRef.current || typeof initialChild === 'undefined') return;
 
       const { width, height } = getComputedStyle(initialChild);
+
       if (autoAdjustWidth) innerRef.current.style.width = width;
+      else if (style.width)
+        innerRef.current.style.width = style.width.toString();
+      else innerRef.current.style.removeProperty('width');
+
       if (autoAdjustHeight) innerRef.current.style.height = height;
-    }, [autoAdjustHeight, autoAdjustWidth]);
+      else if (style.height)
+        innerRef.current.style.height = style.height.toString();
+      else innerRef.current.style.removeProperty('height');
+    }, [autoAdjustHeight, autoAdjustWidth, style]);
 
     const Comp = asChild ? Slot : 'div';
 
@@ -118,6 +127,7 @@ export const TransitionSwitch = forwardRef<
           {...props}
           {...(directional ? { 'data-direction': direction } : {})}
           ref={innerRef}
+          style={style}
         >
           {children}
         </Comp>
