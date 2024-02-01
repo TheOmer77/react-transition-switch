@@ -27,7 +27,15 @@ export type TransitionSwitchProps = ComponentPropsWithoutRef<'div'> & {
    * @see [Radix UI Composition](https://www.radix-ui.com/primitives/docs/guides/composition)
    */
   asChild?: boolean;
+  /**
+   * Whether or not the parent container should automatically adjust its width
+   * to that of the active child.
+   */
   autoAdjustWidth?: boolean;
+  /**
+   * Whether or not the parent container should automatically adjust its height
+   * to that of the active child.
+   */
   autoAdjustHeight?: boolean;
   /**
    * Add a `data-direction` attribute to the parent element, representing the
