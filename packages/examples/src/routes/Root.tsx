@@ -17,7 +17,7 @@ const links = [
   },
   {
     title: 'Directional example',
-    description: 'Not done yet!',
+    description: 'Simple slide animation',
     href: '/directionalSimple',
   },
   {
