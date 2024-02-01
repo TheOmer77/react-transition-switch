@@ -22,7 +22,10 @@ export const TransitionSwitchItem = forwardRef<
 >(({ value, children }, ref) => {
   const { value: activeValue } = useContext(TransitionSwitchContext);
   return (
-    <Presence key={`sharedAxis-item-${value}`} present={activeValue === value}>
+    <Presence
+      key={`transitionSwitch-item-${value}`}
+      present={activeValue === value}
+    >
       <TransitionSwitchItemContent value={value} ref={ref}>
         {children}
       </TransitionSwitchItemContent>
