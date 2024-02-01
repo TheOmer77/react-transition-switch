@@ -24,7 +24,7 @@ export type TransitionSwitchProps = ComponentPropsWithoutRef<'div'> & {
    * When set to `true`, this component must have a single child which accepts
    * a ref, and its children should be `<TransitionSwitchItem>` components.
    *
-   * @see [Radix UI Composition](https://www.radix-ui.com/primitives/docs/guides/composition)
+   * @see [Radix UI composition](https://www.radix-ui.com/primitives/docs/guides/composition)
    */
   asChild?: boolean;
   /**
