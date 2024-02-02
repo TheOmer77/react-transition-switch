@@ -1,4 +1,6 @@
 import type { ComponentPropsWithoutRef } from 'react';
+
+import { Label } from '@/components/ui/Label';
 import { cn } from '@/lib/utils';
 
 export const Radio = ({
@@ -17,6 +19,6 @@ export const Radio = ({
         className
       )}
     />
-    {label && <label htmlFor={id}>{label}</label>}
+    {label && <Label htmlFor={id}>{label}</Label>}
   </div>
 );
