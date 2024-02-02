@@ -10,8 +10,10 @@ import { toWords } from 'number-to-words';
 import { TransitionSwitchItem } from '@theomer77/react-transition-switch';
 import { Button } from '@/components/ui/Button';
 import { Checkbox } from '@/components/ui/Checkbox';
+import { FormItem } from '@/components/ui/Form';
+import { Label } from '@/components/ui/Label';
 import { Radio } from '@/components/ui/Radio';
-import { Separator } from '@/components/ui/Separator/Separator';
+import { Separator } from '@/components/ui/Separator';
 import SharedAxis, { type Axis } from '@/components/SharedAxis';
 import { cn } from '@/lib/utils';
 
@@ -131,34 +133,42 @@ justify-center gap-2 p-4 md:p-8'
             orientation='vertical'
             className='hidden h-10 md:block'
           />
-          <Checkbox
-            name='fadevariant'
-            id='checkbox-fadevariant'
-            label='Fade variant'
-            checked={fadeVariant}
-            onChange={() => setFadeVariant(prev => !prev)}
-          />
-          <Checkbox
-            name='variations'
-            id='checkbox-variations'
-            label='Item variations'
-            checked={variations}
-            onChange={() => setVariations(prev => !prev)}
-          />
-          <Checkbox
-            name='rtl'
-            id='checkbox-rtl'
-            label='RTL'
-            checked={rtl}
-            onChange={() => setRtl(prev => !prev)}
-          />
-          <Checkbox
-            name='debug'
-            id='checkbox-debug'
-            label='Debug ring'
-            checked={debug}
-            onChange={() => setDebug(prev => !prev)}
-          />
+          <FormItem>
+            <Checkbox
+              name='fadevariant'
+              id='checkbox-fadevariant'
+              checked={fadeVariant}
+              onCheckedChange={setFadeVariant}
+            />
+            <Label htmlFor='checkbox-fadevariant'>Fade variant</Label>
+          </FormItem>
+          <FormItem>
+            <Checkbox
+              name='variations'
+              id='checkbox-variations'
+              checked={variations}
+              onCheckedChange={setVariations}
+            />
+            <Label htmlFor='checkbox-variations'>Item variations</Label>
+          </FormItem>
+          <FormItem>
+            <Checkbox
+              name='rtl'
+              id='checkbox-rtl'
+              checked={rtl}
+              onCheckedChange={setRtl}
+            />
+            <Label htmlFor='checkbox-rtl'>RTL</Label>
+          </FormItem>
+          <FormItem>
+            <Checkbox
+              name='debug'
+              id='checkbox-debug'
+              checked={debug}
+              onCheckedChange={setDebug}
+            />
+            <Label htmlFor='checkbox-debug'>Debug ring</Label>
+          </FormItem>
         </div>
       </div>
     </div>
