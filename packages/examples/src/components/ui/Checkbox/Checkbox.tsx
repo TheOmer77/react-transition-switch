@@ -20,7 +20,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           onChange={e => onCheckedChange?.(e.target.checked)}
           className={cn(
             `h-5 w-5 appearance-none content-center rounded-md bg-background
-shadow-sm ring-[1.5px] ring-inset ring-border
+shadow-sm ring-1 ring-inset ring-border/50 ring-offset-1 ring-offset-border
 transition-[background-color,box-shadow] duration-75 state-layer
 checked:bg-primary checked:ring-primary hover:state-layer-foreground/10
 checked:hover:state-layer-primary-active/50 active:bg-neutral-100
