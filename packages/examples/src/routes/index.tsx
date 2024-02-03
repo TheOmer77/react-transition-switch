@@ -27,7 +27,9 @@ const RouterRoot = () => {
     <SharedAxis
       value={pathname}
       axis='z'
-      className='overflow-hidden [&>*]:min-h-dvh [&>*]:w-dvw'
+      autoAdjustWidth={false}
+      autoAdjustHeight={false}
+      className='min-h-dvh w-dvw overflow-hidden [&>*]:h-full [&>*]:w-full'
     >
       {routes.map(({ index, path, element }) => {
         const value = (index ? '/' : path) as string;
