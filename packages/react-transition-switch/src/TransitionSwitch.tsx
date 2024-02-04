@@ -6,6 +6,7 @@ import {
   useRef,
   useState,
   type ComponentPropsWithoutRef,
+  type PropsWithChildren,
   type ReactElement,
 } from 'react';
 import { Slot } from '@radix-ui/react-slot';
@@ -80,8 +81,14 @@ export const TransitionSwitch = forwardRef<
         return;
       }
 
-      const childrenArr = Children.toArray(
-        children
+      const originalChildrenArr = Children.toArray(children);
+      const childrenArr = (
+        asChild
+          ? Children.toArray(
+              (originalChildrenArr as ReactElement<PropsWithChildren>[])[0]
+                ?.props.children
+            )
+          : originalChildrenArr
       ) as ReactElement<TransitionSwitchItemProps>[];
 
       const valueIndex = childrenArr.findIndex(
@@ -101,7 +108,7 @@ export const TransitionSwitch = forwardRef<
       setDirectionalValue(value);
 
       prevValue.current = value;
-    }, [children, directional, value]);
+    }, [asChild, children, directional, value]);
 
     useEffect(() => {
       const initialChild = innerRef.current?.children?.[0];
