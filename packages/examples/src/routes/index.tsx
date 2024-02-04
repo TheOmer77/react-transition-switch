@@ -6,9 +6,9 @@ import {
 import { TransitionSwitchItem } from '@theomer77/react-transition-switch';
 
 import Root from './Root';
-import SimpleExample from './SimpleExample';
 import DirectionalExample from './DirectionalExample';
-import SharedAxisExample from './SharedAxisExample';
+import SimpleExample from './SimpleExample';
+import StepsExample from './StepsExample';
 import ErrorPage from './Error';
 import SharedAxis from '@/components/SharedAxis';
 
@@ -17,7 +17,7 @@ const routes: RouteObject[] = [
   { path: '/simple1', element: <SimpleExample /> },
   // TODO: Advanced (simple2)
   { path: '/directional1', element: <DirectionalExample /> },
-  { path: '/directional2', element: <SharedAxisExample /> },
+  { path: '/directional2', element: <StepsExample /> },
 ];
 
 const RouterRoot = () => {
