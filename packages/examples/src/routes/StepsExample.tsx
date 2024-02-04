@@ -99,7 +99,7 @@ const StepsExample = forwardRef<
                   account, so you can join our community and start connecting
                   with your friends!
                 </p>
-                <Button className='w-full' onClick={nextStep}>
+                <Button variant='primary' className='w-full' onClick={nextStep}>
                   Get Started
                 </Button>
               </CardContent>
@@ -138,7 +138,9 @@ const StepsExample = forwardRef<
                 </div>
                 <div className='flex flex-row justify-between'>
                   <Button onClick={prevStep}>Back</Button>
-                  <Button onClick={nextStep}>Next</Button>
+                  <Button variant='primary' onClick={nextStep}>
+                    Next
+                  </Button>
                 </div>
               </CardContent>
             </section>
@@ -159,7 +161,9 @@ const StepsExample = forwardRef<
                 </div>
                 <div className='flex flex-row justify-between'>
                   <Button onClick={prevStep}>Back</Button>
-                  <Button onClick={nextStep}>Verify</Button>
+                  <Button variant='primary' onClick={nextStep}>
+                    Verify
+                  </Button>
                 </div>
               </CardContent>
             </section>
@@ -188,7 +192,9 @@ const StepsExample = forwardRef<
                 </div>
                 <div className='flex flex-row justify-between'>
                   <Button onClick={prevStep}>Back</Button>
-                  <Button onClick={nextStep}>Next</Button>
+                  <Button variant='primary' onClick={nextStep}>
+                    Next
+                  </Button>
                 </div>
               </CardContent>
             </section>
@@ -236,7 +242,9 @@ whitespace-normal text-start [&>svg]:text-xl'
                 </div>
                 <div className='flex flex-row justify-between'>
                   <Button onClick={prevStep}>Back</Button>
-                  <Button onClick={nextStep}>Next</Button>
+                  <Button variant='primary' onClick={nextStep}>
+                    Next
+                  </Button>
                 </div>
               </CardContent>
             </section>
@@ -253,7 +261,11 @@ whitespace-normal text-start [&>svg]:text-xl'
                   Your account has been successfully created. We can&apos;t wait
                   for you to join us!
                 </p>
-                <Button className='w-full' onClick={() => navigate(-1)}>
+                <Button
+                  variant='primary'
+                  className='w-full'
+                  onClick={() => navigate(-1)}
+                >
                   Go to Home
                 </Button>
               </CardContent>
