@@ -14,7 +14,7 @@ active:bg-neutral-100 dark:bg-neutral-800 dark:active:bg-neutral-700
 dark:active:bg-neutral-700`,
         primary: `bg-primary text-primary-foreground shadow-primary/30
 hover:state-layer-primary-foreground/10 active:bg-primary-active`,
-        flat: 'bg-transparent active:bg-foreground/10',
+        flat: 'bg-transparent shadow-none active:bg-foreground/10',
       },
       size: {
         sm: 'h-8 px-3 text-xs [&>svg]:text-sm',
