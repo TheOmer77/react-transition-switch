@@ -47,6 +47,25 @@ export type TransitionSwitchProps = ComponentPropsWithoutRef<'div'> & {
   directional?: boolean;
 };
 
+const validateChildren = ({
+  children,
+  asChild,
+}: Pick<TransitionSwitchProps, 'children' | 'asChild'>) => {
+  const childrenArr = Children.toArray(children);
+  if (
+    childrenArr.some(
+      child => typeof child === 'string' || typeof child === 'number'
+    )
+  )
+    throw new Error(
+      'Strings and numbers cannot be children of TransitionSwitch.'
+    );
+  if (asChild && childrenArr.length !== 1)
+    throw new Error(
+      'TransitionSwitch expects exactly one child, which accepts a ref, when its asChild prop is true.'
+    );
+};
+
 export const TransitionSwitch = forwardRef<
   HTMLDivElement,
   TransitionSwitchProps
@@ -64,6 +83,8 @@ export const TransitionSwitch = forwardRef<
     },
     ref
   ) => {
+    validateChildren({ children, asChild });
+
     const [directionalValue, setDirectionalValue] = useState(value);
     const [direction, setDirection] = useState<TransitionSwitchDirection>();
 
