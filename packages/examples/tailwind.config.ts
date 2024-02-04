@@ -91,7 +91,10 @@ const config = {
       ),
 
       border: 'rgb(var(--color-border))',
-      input: 'rgb(var(--color-input))',
+      input: {
+        DEFAULT: 'rgb(var(--color-input))',
+        active: 'rgb(var(--color-input-active))',
+      },
       ring: 'rgb(var(--color-ring))',
       background: 'rgb(var(--color-background))',
       foreground: 'rgb(var(--color-foreground))',

@@ -85,6 +85,7 @@
   --color-accent-foreground: var(--color-neutral-900);
   --color-border: var(--color-neutral-200);
   --color-input: var(--color-neutral-200);
+  --color-input-active: var(--color-neutral-300);
   --color-ring: var(--color-primary-main);
 
   --border-radius: 0.5rem;
@@ -120,6 +121,7 @@
     --color-accent-foreground: var(--color-neutral-100);
     --color-border: var(--color-neutral-800);
     --color-input: var(--color-neutral-800);
+    --color-input-active: var(--color-neutral-700);
   }
 }
 
