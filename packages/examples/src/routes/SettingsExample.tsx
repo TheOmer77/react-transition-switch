@@ -7,10 +7,10 @@ import {
   AccountTab,
   NotificationsTab,
   PrivacyTab,
-} from '@/components/ExampleSettings';
+} from '@/components/SettingsExample';
 import Fade from '@/components/Fade';
 
-const SimpleExample = forwardRef<
+const SettingsExample = forwardRef<
   HTMLDivElement,
   ComponentPropsWithoutRef<'div'>
 >((props, ref) => {
@@ -51,6 +51,6 @@ duration-300 [&>*]:w-full'
     </div>
   );
 });
-SimpleExample.displayName = 'SimpleExample';
+SettingsExample.displayName = 'SimpleExample';
 
-export default SimpleExample;
+export default SettingsExample;

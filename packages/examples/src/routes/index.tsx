@@ -7,14 +7,14 @@ import { TransitionSwitchItem } from '@theomer77/react-transition-switch';
 
 import Root from './Root';
 import DirectionalExample from './DirectionalExample';
-import SimpleExample from './SimpleExample';
+import SettingsExample from './SettingsExample';
 import StepsExample from './StepsExample';
 import ErrorPage from './Error';
 import SharedAxis from '@/components/SharedAxis';
 
 const routes: RouteObject[] = [
   { index: true, element: <Root /> },
-  { path: '/simple1', element: <SimpleExample /> },
+  { path: '/simple1', element: <SettingsExample /> },
   // TODO: Advanced (simple2)
   { path: '/directional1', element: <DirectionalExample /> },
   { path: '/directional2', element: <StepsExample /> },
