@@ -23,7 +23,7 @@ This package provides a `TransitionSwitch` parent component and `TransitionSwitc
 - The `TransitionSwitch` component accepts a `value` prop, and children which must be `TransitionSwitchItem` components.
 - The `TransitionSwitchItem` component also accepts a `value` prop, and a child which must be a component that accepts a ref, or an element such as a div.
 
-If the value of an item matches the parent's value, only that item's child component will be displayed. By default, the parent container will also adjust its width & height to those of the active item.
+If the value of an item matches the parent's value, only that item's child component will be displayed.
 
 ```jsx
 import { useState } from 'react';
@@ -104,77 +104,11 @@ In your CSS file, define your animations for active/incoming and inactive/outgoi
 
 </details>
 
-### The `directional` prop
-
-Setting the `directional` prop on your parent `TransitionSwitch` allows you to apply a different animation based on the transition direction - whether the incoming child comes before or after the outgoing child. This will add a `data-direction` attribute to the parent, which you can target in your CSS.
-
-<details>
-  <summary>Directional CSS example</summary>
-
-```css
-.slide {
-  position: relative;
-}
-.slide > * {
-  position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-}
-
-.slide[data-direction='forward'] > [data-state='active'] {
-  animation: slideLeftIn 300ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.slide[data-direction='forward'] > [data-state='inactive'] {
-  animation: slideLeftOut 300ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.slide[data-direction='backward'] > [data-state='active'] {
-  animation: slideRightIn 300ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.slide[data-direction='backward'] > [data-state='inactive'] {
-  animation: slideRightOut 300ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@keyframes slideLeftIn {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
-}
-@keyframes slideLeftOut {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-@keyframes slideRightIn {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
-}
-@keyframes slideRightOut {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(100%);
-  }
-}
-```
-
-</details>
-
-### Other `TransitionSwitch` props
+### Optional `TransitionSwitch` props
 
 | Prop               | Type      | Description                                                                                                                                                                                                                                                                                                                                      |
 | ------------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `asChild`          | `boolean` | Change the default `<div>` element for the one passed as a child, merging their props and behavior.<br>When set to true, this component must have a single child which accepts a ref, and its children should be `<TransitionSwitchItem>` components.<br>See [Radix UI composition](https://www.radix-ui.com/primitives/docs/guides/composition) |
-| `autoAdjustWidth`  | `boolean` | Whether or not the parent container should automatically adjust its width to that of the active child.<br>`true` by default.                                                                                                                                                                                                                     |
-| `autoAdjustHeight` | `boolean` | Whether or not the parent container should automatically adjust its height to that of the active child.<br>`true` by default.                                                                                                                                                                                                                    |
+| `autoAdjustHeight` | `boolean` | Whether or not the parent container should automatically adjust its height to that of the active child.                                                                                                                                                                                                                                          |
+| `autoAdjustWidth`  | `boolean` | Whether or not the parent container should automatically adjust its width to that of the active child.                                                                                                                                                                                                                                           |
+| `directional`      | `boolean` | Add a `data-direction` attribute to the parent element, representing the transition direction, which would have a value of either 'backward' or 'forward'. This allows to apply a different animation based on the transition direction.                                                                                                         |
