@@ -102,11 +102,7 @@ whitespace-normal text-start [&>svg]:text-xl'
             ))}
           </div>
         </CardContent>
-        <StepFooter
-          onNextClick={onNextClick}
-          onPrevClick={onPrevClick}
-          nextDisabled={selectedInterests.length < 1}
-        />
+        <StepFooter onNextClick={onNextClick} onPrevClick={onPrevClick} />
       </section>
     );
   }

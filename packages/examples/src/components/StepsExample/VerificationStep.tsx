@@ -39,7 +39,6 @@ export const VerificationStep = forwardRef<ElementRef<'section'>, StepProps>(
           onNextClick={onNextClick}
           onPrevClick={onPrevClick}
           nextLabel='Verify'
-          nextDisabled={code.length < CODE_LENGTH}
         />
       </section>
     );
