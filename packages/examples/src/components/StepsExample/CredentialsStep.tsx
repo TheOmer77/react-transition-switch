@@ -1,24 +1,18 @@
 import { forwardRef, type ElementRef } from 'react';
 
-import { StepFooter } from './StepFooter';
-import type { StepProps } from './types';
-import {
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/Card';
+import { CardContent, CardDescription, CardHeader } from '@/components/ui/Card';
 import { Input } from '@/components/ui/Input';
 import { Label } from '@/components/ui/Label';
+import { StepFooter } from './StepFooter';
+import { StepTitle } from './StepTitle';
+import type { StepProps } from './types';
 
 export const CredentialsStep = forwardRef<ElementRef<'section'>, StepProps>(
   ({ onNextClick, onPrevClick, ...props }, ref) => (
     <section {...props} ref={ref}>
       <CardHeader>
-        <CardTitle>Let&apos;s create your account</CardTitle>
-        <CardDescription>
-          Start by entering your login credentials.
-        </CardDescription>
+        <StepTitle>Let&apos;s create your account</StepTitle>
+        <CardDescription>Start by entering your login details.</CardDescription>
       </CardHeader>
       <CardContent className='space-y-4'>
         <div className='space-y-2'>

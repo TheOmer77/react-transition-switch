@@ -6,23 +6,29 @@ import {
 import { useNavigate } from 'react-router-dom';
 
 import { Button } from '@/components/ui/Button';
-import { CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import {
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/Card';
+import { cn } from '@/lib/utils';
 
 export const FinishStep = forwardRef<
   ElementRef<'section'>,
   ComponentPropsWithoutRef<'section'>
->(({ ...props }, ref) => {
+>(({ className, ...props }, ref) => {
   const navigate = useNavigate();
   return (
-    <section {...props} ref={ref}>
+    <section {...props} ref={ref} className={cn('justify-center', className)}>
       <CardHeader>
-        <CardTitle className='text-center text-2xl font-bold'>Done!</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <p className='mb-8 text-center text-muted-foreground'>
+        <CardTitle className='text-3xl font-bold'>Done!</CardTitle>
+        <CardDescription className='text-base'>
           Your account has been successfully created. We can&apos;t wait for you
           to join us!
-        </p>
+        </CardDescription>
+      </CardHeader>
+      <CardFooter>
         <Button
           variant='primary'
           className='w-full'
@@ -30,7 +36,7 @@ export const FinishStep = forwardRef<
         >
           Go to Home
         </Button>
-      </CardContent>
+      </CardFooter>
     </section>
   );
 });

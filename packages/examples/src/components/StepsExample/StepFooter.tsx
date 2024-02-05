@@ -11,7 +11,7 @@ export const StepFooter = ({
   onPrevClick,
   nextLabel,
 }: StepFooterProps) => (
-  <CardFooter className='flex flex-row justify-between'>
+  <CardFooter className='mt-auto flex flex-row justify-between md:mt-0'>
     <Button onClick={onPrevClick}>Back</Button>
     <Button variant='primary' onClick={onNextClick}>
       {nextLabel || 'Next'}
