@@ -6,10 +6,17 @@ import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette';
 
 const shades = [50, ...[...Array(9).keys()].map(key => (key + 1) * 100), 950];
 
-const stateLayer = plugin(({ addUtilities, matchUtilities, theme }) => {
+const utils = plugin(({ addUtilities, matchUtilities, theme }) => {
   const themeColors = flattenColorPalette(theme('colors'));
 
   addUtilities({
+    '.input-appearance-none': {
+      '&[type=number]': { MozAppearance: 'textfield' },
+      '&::-webkit-outer-spin-button, &::-webkit-inner-spin-button': {
+        WebkitAppearance: 'none',
+        margin: '0',
+      },
+    },
     '.state-layer': {
       position: 'relative',
       overflow: 'hidden',
@@ -116,6 +123,6 @@ const config = {
       },
     },
   },
-  plugins: [animate, stateLayer],
+  plugins: [animate, utils],
 } satisfies Config;
 export default config;
