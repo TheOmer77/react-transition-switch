@@ -74,8 +74,8 @@ export const TransitionSwitch = forwardRef<
     {
       value = '',
       asChild = false,
-      autoAdjustWidth = true,
-      autoAdjustHeight = true,
+      autoAdjustWidth = false,
+      autoAdjustHeight = false,
       directional = false,
       style = {},
       children,

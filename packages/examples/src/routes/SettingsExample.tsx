@@ -33,7 +33,7 @@ const SettingsExample = forwardRef<
           value={activeTab}
           className='w-inherit max-w-inherit overflow-hidden transition-[height]
 duration-300 [&>*]:w-full'
-          autoAdjustWidth={false}
+          autoAdjustHeight={true}
         >
           <Card>
             <TransitionSwitchItem value='account'>

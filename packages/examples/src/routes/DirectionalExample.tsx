@@ -61,8 +61,6 @@ const DirectionalExample = forwardRef<
       <Slide
         value={activeIndex.toString()}
         className='h-dvh w-dvw overflow-hidden duration-300 [&>*]:w-full'
-        autoAdjustWidth={false}
-        autoAdjustHeight={false}
       >
         {images.map(({ description, author, unsplashId, url }, index) => (
           <TransitionSwitchItem key={unsplashId} value={index.toString()}>
