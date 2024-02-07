@@ -95,6 +95,7 @@ whitespace-normal text-start [&>svg]:text-xl'
                 <Checkbox
                   className='pointer-events-none'
                   checked={selectedInterests.includes(id)}
+                  tabIndex={-1}
                 />
               </Button>
             ))}
