@@ -87,8 +87,10 @@ whitespace-normal text-start [&>svg]:text-xl'
               >
                 <Icon className='shrink-0' />
                 <div className='grow space-y-1'>
-                  <p className='text-sm font-medium leading-none'>{title}</p>
-                  <p className='text-sm text-muted-foreground'>{description}</p>
+                  <p className='text-sm leading-none'>{title}</p>
+                  <p className='text-sm font-normal text-muted-foreground'>
+                    {description}
+                  </p>
                 </div>
                 <Checkbox
                   className='pointer-events-none'
