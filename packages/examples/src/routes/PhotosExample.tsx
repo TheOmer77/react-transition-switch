@@ -50,7 +50,7 @@ const images = [
   url: string;
 }[];
 
-const DirectionalExample = forwardRef<
+const PhotosExample = forwardRef<
   HTMLDivElement,
   ComponentPropsWithoutRef<'div'>
 >((props, ref) => {
@@ -102,6 +102,6 @@ items-center rounded-lg bg-background/60 p-4 text-center'
     </div>
   );
 });
-DirectionalExample.displayName = 'SimpleExample';
+PhotosExample.displayName = 'SimpleExample';
 
-export default DirectionalExample;
+export default PhotosExample;
