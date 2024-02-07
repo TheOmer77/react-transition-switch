@@ -33,16 +33,22 @@ transition-[grid-template-rows] duration-300 md:grid-cols-2 md:grid-rows-none`,
       )}
     >
       <div
-        className='flex h-full w-full flex-col justify-start
-bg-[url(/boliviainteligente-_75VdeLT3BI-unsplash.jpg)] bg-cover bg-center p-4'
+        className={cn(
+          `flex h-full w-full flex-col justify-between
+bg-[url(/boliviainteligente-_75VdeLT3BI-unsplash.jpg)] bg-cover bg-center p-4
+[&>*]:shrink-0 [&>*]:transition-opacity`,
+          activeIndex > 0 && '[&>*]:opacity-0 md:[&>*]:opacity-100'
+        )}
       >
         <ExampleLogo
-          className={cn(
-            `shrink-0 fill-primary-50 transition-opacity
-[&>.eyes]:fill-primary-700`,
-            activeIndex > 0 && 'opacity-0 md:opacity-100'
-          )}
+          className={cn('fill-primary-50 [&>.eyes]:fill-primary-700')}
         />
+        <a
+          className='self-end rounded-lg text-sm text-neutral-400'
+          href='https://unsplash.com/photos/_75VdeLT3BI'
+        >
+          Photo by BoliviaInteligente on Unsplash
+        </a>
       </div>
       <SharedAxis
         value={activeIndex.toString()}
