@@ -47,7 +47,7 @@ bg-[url(/boliviainteligente-_75VdeLT3BI-unsplash.jpg)] bg-cover bg-center p-4'
       <SharedAxis
         value={activeIndex.toString()}
         className='h-full w-full overflow-hidden bg-card [&>section>*]:mx-auto
-[&>section>*]:w-full [&>section>*]:max-w-[25rem] [&>section]:flex [&>section]:h-full
+[&>section>*]:w-full sm:[&>section>*]:max-w-[25rem] [&>section]:flex [&>section]:h-full
 [&>section]:w-full [&>section]:flex-col md:[&>section]:justify-center'
         autoAdjustWidth={false}
         autoAdjustHeight={false}
