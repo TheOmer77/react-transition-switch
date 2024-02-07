@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/Textarea';
 import { StepFooter } from './StepFooter';
 import { StepTitle } from './StepTitle';
 import type { StepProps } from './types';
+import { AvatarInput } from './AvatarInput';
 
 export const ProfileStep = forwardRef<ElementRef<'section'>, StepProps>(
   ({ onNextClick, onPrevClick, ...props }, ref) => (
@@ -17,7 +18,8 @@ export const ProfileStep = forwardRef<ElementRef<'section'>, StepProps>(
           Add some extra details to complete your profile.
         </CardDescription>
       </CardHeader>
-      <CardContent className='space-y-4'>
+      <CardContent className='flex flex-col gap-4'>
+        <AvatarInput />
         <div className='space-y-2'>
           <Label htmlFor='displayName'>Display Name</Label>
           <Input id='displayName' placeholder='Display name' required />
