@@ -9,7 +9,7 @@ disabled:opacity-50 [&>*]:z-10 [&>svg]:text-base`,
   {
     variants: {
       variant: {
-        default: `bg-background shadow-neutral-950/20
+        default: `bg-background shadow-neutral-950/10
 active:bg-neutral-100 dark:bg-neutral-800 dark:active:bg-neutral-700
 dark:active:bg-neutral-700`,
         primary: `bg-primary text-primary-foreground shadow-primary/30
