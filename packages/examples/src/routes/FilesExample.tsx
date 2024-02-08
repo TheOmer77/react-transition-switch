@@ -28,9 +28,9 @@ const FilesExample = forwardRef<
       />
       <Search />
       <Fade value={activeSection} autoAdjustHeight>
-        {navItems.map(({ id, label }) => (
+        {navItems.map(({ id, pageComponent }) => (
           <TransitionSwitchItem key={id} value={id}>
-            <section>{label}</section>
+            {pageComponent}
           </TransitionSwitchItem>
         ))}
       </Fade>
