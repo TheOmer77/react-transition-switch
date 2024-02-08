@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 
-import type { TransitionSwitchProps } from './TransitionSwitch';
+import type { TransitionSwitchProps } from './types';
 
 export type TransitionSwitchContextValue = Pick<
   TransitionSwitchProps,

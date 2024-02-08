@@ -4,17 +4,12 @@ import {
   useImperativeHandle,
   useLayoutEffect,
   useRef,
-  type ReactNode,
 } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { Presence } from '@radix-ui/react-presence';
 
 import { TransitionSwitchContext } from './context';
-
-export type TransitionSwitchItemProps = {
-  value: string;
-  children?: ReactNode;
-};
+import type { TransitionSwitchItemProps } from './types';
 
 export const TransitionSwitchItem = forwardRef<
   HTMLElement,
