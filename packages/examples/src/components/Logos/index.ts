@@ -1,3 +1,4 @@
 export * from './ExampleLogo';
-export * from './GoogleLogo';
+export * from './FilesLogo';
 export * from './GithubLogo';
+export * from './GoogleLogo';

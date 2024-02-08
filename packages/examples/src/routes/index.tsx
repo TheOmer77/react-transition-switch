@@ -6,6 +6,7 @@ import {
 import { TransitionSwitchItem } from '@theomer77/react-transition-switch';
 
 import Root from './Root';
+import FilesExample from './FilesExample';
 import PhotosExample from './PhotosExample';
 import SettingsExample from './SettingsExample';
 import StepsExample from './StepsExample';
@@ -15,7 +16,7 @@ import SharedAxis from '@/components/SharedAxis';
 const routes: RouteObject[] = [
   { index: true, element: <Root /> },
   { path: '/simple1', element: <SettingsExample /> },
-  // TODO: Advanced (simple2)
+  { path: '/simple2', element: <FilesExample /> },
   { path: '/directional1', element: <PhotosExample /> },
   { path: '/directional2', element: <StepsExample /> },
 ];
