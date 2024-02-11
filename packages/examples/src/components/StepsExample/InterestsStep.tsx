@@ -65,8 +65,7 @@ export const InterestsStep = forwardRef<ElementRef<'section'>, StepProps>(
         <CardHeader>
           <StepTitle>Select your interests</StepTitle>
           <CardDescription>
-            Please select at least one interest to help us tailor your
-            experience.
+            Pick some topics you&apos;re into so we can tailor your experience.
           </CardDescription>
         </CardHeader>
         <CardContent className='space-y-4'>
@@ -76,7 +75,7 @@ export const InterestsStep = forwardRef<ElementRef<'section'>, StepProps>(
                 key={id}
                 variant='flat'
                 className='-mx-2 flex h-auto justify-start space-x-4
-whitespace-normal text-start [&>svg]:text-xl'
+whitespace-normal py-2 text-start [&>svg]:text-xl'
                 onClick={() =>
                   setSelectedInterests(prev =>
                     prev.includes(id)
