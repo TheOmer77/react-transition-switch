@@ -31,8 +31,9 @@ checked:active:ring-primary-active dark:bg-card dark:active:bg-neutral-800
 [&~svg]:pointer-events-none [&~svg]:absolute [&~svg]:start-[0.0625rem]
 [&~svg]:top-[0.0625rem] [&~svg]:z-10 [&~svg]:text-lg
 [&~svg]:text-primary-foreground [&~svg]:opacity-0 [&~svg]:transition-opacity
-[&~svg]:duration-75 [&~svg]:[stroke-dasharray:2em] [&~svg]:[stroke-dashoffset:0]
-[&~svg]:checked:animate-checkbox-check [&~svg]:checked:opacity-100`,
+[&~svg]:duration-75 [&~svg]:[stroke-dasharray:22.627416610717773px]
+[&~svg]:[stroke-dashoffset:0] [&~svg]:checked:animate-checkbox-check
+[&~svg]:checked:opacity-100`,
             className
           )}
         />

@@ -16,7 +16,7 @@ export const FilesLogo = forwardRef<
       className='rounded-lg bg-primary p-1 text-5xl
 text-primary-foreground'
     />
-    <h3 className='text-2xl font-bold tracking-tight'>FileBox</h3>
+    <h1 className='text-2xl font-bold tracking-tight'>FileBox</h1>
   </div>
 ));
 FilesLogo.displayName = 'FilesLogo';

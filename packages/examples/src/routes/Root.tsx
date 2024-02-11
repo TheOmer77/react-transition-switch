@@ -47,8 +47,8 @@ text-4xl font-bold tracking-tight'
             key={i}
             asChild
             variant='flat'
-            className='h-auto cursor-pointer flex-col items-start text-start
-text-base font-normal'
+            className='h-auto cursor-pointer flex-col items-start py-2
+text-start text-base font-normal'
           >
             <Link to={href}>
               <span className='text-base font-medium'>{title}</span>

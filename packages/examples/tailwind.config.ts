@@ -67,7 +67,7 @@ const config = {
           to: { height: '0' },
         },
         'checkbox-check': {
-          from: { strokeDashoffset: '-2em' },
+          from: { strokeDashoffset: '-22.627416610717773px' },
           to: { strokeDashoffset: '0' },
         },
       },

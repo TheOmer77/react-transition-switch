@@ -73,14 +73,17 @@ export const NotificationsTab = forwardRef<
             variant='flat'
             onClick={() => setSelectedOption(id)}
             className={cn(
-              '-mx-2 flex h-auto justify-start space-x-4 whitespace-normal text-start',
+              `-mx-2 flex h-auto justify-start space-x-4 whitespace-normal py-2
+text-start [&>svg]:text-xl`,
               selectedOption === id && 'bg-accent'
             )}
           >
             <Icon className='mt-px h-5 w-5 shrink-0' />
             <div className='grow space-y-1'>
-              <p className='text-sm font-medium leading-none'>{title}</p>
-              <p className='text-sm text-muted-foreground'>{description}</p>
+              <p className='text-sm leading-none'>{title}</p>
+              <p className='text-sm font-normal text-muted-foreground'>
+                {description}
+              </p>
             </div>
           </Button>
         ))}
