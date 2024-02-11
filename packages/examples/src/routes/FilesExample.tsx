@@ -20,14 +20,18 @@ const FilesExample = forwardRef<
     <div
       {...props}
       ref={ref}
-      className={cn('px-4 pb-4 pt-20 md:ps-[21rem]', className)}
+      className={cn('grid grid-rows-[auto,1fr] md:ps-80', className)}
     >
       <Nav
         activeSection={activeSection}
         onActiveSectionChange={setActiveSection}
       />
       <Search />
-      <Fade value={activeSection} autoAdjustHeight>
+      <Fade
+        value={activeSection}
+        className='w-full [&>*]:max-h-full [&>*]:w-full [&>*]:overflow-y-auto
+[&>*]:px-4 [&>*]:pb-20 md:[&>*]:pb-4'
+      >
         {navItems.map(({ id, pageComponent }) => (
           <TransitionSwitchItem key={id} value={id}>
             {pageComponent}
