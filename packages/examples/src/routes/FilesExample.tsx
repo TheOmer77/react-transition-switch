@@ -29,7 +29,6 @@ const FilesExample = forwardRef<
       />
       <Search />
       <ScrollArea
-        type='always'
         className='w-full [&>[data-radix-scroll-area-scrollbar]]:pb-16
 md:[&>[data-radix-scroll-area-scrollbar]]:pb-0
 [&>[data-radix-scroll-area-viewport]]:max-h-[calc(100dvh-4rem)]'
