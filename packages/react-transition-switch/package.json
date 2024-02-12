@@ -1,9 +1,9 @@
 {
   "name": "@theomer77/react-transition-switch",
-  "description": "TODO this description",
+  "description": "A React component allowing to switch between child components with CSS animations.",
   "version": "1.0.0",
   "author": "TheOmer77",
-  "license": "ISC",
+  "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
