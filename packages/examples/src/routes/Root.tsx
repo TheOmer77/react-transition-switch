@@ -6,24 +6,24 @@ import { Card } from '@/components/ui/Card';
 
 const links = [
   {
-    title: 'Simple example 1',
+    title: 'Settings',
     description: 'Simple fade animation',
-    href: '/simple1',
+    href: '/settings',
   },
   {
-    title: 'Simple example 2',
-    description: 'Not done yet!',
-    href: '/simple2',
+    title: 'Files',
+    description: 'Material fade through',
+    href: '/files',
   },
   {
-    title: 'Directional example 1',
+    title: 'Photos',
     description: 'Simple slide animation',
-    href: '/directional1',
+    href: '/photos',
   },
   {
-    title: 'Directional example 2',
+    title: 'Steps',
     description: 'Material design shared axis',
-    href: '/directional2',
+    href: '/steps',
   },
 ] as const satisfies { title: string; description: string; href: string }[];
 

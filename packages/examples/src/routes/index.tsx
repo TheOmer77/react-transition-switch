@@ -15,10 +15,10 @@ import SharedAxis from '@/components/SharedAxis';
 
 const routes: RouteObject[] = [
   { index: true, element: <Root /> },
-  { path: '/simple1', element: <SettingsExample /> },
-  { path: '/simple2', element: <FilesExample /> },
-  { path: '/directional1', element: <PhotosExample /> },
-  { path: '/directional2', element: <StepsExample /> },
+  { path: '/settings', element: <SettingsExample /> },
+  { path: '/files', element: <FilesExample /> },
+  { path: '/photos', element: <PhotosExample /> },
+  { path: '/steps', element: <StepsExample /> },
 ];
 
 const RouterRoot = () => {
