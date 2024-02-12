@@ -7,7 +7,7 @@ import {
   Search,
   type NavItemId,
 } from '@/components/FilesExample';
-import Fade from '@/components/Fade';
+import FadeThrough from '@/components/FadeThrough';
 import { cn } from '@/lib/utils';
 
 const FilesExample = forwardRef<
@@ -27,7 +27,7 @@ const FilesExample = forwardRef<
         onActiveSectionChange={setActiveSection}
       />
       <Search />
-      <Fade
+      <FadeThrough
         value={activeSection}
         className='w-full [&>*]:max-h-full [&>*]:w-full [&>*]:overflow-y-auto
 [&>*]:px-4 [&>*]:pb-20 md:[&>*]:pb-4'
@@ -37,7 +37,7 @@ const FilesExample = forwardRef<
             {pageComponent}
           </TransitionSwitchItem>
         ))}
-      </Fade>
+      </FadeThrough>
     </div>
   );
 });
