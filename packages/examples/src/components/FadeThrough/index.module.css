@@ -1,0 +1,36 @@
+.fadeThrough {
+  position: relative;
+}
+.fadeThrough > * {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+}
+
+.fadeThrough > [data-state='active'] {
+  opacity: 0;
+  animation: fadeThrough-in 210ms cubic-bezier(0, 0, 0.2, 1) 90ms forwards;
+}
+.fadeThrough > [data-state='inactive'] {
+  animation: fadeThrough-out 90ms cubic-bezier(0.4, 0, 1, 1);
+}
+
+@keyframes fadeThrough-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeThrough-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
