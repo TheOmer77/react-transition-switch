@@ -9,6 +9,7 @@ import {
 } from '@/components/FilesExample';
 import FadeThrough from '@/components/FadeThrough';
 import { cn } from '@/lib/utils';
+import { ScrollArea } from '@/components/ui/ScrollArea';
 
 const FilesExample = forwardRef<
   HTMLDivElement,
@@ -29,12 +30,16 @@ const FilesExample = forwardRef<
       <Search />
       <FadeThrough
         value={activeSection}
-        className='w-full [&>*]:max-h-full [&>*]:w-full [&>*]:overflow-y-auto
-[&>*]:px-4 [&>*]:pb-20 md:[&>*]:pb-4'
+        className='w-full [&_main]:px-4 [&_main]:pb-20 md:[&_main]:pb-4'
       >
         {navItems.map(({ id, pageComponent }) => (
           <TransitionSwitchItem key={id} value={id}>
-            {pageComponent}
+            <ScrollArea
+              className='w-full [&>[data-radix-scroll-area-scrollbar]]:z-50
+[&>[data-radix-scroll-area-viewport]]:max-h-[calc(100dvh-4rem)]'
+            >
+              {pageComponent}
+            </ScrollArea>
           </TransitionSwitchItem>
         ))}
       </FadeThrough>
