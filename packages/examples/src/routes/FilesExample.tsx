@@ -28,21 +28,21 @@ const FilesExample = forwardRef<
         onActiveSectionChange={setActiveSection}
       />
       <Search />
-      <FadeThrough
-        value={activeSection}
-        className='w-full [&_main]:px-4 [&_main]:pb-20 md:[&_main]:pb-4'
-      >
-        {navItems.map(({ id, pageComponent }) => (
-          <TransitionSwitchItem key={id} value={id}>
-            <ScrollArea
-              className='w-full [&>[data-radix-scroll-area-scrollbar]]:z-50
+      <ScrollArea
+        className='w-full [&>[data-radix-scroll-area-scrollbar]]:z-50
 [&>[data-radix-scroll-area-viewport]]:max-h-[calc(100dvh-4rem)]'
-            >
+      >
+        <FadeThrough
+          value={activeSection}
+          className='w-full [&_main]:w-full [&_main]:px-4 [&_main]:pb-20 md:[&_main]:pb-4'
+        >
+          {navItems.map(({ id, pageComponent }) => (
+            <TransitionSwitchItem key={id} value={id}>
               {pageComponent}
-            </ScrollArea>
-          </TransitionSwitchItem>
-        ))}
-      </FadeThrough>
+            </TransitionSwitchItem>
+          ))}
+        </FadeThrough>
+      </ScrollArea>
     </div>
   );
 });
