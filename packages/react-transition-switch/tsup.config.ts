@@ -8,7 +8,6 @@ const config = defineConfig({
   clean: true,
   dts: true,
   minify: true,
-  splitting: false,
   treeshake: true,
 });
 
