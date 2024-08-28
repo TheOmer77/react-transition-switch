@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "lint": "tsc --noEmit && eslint --max-warnings=0 src",
     "format": "prettier --ignore-path ../../.prettierignore --write .",
-    "format:check": "prettier --ignore-path ../../.prettierignore --check ."
+    "format:check": "prettier --ignore-path ../../.prettierignore --check .",
+    "ci": "pnpm lint && pnpm format:check && pnpm build"
   },
   "dependencies": {
     "@fontsource-variable/figtree": "^5.0.22",

@@ -17,7 +17,10 @@
     "lint:examples": "pnpm --silent -F examples lint",
     "format": "prettier --write .",
     "format:package": "pnpm --silent -F react-transition-switch format",
-    "format:examples": "pnpm --silent -F examples format"
+    "format:examples": "pnpm --silent -F examples format",
+    "ci": "pnpm --silent ci:package && pnpm --silent ci:examples",
+    "ci:package": "pnpm --silent -F react-transition-switch run ci",
+    "ci:examples": "pnpm --silent -F examples run ci"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.15.4",
