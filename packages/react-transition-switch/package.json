@@ -24,7 +24,8 @@
     "build:watch": "tsup --watch",
     "lint": "tsc && eslint --max-warnings=0 src",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "exports": "attw --pack ."
   },
   "type": "module",
   "main": "dist/index.js",
