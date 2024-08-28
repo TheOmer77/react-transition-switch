@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "declaration": true,
-    "declarationMap": true,
     "esModuleInterop": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
