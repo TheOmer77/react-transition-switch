@@ -22,7 +22,9 @@
   "scripts": {
     "build": "pnpm --silent lint && tsup",
     "build:watch": "tsup --watch",
-    "lint": "tsc && eslint --max-warnings=0 src"
+    "lint": "tsc && eslint --max-warnings=0 src",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "type": "module",
   "main": "dist/index.js",

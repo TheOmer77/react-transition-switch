@@ -16,7 +16,8 @@
     "lint:package": "pnpm --silent -F react-transition-switch lint",
     "lint:examples": "pnpm --silent -F examples lint",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:package": "pnpm --silent -F react-transition-switch format",
+    "format:examples": "pnpm --silent -F examples format"
   },
   "devDependencies": {
     "@types/node": "^22.5.1",
