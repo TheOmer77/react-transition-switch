@@ -31,8 +31,7 @@ const SettingsExample = forwardRef<
         <Fade
           asChild
           value={activeTab}
-          className='w-inherit max-w-inherit overflow-hidden transition-[height]
-duration-300 [&>*]:w-full'
+          className='w-inherit max-w-inherit overflow-hidden transition-[height] duration-300 [&>*]:w-full'
           autoAdjustHeight={true}
         >
           <Card>

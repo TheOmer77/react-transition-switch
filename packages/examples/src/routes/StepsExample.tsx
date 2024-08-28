@@ -27,16 +27,13 @@ const StepsExample = forwardRef<
       {...props}
       ref={ref}
       className={cn(
-        `grid grid-cols-1 grid-rows-[16rem,1fr] items-center justify-center
-transition-[grid-template-rows] duration-300 md:grid-cols-2 md:grid-rows-none`,
+        `grid grid-cols-1 grid-rows-[16rem,1fr] items-center justify-center transition-[grid-template-rows] duration-300 md:grid-cols-2 md:grid-rows-none`,
         activeIndex > 0 && 'grid-rows-[0,1fr]'
       )}
     >
       <div
         className={cn(
-          `flex h-full w-full flex-col justify-between
-bg-[url(/boliviainteligente-_75VdeLT3BI-unsplash.jpg)] bg-cover bg-center p-4
-[&>*]:shrink-0 [&>*]:transition-opacity`,
+          `flex h-full w-full flex-col justify-between bg-[url(/boliviainteligente-_75VdeLT3BI-unsplash.jpg)] bg-cover bg-center p-4 [&>*]:shrink-0 [&>*]:transition-opacity`,
           activeIndex > 0 && '[&>*]:opacity-0 md:[&>*]:opacity-100'
         )}
       >
@@ -52,9 +49,7 @@ bg-[url(/boliviainteligente-_75VdeLT3BI-unsplash.jpg)] bg-cover bg-center p-4
       </div>
       <SharedAxis
         value={activeIndex.toString()}
-        className='h-full w-full overflow-hidden bg-card [&>section>*]:mx-auto
-[&>section>*]:w-full sm:[&>section>*]:max-w-[25rem] [&>section]:flex [&>section]:h-full
-[&>section]:w-full [&>section]:flex-col md:[&>section]:justify-center'
+        className='h-full w-full overflow-hidden bg-card [&>section>*]:mx-auto [&>section>*]:w-full sm:[&>section>*]:max-w-[25rem] [&>section]:flex [&>section]:h-full [&>section]:w-full [&>section]:flex-col md:[&>section]:justify-center'
         autoAdjustWidth={false}
         autoAdjustHeight={false}
       >

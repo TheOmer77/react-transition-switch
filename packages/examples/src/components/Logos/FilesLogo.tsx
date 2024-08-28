@@ -12,10 +12,7 @@ export const FilesLogo = forwardRef<
     ref={ref}
     className={cn('flex select-none flex-row items-center gap-2', className)}
   >
-    <BoxIcon
-      className='rounded-lg bg-primary p-1 text-5xl
-text-primary-foreground'
-    />
+    <BoxIcon className='rounded-lg bg-primary p-1 text-5xl text-primary-foreground' />
     <h1 className='text-2xl font-bold tracking-tight'>FileBox</h1>
   </div>
 ));

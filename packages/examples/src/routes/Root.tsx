@@ -34,10 +34,7 @@ const Root = forwardRef<HTMLDivElement, ComponentPropsWithoutRef<'div'>>(
       ref={ref}
       className='flex h-full flex-col items-center justify-center'
     >
-      <h1
-        className='mb-4 flex w-[calc(100dvw-2rem)] max-w-sm select-none
-text-4xl font-bold tracking-tight'
-      >
+      <h1 className='mb-4 flex w-[calc(100dvw-2rem)] max-w-sm select-none text-4xl font-bold tracking-tight'>
         React Transition Switch
       </h1>
 
@@ -47,8 +44,7 @@ text-4xl font-bold tracking-tight'
             key={i}
             asChild
             variant='flat'
-            className='h-auto cursor-pointer flex-col items-start py-2
-text-start text-base font-normal'
+            className='h-auto cursor-pointer flex-col items-start py-2 text-start text-base font-normal'
           >
             <Link to={href}>
               <span className='text-base font-medium'>{title}</span>

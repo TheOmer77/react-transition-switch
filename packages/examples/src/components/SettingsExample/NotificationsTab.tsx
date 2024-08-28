@@ -73,8 +73,7 @@ export const NotificationsTab = forwardRef<
             variant='flat'
             onClick={() => setSelectedOption(id)}
             className={cn(
-              `-mx-2 flex h-auto justify-start space-x-4 whitespace-normal py-2
-text-start [&>svg]:text-xl`,
+              `-mx-2 flex h-auto justify-start space-x-4 whitespace-normal py-2 text-start [&>svg]:text-xl`,
               selectedOption === id && 'bg-accent'
             )}
           >

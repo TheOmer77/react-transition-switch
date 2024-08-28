@@ -18,8 +18,7 @@ export const CodeInput = ({ length, className, ...props }: CodeInputProps) => (
       <Input
         {...props}
         className={cn(
-          `w-full max-w-9 text-center input-appearance-none
-[&:not(:last-of-type)]:me-1`,
+          `w-full max-w-9 text-center input-appearance-none [&:not(:last-of-type)]:me-1`,
           className
         )}
       />

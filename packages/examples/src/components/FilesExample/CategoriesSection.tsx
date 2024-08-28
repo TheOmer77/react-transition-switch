@@ -17,10 +17,7 @@ const CATEGORIES = [
 
 export const CategoriesSection = () => (
   <div className='grid grid-cols-2 gap-2 lg:grid-cols-4'>
-    <h2
-      className='col-span-2 text-xl font-semibold tracking-tight
-lg:col-span-4'
-    >
+    <h2 className='col-span-2 text-xl font-semibold tracking-tight lg:col-span-4'>
       Categories
     </h2>
     {CATEGORIES.map(({ id, label, icon: Icon }) => (

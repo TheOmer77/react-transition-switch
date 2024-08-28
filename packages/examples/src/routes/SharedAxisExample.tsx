@@ -52,9 +52,7 @@ const SharedAxisExample = forwardRef<
             <TransitionSwitchItem key={key} value={toWords(key)}>
               <div
                 className={cn(
-                  `flex h-32 w-32 select-none items-center justify-center
-rounded-xl text-6xl text-neutral-50 shadow-lg
-transition-[width,height,background-color,color,box-shadow]`,
+                  `flex h-32 w-32 select-none items-center justify-center rounded-xl text-6xl text-neutral-50 shadow-lg transition-[width,height,background-color,color,box-shadow]`,
                   variations && key % 2 !== 0
                     ? [
                         `bg-secondary text-secondary-foreground shadow-secondary/50`,
@@ -87,10 +85,7 @@ transition-[width,height,background-color,color,box-shadow]`,
         {rtl ? <ChevronLeft /> : <ChevronRight />}
       </Button>
 
-      <div
-        className='fixed bottom-0 flex w-full flex-col items-center
-justify-center gap-2 p-4 md:p-8'
-      >
+      <div className='fixed bottom-0 flex w-full flex-col items-center justify-center gap-2 p-4 md:p-8'>
         <span className='mb-2 text-xl [direction:ltr] md:mb-0'>
           <span className='font-bold'>Current value: </span>
           <code>{`"${value}"`}</code>

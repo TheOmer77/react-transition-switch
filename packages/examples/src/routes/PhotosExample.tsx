@@ -72,8 +72,7 @@ const PhotosExample = forwardRef<
               />
               <a
                 href={`https://unsplash.com/photos/${unsplashId}`}
-                className='absolute bottom-8 end-8 start-8 flex flex-col
-items-center rounded-lg bg-background/60 p-4 text-center'
+                className='absolute bottom-8 end-8 start-8 flex flex-col items-center rounded-lg bg-background/60 p-4 text-center'
               >
                 <span className='font-medium'>{description}</span>
                 <span className='text-sm text-muted-foreground'>{`Photo by ${author} on Unsplash`}</span>

@@ -69,8 +69,7 @@ export const FileList = ({ data = [] }: { data?: FileListItem[] }) => {
         <li key={index}>
           <Button
             variant='flat'
-            className='-inset-x-2 flex h-auto w-[calc(100%+1rem)] flex-row
-items-center justify-start gap-4 px-4 py-2 text-start [&>svg]:text-xl'
+            className='-inset-x-2 flex h-auto w-[calc(100%+1rem)] flex-row items-center justify-start gap-4 px-4 py-2 text-start [&>svg]:text-xl'
           >
             <Icon />
             <div className='flex flex-col'>

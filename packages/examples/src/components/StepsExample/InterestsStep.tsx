@@ -74,8 +74,7 @@ export const InterestsStep = forwardRef<ElementRef<'section'>, StepProps>(
               <Button
                 key={id}
                 variant='flat'
-                className='-mx-2 flex h-auto justify-start space-x-4
-whitespace-normal py-2 text-start [&>svg]:text-xl'
+                className='-mx-2 flex h-auto justify-start space-x-4 whitespace-normal py-2 text-start [&>svg]:text-xl'
                 onClick={() =>
                   setSelectedInterests(prev =>
                     prev.includes(id)

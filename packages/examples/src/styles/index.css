@@ -136,9 +136,7 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
   body {
-    @apply min-h-dvh overflow-hidden bg-background text-foreground
-selection:bg-primary-500/30 selection:text-primary-950
-dark:selection:text-primary-50;
+    @apply min-h-dvh overflow-hidden bg-background text-foreground selection:bg-primary-500/30 selection:text-primary-950 dark:selection:text-primary-50;
   }
 }
 .lucide {
