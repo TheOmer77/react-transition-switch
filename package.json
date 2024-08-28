@@ -15,7 +15,7 @@
     "lint": "pnpm --silent lint:package && pnpm --silent lint:examples",
     "lint:package": "pnpm --silent -F react-transition-switch lint",
     "lint:examples": "pnpm --silent -F examples lint",
-    "format": "prettier --write **/*"
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "@types/node": "^22.5.1",
