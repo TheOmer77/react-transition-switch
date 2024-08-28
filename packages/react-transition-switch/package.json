@@ -23,8 +23,8 @@
     "build": "pnpm --silent lint && tsup",
     "build:watch": "tsup --watch",
     "lint": "tsc && eslint --max-warnings=0 src",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
+    "format": "prettier --ignore-path ../../.prettierignore --write . ",
+    "format:check": "prettier --ignore-path ../../.prettierignore --check .",
     "exports": "attw --pack ."
   },
   "type": "module",
