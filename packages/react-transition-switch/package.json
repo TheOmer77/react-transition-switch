@@ -13,7 +13,7 @@
     "directory": "packages/react-transition-switch"
   },
   "scripts": {
-    "build": "bun --silent lint && tsup",
+    "build": "pnpm --silent lint && tsup",
     "build:watch": "tsup --watch",
     "lint": "tsc && eslint --max-warnings=0 src"
   },

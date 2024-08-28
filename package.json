@@ -6,16 +6,16 @@
   "private": true,
   "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1",
   "scripts": {
-    "dev": "concurrently \"bun --silent dev:package\" \"bun --silent dev:examples\"",
-    "dev:package": "bun --silent --cwd packages/react-transition-switch build:watch",
-    "dev:examples": "bun --silent --cwd packages/examples dev",
-    "build": "bun --silent build:package && bun --slient build:examples",
-    "build:package": "bun --silent --cwd packages/react-transition-switch build",
-    "build:examples": "bun --silent --cwd packages/examples build",
-    "lint": "bun --silent lint:package && bun --silent lint:examples",
-    "lint:package": "bun --silent --cwd packages/react-transition-switch lint",
-    "lint:examples": "bun --silent --cwd packages/examples lint",
-    "format": "prettier --write packages/**/*"
+    "dev": "concurrently \"pnpm --silent dev:package\" \"pnpm --silent dev:examples\"",
+    "dev:package": "pnpm --silent -F react-transition-switch build:watch",
+    "dev:examples": "pnpm --silent -F examples dev",
+    "build": "pnpm --silent build:package && pnpm --slient build:examples",
+    "build:package": "pnpm --silent -F react-transition-switch build",
+    "build:examples": "pnpm --silent -F examples build",
+    "lint": "pnpm --silent lint:package && pnpm --silent lint:examples",
+    "lint:package": "pnpm --silent -F react-transition-switch lint",
+    "lint:examples": "pnpm --silent -F examples lint",
+    "format": "prettier --write **/*"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",
