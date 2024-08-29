@@ -18,12 +18,14 @@ npm install @theomer77/react-transition-switch
 
 ## Usage
 
-This package provides a `TransitionSwitch` parent component and `TransitionSwitchItem` child component.
+This package provides a `TransitionSwitch` parent component and a `TransitionSwitchItem` child component.
 
-- The `TransitionSwitch` component accepts a `value` prop, and children which must be `TransitionSwitchItem` components.
+- The `TransitionSwitch` component accepts a `value` prop, and children which can be `TransitionSwitchItem` components.
 - The `TransitionSwitchItem` component also accepts a `value` prop, and a child which must be a component that accepts a ref, or an element such as a div.
 
 If the value of an item matches the parent's value, only that item's child component will be displayed.
+
+If the parent includes any children other than `TransitionSwitchItem`s, they will always be rendered alongside the active switch item.
 
 ```jsx
 import { useState } from 'react';
@@ -51,7 +53,7 @@ const MyComponent = () => {
 
 ### Adding Transitions
 
-To add transitions between items, you can use CSS animations. Add a CSS class to your parent `TransitionSwitch` component:
+To add transitions between items, you can use CSS animations. Simply add a CSS class to your parent `TransitionSwitch` component:
 
 ```jsx
 <TransitionSwitch value={value} className='fade'>
