@@ -73,55 +73,52 @@ const config = {
       },
       spacing: { em: '1em', inherit: 'inherit' },
     },
-    colors: {
-      inherit: 'inherit',
-      white: '#fff',
-      black: '#000',
-      transparent: 'transparent',
+    colors: ['primary', 'neutral', 'danger', 'secondary'].reduce(
+      (obj, colorName) => ({
+        ...obj,
+        [colorName]: [...shades].reduce(
+          (obj, shade) => ({
+            ...obj,
+            [shade]: `rgb(var(--color-${colorName}-${shade}) / <alpha-value>)`,
+          }),
+          {
+            DEFAULT: `rgb(var(--color-${colorName}))`,
+            foreground: `rgb(var(--color-${colorName}-foreground))`,
+          }
+        ),
+      }),
+      {
+        inherit: 'inherit',
+        white: '#fff',
+        black: '#000',
+        transparent: 'transparent',
 
-      ...['primary', 'neutral', 'danger', 'secondary'].reduce(
-        (obj, colorName) => ({
-          ...obj,
-          [colorName]: [...shades].reduce(
-            (obj, shade) => ({
-              ...obj,
-              [shade]: `rgb(var(--color-${colorName}-${shade}) / <alpha-value>)`,
-            }),
-            {
-              DEFAULT: `rgb(var(--color-${colorName}-main))`,
-              active: `rgb(var(--color-${colorName}-active))`,
-              foreground: `rgb(var(--color-${colorName}-foreground))`,
-            }
-          ),
-        }),
-        {}
-      ),
-
-      border: 'rgb(var(--color-border))',
-      input: {
-        DEFAULT: 'rgb(var(--color-input))',
-        active: 'rgb(var(--color-input-active))',
-      },
-      ring: 'rgb(var(--color-ring))',
-      background: 'rgb(var(--color-background))',
-      foreground: 'rgb(var(--color-foreground))',
-      muted: {
-        DEFAULT: 'rgb(var(--color-muted))',
-        foreground: 'rgb(var(--color-muted-foreground))',
-      },
-      accent: {
-        DEFAULT: 'rgb(var(--color-accent))',
-        foreground: 'rgb(var(--color-accent-foreground))',
-      },
-      popover: {
-        DEFAULT: 'rgb(var(--color-popover))',
-        foreground: 'rgb(var(--color-popover-foreground))',
-      },
-      card: {
-        DEFAULT: 'rgb(var(--color-card))',
-        foreground: 'rgb(var(--color-card-foreground))',
-      },
-    },
+        border: 'rgb(var(--color-border))',
+        input: {
+          DEFAULT: 'rgb(var(--color-input))',
+          active: 'rgb(var(--color-input-active))',
+        },
+        ring: 'rgb(var(--color-ring))',
+        background: 'rgb(var(--color-background))',
+        foreground: 'rgb(var(--color-foreground))',
+        muted: {
+          DEFAULT: 'rgb(var(--color-muted))',
+          foreground: 'rgb(var(--color-muted-foreground))',
+        },
+        accent: {
+          DEFAULT: 'rgb(var(--color-accent))',
+          foreground: 'rgb(var(--color-accent-foreground))',
+        },
+        popover: {
+          DEFAULT: 'rgb(var(--color-popover))',
+          foreground: 'rgb(var(--color-popover-foreground))',
+        },
+        card: {
+          DEFAULT: 'rgb(var(--color-card))',
+          foreground: 'rgb(var(--color-card-foreground))',
+        },
+      }
+    ),
   },
   plugins: [animate, utils],
 } satisfies Config;
