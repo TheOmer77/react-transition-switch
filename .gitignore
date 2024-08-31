@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 *.tsbuildinfo
 .eslintcache
+
+# README file in published package
+packages/react-transition-switch/README.md
