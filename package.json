@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.15.4",
+    "@changesets/cli": "^2.27.7",
     "@types/node": "^22.5.1",
     "@types/number-to-words": "^1.2.3",
     "@types/react": "^18.3.4",
