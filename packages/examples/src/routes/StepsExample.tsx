@@ -1,7 +1,7 @@
 import { forwardRef, useState, type ComponentPropsWithoutRef } from 'react';
 
 import { TransitionSwitchItem } from 'react-transition-switch';
-import { ExampleLogo } from '@/components/Logos';
+import { ExampleLogo } from '@/components/logos';
 import { SharedAxis } from '@/components/transitions/SharedAxis';
 import {
   CredentialsStep,

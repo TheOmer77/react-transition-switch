@@ -1,5 +1,5 @@
 import { navItems, type NavItemId } from './navItems';
-import { FilesLogo } from '../../Logos';
+import { FilesLogo } from '../../logos';
 import { Button } from '@/components/ui/Button';
 import { cn } from '@/lib/utils';
 
