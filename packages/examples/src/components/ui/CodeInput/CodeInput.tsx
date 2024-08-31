@@ -1,3 +1,6 @@
+// TODO: Replace with Shadcn OTP Input
+// https://ui.shadcn.com/docs/components/input-otp
+
 import type { ComponentPropsWithoutRef } from 'react';
 import OtpInput from 'react-otp-input';
 
