@@ -42,6 +42,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "postcss": "^8.4.41",
     "postcss-hover-media-feature": "^1.0.2",
+    "postcss-mixins": "^10.0.1",
     "postcss-viewport-unit-fallback": "^1.0.1",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",
