@@ -15,7 +15,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/Table';
-import { Button } from '../ui/Button';
+import { Button } from '../../ui/Button';
 
 export type FileListItem = {
   name: string;

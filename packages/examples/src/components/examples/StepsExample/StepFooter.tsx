@@ -1,6 +1,7 @@
-import { Button } from '../ui/Button';
-import type { StepProps } from './types';
+import { Button } from '@/components/ui/Button';
 import { CardFooter } from '@/components/ui/Card';
+
+import type { StepProps } from './types';
 
 type StepFooterProps = Pick<StepProps, 'onNextClick' | 'onPrevClick'> & {
   nextLabel?: string;

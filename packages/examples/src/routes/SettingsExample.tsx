@@ -7,7 +7,7 @@ import {
   AccountTab,
   NotificationsTab,
   PrivacyTab,
-} from '@/components/SettingsExample';
+} from '@/components/examples/SettingsExample';
 import Fade from '@/components/Fade';
 
 const SettingsExample = forwardRef<

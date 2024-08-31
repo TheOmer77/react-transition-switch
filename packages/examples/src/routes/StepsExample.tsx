@@ -10,7 +10,7 @@ import {
   ProfileStep,
   VerificationStep,
   WelcomeStep,
-} from '@/components/StepsExample';
+} from '@/components/examples/StepsExample';
 import { cn } from '@/lib/utils';
 
 const StepsExample = forwardRef<
