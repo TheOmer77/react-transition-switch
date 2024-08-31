@@ -4,16 +4,8 @@ React Transition Switch provides a simple and effective way to easily switch bet
 
 ## Installation
 
-This package can be installed from the GitHub NPM registry. Create a `.npmrc` file in your project and add the following to it:
-
-```
-@theomer77:registry=https://npm.pkg.github.com
-```
-
-Then install using your favorite package manager:
-
 ```bash
-npm install @theomer77/react-transition-switch
+npm install react-transition-switch
 ```
 
 ## Usage
@@ -28,7 +20,7 @@ import { useState } from 'react';
 import {
   TransitionSwitch,
   TransitionSwitchItem,
-} from '@theomer77/react-transition-switch';
+} from 'react-transition-switch';
 
 const MyComponent = () => {
   const [value, setValue] = useState('item1');
