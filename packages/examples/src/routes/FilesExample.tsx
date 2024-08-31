@@ -7,7 +7,7 @@ import {
   Search,
   type NavItemId,
 } from '@/components/examples/FilesExample';
-import FadeThrough from '@/components/FadeThrough';
+import { FadeThrough } from '@/components/transitions/FadeThrough';
 import { cn } from '@/lib/utils';
 import { ScrollArea } from '@/components/ui/ScrollArea';
 

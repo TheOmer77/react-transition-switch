@@ -3,7 +3,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
 
 import { TransitionSwitchItem } from 'react-transition-switch';
 import { Button } from '@/components/ui/Button';
-import Slide from '@/components/Slide';
+import { Slide } from '@/components/transitions/Slide';
 
 const images = [
   {

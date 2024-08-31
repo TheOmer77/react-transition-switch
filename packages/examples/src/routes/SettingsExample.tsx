@@ -8,7 +8,7 @@ import {
   NotificationsTab,
   PrivacyTab,
 } from '@/components/examples/SettingsExample';
-import Fade from '@/components/Fade';
+import { Fade } from '@/components/transitions/Fade';
 
 const SettingsExample = forwardRef<
   HTMLDivElement,

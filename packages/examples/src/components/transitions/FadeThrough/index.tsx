@@ -4,16 +4,14 @@ import {
 } from 'react-transition-switch';
 import { cn } from '@/lib/utils';
 
-import { fade } from './index.module.css';
+import { fadeThrough } from './index.module.css';
 
-const Fade = ({
+export const FadeThrough = ({
   className,
   children,
   ...props
 }: Omit<TransitionSwitchProps, 'directional'>) => (
-  <TransitionSwitch {...props} className={cn(fade, className)}>
+  <TransitionSwitch {...props} className={cn(fadeThrough, className)}>
     {children}
   </TransitionSwitch>
 );
-
-export default Fade;

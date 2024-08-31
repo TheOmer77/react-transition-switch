@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 
 import { slide } from './index.module.css';
 
-const Slide = ({
+export const Slide = ({
   className,
   children,
   ...props
@@ -15,5 +15,3 @@ const Slide = ({
     {children}
   </TransitionSwitch>
 );
-
-export default Slide;

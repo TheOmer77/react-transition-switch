@@ -2,7 +2,7 @@ import { forwardRef, useState, type ComponentPropsWithoutRef } from 'react';
 
 import { TransitionSwitchItem } from 'react-transition-switch';
 import { ExampleLogo } from '@/components/Logos';
-import SharedAxis from '@/components/SharedAxis';
+import { SharedAxis } from '@/components/transitions/SharedAxis';
 import {
   CredentialsStep,
   FinishStep,

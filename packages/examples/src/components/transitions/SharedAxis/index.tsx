@@ -13,7 +13,7 @@ export type SharedAxisProps = Omit<TransitionSwitchProps, 'directional'> & {
   fadeVariant?: boolean;
 };
 
-const SharedAxis = ({
+export const SharedAxis = ({
   axis = 'x',
   fadeVariant = false,
   className,
@@ -30,5 +30,3 @@ const SharedAxis = ({
     {children}
   </TransitionSwitch>
 );
-
-export default SharedAxis;

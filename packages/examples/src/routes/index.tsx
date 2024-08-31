@@ -11,7 +11,7 @@ import PhotosExample from './PhotosExample';
 import SettingsExample from './SettingsExample';
 import StepsExample from './StepsExample';
 import ErrorPage from './Error';
-import SharedAxis from '@/components/SharedAxis';
+import { SharedAxis } from '@/components/transitions/SharedAxis';
 
 const routes: RouteObject[] = [
   { index: true, element: <Root /> },
