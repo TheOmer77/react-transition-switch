@@ -43,6 +43,8 @@ const SharedAxisExample = forwardRef<
         <SharedAxis
           axis={axis}
           fadeVariant={fadeVariant}
+          autoAdjustHeight
+          autoAdjustWidth
           value={value}
           className={cn(
             debug && `ring-2 ring-danger ring-offset-4 ring-offset-background`
