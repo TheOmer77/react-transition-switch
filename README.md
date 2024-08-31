@@ -20,12 +20,8 @@ npm install @theomer77/react-transition-switch
 
 This package provides a `TransitionSwitch` parent component and a `TransitionSwitchItem` child component.
 
-- The `TransitionSwitch` component accepts a `value` prop, and children which can be `TransitionSwitchItem` components.
-- The `TransitionSwitchItem` component also accepts a `value` prop, and a child which must be a component that accepts a ref, or an element such as a div.
-
-If the value of an item matches the parent's value, only that item's child component will be displayed.
-
-If the parent includes any children other than `TransitionSwitchItem`s, they will always be rendered alongside the active switch item.
+- The `TransitionSwitch` component accepts a `value` prop, and children which can be `TransitionSwitchItem` components. Components other than `TransitionSwitchItem` are not affected by the `value` prop.
+- The `TransitionSwitchItem` component also accepts a `value` prop, and a child which must be a component that accepts a ref, or an element such as a div. If its value matches the parent's value, only this item's children will be rendered.
 
 ```jsx
 import { useState } from 'react';
