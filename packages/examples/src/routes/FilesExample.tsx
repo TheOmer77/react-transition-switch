@@ -1,6 +1,7 @@
 import { forwardRef, type ComponentPropsWithoutRef, useState } from 'react';
-
 import { TransitionSwitchItem } from 'react-transition-switch';
+
+import { ScrollArea } from '@/components/ui/ScrollArea';
 import {
   Nav,
   navItems,
@@ -9,7 +10,6 @@ import {
 } from '@/components/examples/FilesExample';
 import { FadeThrough } from '@/components/transitions/FadeThrough';
 import { cn } from '@/lib/utils';
-import { ScrollArea } from '@/components/ui/ScrollArea';
 
 const FilesExample = forwardRef<
   HTMLDivElement,

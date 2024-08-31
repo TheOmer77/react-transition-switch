@@ -9,8 +9,9 @@ import {
   ScrollAreaViewport,
 } from '@radix-ui/react-scroll-area';
 
-import { ScrollBar } from './ScrollBar';
 import { cn } from '@/lib/utils';
+
+import { ScrollBar } from './ScrollBar';
 
 export const ScrollArea = forwardRef<
   ElementRef<typeof ScrollAreaRoot>,

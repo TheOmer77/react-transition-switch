@@ -4,10 +4,11 @@ import {
   type ElementRef,
 } from 'react';
 
+import { cn } from '@/lib/utils';
+
 import { CategoriesSection } from './CategoriesSection';
 import { FileList, type FileListItem } from './FileList';
 import { UsedStorageCard } from './UsedStorageCard';
-import { cn } from '@/lib/utils';
 
 const RECENT_FILES = [
   {

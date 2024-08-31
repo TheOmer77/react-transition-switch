@@ -1,8 +1,8 @@
 import type { ReactNode } from 'react';
 import { HomeIcon, Share2Icon, StarIcon, type LucideIcon } from 'lucide-react';
 
-import { HomePage } from './HomePage';
 import { FavoritesPage } from './FavoritesPage';
+import { HomePage } from './HomePage';
 import { SharedPage } from './SharedPage';
 
 export const navItems = [

@@ -1,5 +1,6 @@
-import { cn } from '@/lib/utils';
 import { forwardRef, type ComponentPropsWithoutRef } from 'react';
+
+import { cn } from '@/lib/utils';
 
 export const ExampleLogo = forwardRef<
   SVGSVGElement,

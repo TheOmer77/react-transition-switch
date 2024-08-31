@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/Input';
 import { Label } from '@/components/ui/Label';
 import { Separator } from '@/components/ui/Separator';
 import { GithubLogo, GoogleLogo } from '@/components/logos';
+
 import { StepFooter } from './StepFooter';
 import { StepTitle } from './StepTitle';
 import type { StepProps } from './types';

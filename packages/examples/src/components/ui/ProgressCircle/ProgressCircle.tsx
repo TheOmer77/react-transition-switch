@@ -1,9 +1,10 @@
-import { cn } from '@/lib/utils';
 import {
   forwardRef,
   type ComponentPropsWithoutRef,
   type ElementRef,
 } from 'react';
+
+import { cn } from '@/lib/utils';
 
 export type ProgressCircleProps = ComponentPropsWithoutRef<'svg'> & {
   value: number;

@@ -2,6 +2,7 @@ import {
   TransitionSwitch,
   type TransitionSwitchProps,
 } from 'react-transition-switch';
+
 import { cn } from '@/lib/utils';
 
 import { fade } from './index.module.css';

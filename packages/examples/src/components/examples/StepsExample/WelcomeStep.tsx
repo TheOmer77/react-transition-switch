@@ -1,6 +1,5 @@
 import { forwardRef, type ElementRef } from 'react';
 
-import type { StepProps } from './types';
 import { Button } from '@/components/ui/Button';
 import {
   CardDescription,
@@ -8,6 +7,8 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/Card';
+
+import type { StepProps } from './types';
 
 export const WelcomeStep = forwardRef<
   ElementRef<'section'>,

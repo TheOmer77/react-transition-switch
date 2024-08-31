@@ -6,8 +6,8 @@ import {
 } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { toWords } from 'number-to-words';
-
 import { TransitionSwitchItem } from 'react-transition-switch';
+
 import { Button } from '@/components/ui/Button';
 import { Checkbox } from '@/components/ui/Checkbox';
 import { FormItem } from '@/components/ui/Form';

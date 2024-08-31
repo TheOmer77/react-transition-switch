@@ -1,8 +1,6 @@
 import { forwardRef, useState, type ComponentPropsWithoutRef } from 'react';
-
 import { TransitionSwitchItem } from 'react-transition-switch';
-import { ExampleLogo } from '@/components/logos';
-import { SharedAxis } from '@/components/transitions/SharedAxis';
+
 import {
   CredentialsStep,
   FinishStep,
@@ -11,6 +9,8 @@ import {
   VerificationStep,
   WelcomeStep,
 } from '@/components/examples/StepsExample';
+import { ExampleLogo } from '@/components/logos';
+import { SharedAxis } from '@/components/transitions/SharedAxis';
 import { cn } from '@/lib/utils';
 
 const StepsExample = forwardRef<

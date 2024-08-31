@@ -5,13 +5,14 @@ import {
 } from 'react-router-dom';
 import { TransitionSwitchItem } from 'react-transition-switch';
 
-import Root from './Root';
+import { SharedAxis } from '@/components/transitions/SharedAxis';
+
+import ErrorPage from './Error';
 import FilesExample from './FilesExample';
 import PhotosExample from './PhotosExample';
+import Root from './Root';
 import SettingsExample from './SettingsExample';
 import StepsExample from './StepsExample';
-import ErrorPage from './Error';
-import { SharedAxis } from '@/components/transitions/SharedAxis';
 
 const routes: RouteObject[] = [
   { index: true, element: <Root /> },
