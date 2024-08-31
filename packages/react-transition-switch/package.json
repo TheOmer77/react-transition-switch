@@ -1,6 +1,6 @@
 {
   "name": "react-transition-switch",
-  "description": "A React component allowing to switch between child components with CSS animations.",
+  "description": "A React component to switch between child components with CSS animations.",
   "version": "1.0.1",
   "author": "TheOmer77",
   "license": "MIT",
