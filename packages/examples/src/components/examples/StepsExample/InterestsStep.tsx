@@ -9,11 +9,15 @@ import {
 } from 'lucide-react';
 
 import { Button } from '@/components/ui/Button';
-import { CardContent, CardDescription, CardHeader } from '@/components/ui/Card';
+import {
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/Card';
 import { Checkbox } from '@/components/ui/Checkbox';
 
 import { StepFooter } from './StepFooter';
-import { StepTitle } from './StepTitle';
 import type { StepProps } from './types';
 
 const interests = [
@@ -64,7 +68,7 @@ export const InterestsStep = forwardRef<ElementRef<'section'>, StepProps>(
     return (
       <section {...props} ref={ref}>
         <CardHeader>
-          <StepTitle>Select your interests</StepTitle>
+          <CardTitle>Select your interests</CardTitle>
           <CardDescription>
             Pick some topics you&apos;re into so we can tailor your experience.
           </CardDescription>

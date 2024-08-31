@@ -1,12 +1,16 @@
 import { forwardRef, type ElementRef } from 'react';
 
-import { CardContent, CardDescription, CardHeader } from '@/components/ui/Card';
+import {
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/Card';
 import { Input } from '@/components/ui/Input';
 import { Label } from '@/components/ui/Label';
 import { Textarea } from '@/components/ui/Textarea';
 
 import { StepFooter } from './StepFooter';
-import { StepTitle } from './StepTitle';
 import type { StepProps } from './types';
 import { AvatarInput } from './AvatarInput';
 
@@ -14,7 +18,7 @@ export const ProfileStep = forwardRef<ElementRef<'section'>, StepProps>(
   ({ onNextClick, onPrevClick, ...props }, ref) => (
     <section {...props} ref={ref}>
       <CardHeader>
-        <StepTitle>Tell us about yourself</StepTitle>
+        <CardTitle>Tell us about yourself</CardTitle>
         <CardDescription>
           Add some extra details to complete your profile.
         </CardDescription>

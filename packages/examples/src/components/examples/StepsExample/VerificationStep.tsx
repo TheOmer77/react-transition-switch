@@ -1,11 +1,15 @@
 import { forwardRef, useState, type ElementRef } from 'react';
 
-import { CardContent, CardDescription, CardHeader } from '@/components/ui/Card';
+import {
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/Card';
 import { Label } from '@/components/ui/Label';
 import { OTPInput, OTPInputSlot } from '@/components/ui/OTPInput';
 
 import { StepFooter } from './StepFooter';
-import { StepTitle } from './StepTitle';
 import type { StepProps } from './types';
 
 const CODE_LENGTH = 6;
@@ -17,7 +21,7 @@ export const VerificationStep = forwardRef<ElementRef<'section'>, StepProps>(
     return (
       <section {...props} ref={ref}>
         <CardHeader>
-          <StepTitle>Just to be safe...</StepTitle>
+          <CardTitle>Just to be safe...</CardTitle>
           <CardDescription>
             We&apos;ve sent a verification code to your email - please enter it
             below.
