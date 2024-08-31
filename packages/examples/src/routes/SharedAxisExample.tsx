@@ -71,18 +71,18 @@ const SharedAxisExample = forwardRef<
       </div>
 
       <Button
-        size='icon-lg'
+        size='lg'
         onClick={() => setActiveIndex(prev => prev - 1)}
         disabled={activeIndex <= 0}
-        className='fixed start-4 top-1/2 -translate-y-1/2'
+        className='fixed start-4 top-1/2 size-10 -translate-y-1/2 px-0'
       >
         {rtl ? <ChevronRight /> : <ChevronLeft />}
       </Button>
       <Button
-        size='icon-lg'
+        size='lg'
         onClick={() => setActiveIndex(prev => prev + 1)}
         disabled={activeIndex >= TEST_ITEMS_COUNT - 1}
-        className='fixed end-4 top-1/2 -translate-y-1/2'
+        className='fixed end-4 top-1/2 size-10 -translate-y-1/2 px-0'
       >
         {rtl ? <ChevronLeft /> : <ChevronRight />}
       </Button>
