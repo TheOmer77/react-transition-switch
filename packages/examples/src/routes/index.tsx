@@ -3,7 +3,7 @@ import {
   useLocation,
   type RouteObject,
 } from 'react-router-dom';
-import { TransitionSwitchItem } from '@theomer77/react-transition-switch';
+import { TransitionSwitchItem } from 'react-transition-switch';
 
 import Root from './Root';
 import FilesExample from './FilesExample';

@@ -128,9 +128,6 @@ importers:
       '@radix-ui/react-tabs':
         specifier: ^1.1.0
         version: 1.1.0(@types/react-dom@18.3.0)(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@theomer77/react-transition-switch':
-        specifier: workspace:*
-        version: link:../react-transition-switch
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -155,6 +152,9 @@ importers:
       react-router-dom:
         specifier: ^6.26.1
         version: 6.26.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-transition-switch:
+        specifier: workspace:*
+        version: link:../react-transition-switch
       tailwind-merge:
         specifier: ^2.5.2
         version: 2.5.2

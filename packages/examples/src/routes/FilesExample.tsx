@@ -1,6 +1,6 @@
 import { forwardRef, type ComponentPropsWithoutRef, useState } from 'react';
 
-import { TransitionSwitchItem } from '@theomer77/react-transition-switch';
+import { TransitionSwitchItem } from 'react-transition-switch';
 import {
   Nav,
   navItems,

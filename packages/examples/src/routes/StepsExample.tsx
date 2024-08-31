@@ -1,6 +1,6 @@
 import { forwardRef, useState, type ComponentPropsWithoutRef } from 'react';
 
-import { TransitionSwitchItem } from '@theomer77/react-transition-switch';
+import { TransitionSwitchItem } from 'react-transition-switch';
 import { ExampleLogo } from '@/components/Logos';
 import SharedAxis from '@/components/SharedAxis';
 import {

@@ -1,7 +1,7 @@
 import {
   TransitionSwitch,
   type TransitionSwitchProps,
-} from '@theomer77/react-transition-switch';
+} from 'react-transition-switch';
 import { cn } from '@/lib/utils';
 
 import { slide } from './index.module.css';
