@@ -1,17 +1,19 @@
-import { forwardRef, type ComponentPropsWithoutRef } from 'react';
+import {
+  forwardRef,
+  type ComponentPropsWithoutRef,
+  type ElementRef,
+} from 'react';
 
 import { cn } from '@/lib/utils';
 
 export const CardDescription = forwardRef<
-  HTMLParagraphElement,
+  ElementRef<'p'>,
   ComponentPropsWithoutRef<'p'>
->(({ className, children, ...props }, ref) => (
+>(({ className, ...props }, ref) => (
   <p
     ref={ref}
     className={cn('text-sm text-muted-foreground', className)}
     {...props}
-  >
-    {children}
-  </p>
+  />
 ));
 CardDescription.displayName = 'CardDescription';
