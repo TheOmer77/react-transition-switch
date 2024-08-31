@@ -1,44 +1,10 @@
 import type { Config } from 'tailwindcss';
 import animate from 'tailwindcss-animate';
-import plugin from 'tailwindcss/plugin';
 
-import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette';
+// importing '@/config/tailwind' doesn't work here
+import { autofillOverride, stateLayer } from './src/config/tailwind';
 
 const shades = [50, ...[...Array(9).keys()].map(key => (key + 1) * 100), 950];
-
-const utils = plugin(({ addUtilities, matchUtilities, theme }) => {
-  const themeColors = flattenColorPalette(theme('colors'));
-
-  addUtilities({
-    '.input-appearance-none': {
-      '&[type=number]': { MozAppearance: 'textfield' },
-      '&::-webkit-outer-spin-button, &::-webkit-inner-spin-button': {
-        WebkitAppearance: 'none',
-        margin: '0',
-      },
-    },
-    '.state-layer': {
-      position: 'relative',
-      overflow: 'hidden',
-      '&.fixed': { position: 'fixed' },
-      '&.absolute': { position: 'absolute' },
-      '&::after': {
-        content: '""',
-        position: 'absolute',
-        insetBlockStart: '0',
-        insetInlineStart: '0',
-        width: '100%',
-        height: '100%',
-        zIndex: '1',
-        transition: 'background-color 75ms cubic-bezier(0.4, 0, 0.2, 1)',
-      },
-    },
-  });
-  matchUtilities(
-    { 'state-layer': value => ({ '&::after': { backgroundColor: value } }) },
-    { values: themeColors, type: 'color' }
-  );
-});
 
 const config = {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
@@ -120,6 +86,6 @@ const config = {
       }
     ),
   },
-  plugins: [animate, utils],
+  plugins: [animate, autofillOverride, stateLayer],
 } satisfies Config;
 export default config;
