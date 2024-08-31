@@ -13,7 +13,7 @@ export const SelectLabel = forwardRef<
 >(({ className, ...props }, ref) => (
   <Label
     ref={ref}
-    className={cn('px-2 py-1.5 text-sm font-semibold', className)}
+    className={cn('py-1.5 pe-2 ps-8 text-sm font-semibold', className)}
     {...props}
   />
 ));
