@@ -1,8 +1,8 @@
 import { forwardRef, useState, type ElementRef } from 'react';
 
 import { CardContent, CardDescription, CardHeader } from '@/components/ui/Card';
-import { CodeInput } from '@/components/ui/CodeInput';
 import { Label } from '@/components/ui/Label';
+import { OTPInput, OTPInputSlot } from '@/components/ui/OTPInput';
 
 import { StepFooter } from './StepFooter';
 import { StepTitle } from './StepTitle';
@@ -23,15 +23,17 @@ export const VerificationStep = forwardRef<ElementRef<'section'>, StepProps>(
             below.
           </CardDescription>
         </CardHeader>
-        <CardContent className='space-y-4'>
+        <CardContent className='space-y-2'>
           <Label htmlFor='code'>Verification Code</Label>
-          <CodeInput
-            value={code}
-            onChange={setCode}
-            length={CODE_LENGTH}
-            inputType='number'
-            className='h-14 max-w-14 text-2xl'
-          />
+          <OTPInput maxLength={CODE_LENGTH} value={code} onChange={setCode}>
+            {[...Array(CODE_LENGTH).keys()].map(idx => (
+              <OTPInputSlot
+                key={idx}
+                index={idx}
+                className='h-14 w-full max-w-14 text-2xl'
+              />
+            ))}
+          </OTPInput>
         </CardContent>
         <StepFooter
           onNextClick={onNextClick}
