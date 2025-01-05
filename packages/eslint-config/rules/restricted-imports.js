@@ -2,7 +2,7 @@
 export const restrictedImports = {
   name: 'Restricted imports',
   rules: {
-    'no-restricted-imports': [
+    '@typescript-eslint/no-restricted-imports': [
       'error',
       {
         patterns: [
@@ -11,6 +11,7 @@ export const restrictedImports = {
             importNamePattern: '^(Lucide.*|(?:(?!.*Icon$).+))$',
             message:
               "Only import icons that end with 'Icon' and don't start with 'Lucide'.",
+            allowTypeImports: true,
           },
         ],
       },
