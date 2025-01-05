@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { CardFooter } from '@/components/ui/Card';
+import { CardFooter } from '@/components/ui/card';
 
 import type { StepProps } from './types';
 

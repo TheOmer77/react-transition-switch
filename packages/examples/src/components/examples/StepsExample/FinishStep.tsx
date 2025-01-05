@@ -11,7 +11,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/Card';
+} from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 
 export const FinishStep = forwardRef<

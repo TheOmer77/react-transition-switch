@@ -5,7 +5,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/Card';
+} from '@/components/ui/card';
 import { Label } from '@/components/ui/Label';
 import { OTPInput, OTPInputSlot } from '@/components/ui/OTPInput';
 

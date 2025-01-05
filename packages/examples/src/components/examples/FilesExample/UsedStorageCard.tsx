@@ -5,7 +5,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/Card';
+} from '@/components/ui/card';
 import { ProgressCircle } from '@/components/ui/ProgressCircle';
 
 // These are in GB
