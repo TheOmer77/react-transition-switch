@@ -14,7 +14,7 @@ import { FormItem } from '@/components/ui/form';
 import { Label } from '@/components/ui/label';
 import { Radio } from '@/components/ui/radio';
 import { Separator } from '@/components/ui/separator';
-import { type Axis, SharedAxis } from '@/components/transitions/SharedAxis';
+import { type Axis, SharedAxis } from '@/components/transitions/shared-axis';
 import { cn } from '@/lib/utils';
 
 const TEST_ITEMS_COUNT = 10;

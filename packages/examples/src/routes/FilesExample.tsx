@@ -8,7 +8,7 @@ import {
   navItems,
   Search,
 } from '@/components/examples/FilesExample';
-import { FadeThrough } from '@/components/transitions/FadeThrough';
+import { FadeThrough } from '@/components/transitions/fade-through';
 import { cn } from '@/lib/utils';
 
 const FilesExample = forwardRef<

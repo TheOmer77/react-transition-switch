@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 import { TransitionSwitchItem } from 'react-transition-switch';
 
-import { SharedAxis } from '@/components/transitions/SharedAxis';
+import { SharedAxis } from '@/components/transitions/shared-axis';
 
 import ErrorPage from './Error';
 import FilesExample from './FilesExample';

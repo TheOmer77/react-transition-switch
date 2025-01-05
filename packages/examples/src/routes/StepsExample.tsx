@@ -10,7 +10,7 @@ import {
   WelcomeStep,
 } from '@/components/examples/StepsExample';
 import { ExampleLogo } from '@/components/logos';
-import { SharedAxis } from '@/components/transitions/SharedAxis';
+import { SharedAxis } from '@/components/transitions/shared-axis';
 import { cn } from '@/lib/utils';
 
 const StepsExample = forwardRef<
