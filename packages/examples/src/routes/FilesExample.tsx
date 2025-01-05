@@ -7,7 +7,7 @@ import {
   type NavItemId,
   navItems,
   Search,
-} from '@/components/examples/FilesExample';
+} from '@/components/examples/files';
 import { FadeThrough } from '@/components/transitions/fade-through';
 import { cn } from '@/lib/utils';
 

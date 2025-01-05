@@ -4,7 +4,7 @@ import {
   forwardRef,
 } from 'react';
 
-import { FileList, type FileListItem } from './FileList';
+import { FileList, type FileListItem } from './file-list';
 
 const SHARED_FILES = [
   {

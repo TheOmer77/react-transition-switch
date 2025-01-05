@@ -6,9 +6,9 @@ import {
 
 import { cn } from '@/lib/utils';
 
-import { CategoriesSection } from './CategoriesSection';
-import { FileList, type FileListItem } from './FileList';
-import { UsedStorageCard } from './UsedStorageCard';
+import { CategoriesSection } from './categories-section';
+import { FileList, type FileListItem } from './file-list';
+import { UsedStorageCard } from './used-storage-card';
 
 const RECENT_FILES = [
   {

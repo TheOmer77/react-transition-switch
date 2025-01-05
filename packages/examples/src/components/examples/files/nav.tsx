@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { FilesLogo } from '@/components/logos';
 import { cn } from '@/lib/utils';
 
-import { type NavItemId, navItems } from './navItems';
+import { type NavItemId, navItems } from './nav-items';
 
 export const Nav = ({
   activeSection,
