@@ -9,7 +9,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
 import { toWords } from 'number-to-words';
 
 import { Button } from '@/components/ui/button';
-import { Checkbox } from '@/components/ui/Checkbox';
+import { Checkbox } from '@/components/ui/checkbox';
 import { FormItem } from '@/components/ui/Form';
 import { Label } from '@/components/ui/Label';
 import { Radio } from '@/components/ui/Radio';
