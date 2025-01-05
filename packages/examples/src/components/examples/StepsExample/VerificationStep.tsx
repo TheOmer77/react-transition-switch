@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
-import { OTPInput, OTPInputSlot } from '@/components/ui/OTPInput';
+import { OTPInput, OTPInputSlot } from '@/components/ui/otp-input';
 
 import { StepFooter } from './StepFooter';
 import type { StepProps } from './types';
