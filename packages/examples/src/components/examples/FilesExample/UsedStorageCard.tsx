@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { ProgressCircle } from '@/components/ui/ProgressCircle';
+import { ProgressCircle } from '@/components/ui/progress-circle';
 
 // These are in GB
 const MAX_STORAGE = 64,
