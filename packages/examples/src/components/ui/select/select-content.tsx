@@ -7,8 +7,8 @@ import { Content, Portal, Viewport } from '@radix-ui/react-select';
 
 import { cn } from '@/lib/utils';
 
-import { SelectScrollDownButton } from './SelectScrollDownButton';
-import { SelectScrollUpButton } from './SelectScrollUpButton';
+import { SelectScrollDownButton } from './select-scroll-down-button';
+import { SelectScrollUpButton } from './select-scroll-up-button';
 
 export const SelectContent = forwardRef<
   ElementRef<typeof Content>,
