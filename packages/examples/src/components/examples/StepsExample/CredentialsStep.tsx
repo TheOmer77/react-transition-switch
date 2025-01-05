@@ -1,6 +1,6 @@
 import { type ElementRef, forwardRef } from 'react';
 
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import {
   CardContent,
   CardDescription,

@@ -2,7 +2,7 @@ import { type ComponentPropsWithoutRef, forwardRef, useState } from 'react';
 import { TransitionSwitchItem } from 'react-transition-switch';
 import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
 
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import { Slide } from '@/components/transitions/Slide';
 
 const images = [

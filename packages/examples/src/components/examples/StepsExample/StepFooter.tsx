@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import { CardFooter } from '@/components/ui/Card';
 
 import type { StepProps } from './types';

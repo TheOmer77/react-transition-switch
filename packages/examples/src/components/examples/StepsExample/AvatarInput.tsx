@@ -1,7 +1,7 @@
 import { useMemo, useRef, useState } from 'react';
 import { ImagePlusIcon } from 'lucide-react';
 
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 
 export const AvatarInput = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -17,11 +17,7 @@ export const AvatarInput = () => {
         className='size-32 self-center rounded-full border border-input p-0 after:z-10 [&>svg]:text-2xl'
       >
         {file && typeof fileUrl === 'string' ? (
-          <img
-            src={fileUrl}
-            alt='Avatar'
-            className='size-full object-cover'
-          />
+          <img src={fileUrl} alt='Avatar' className='size-full object-cover' />
         ) : (
           <ImagePlusIcon />
         )}
