@@ -17,7 +17,7 @@ import {
 } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
 
-import { StepFooter } from './StepFooter';
+import { StepFooter } from './step-footer';
 import type { StepProps } from './types';
 
 const interests = [

@@ -9,7 +9,7 @@ import {
 import { Label } from '@/components/ui/label';
 import { OTPInput, OTPInputSlot } from '@/components/ui/otp-input';
 
-import { StepFooter } from './StepFooter';
+import { StepFooter } from './step-footer';
 import type { StepProps } from './types';
 
 const CODE_LENGTH = 6;

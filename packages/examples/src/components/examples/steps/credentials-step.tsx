@@ -12,7 +12,7 @@ import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { GithubLogo, GoogleLogo } from '@/components/logos';
 
-import { StepFooter } from './StepFooter';
+import { StepFooter } from './step-footer';
 import type { StepProps } from './types';
 
 export const CredentialsStep = forwardRef<ElementRef<'section'>, StepProps>(

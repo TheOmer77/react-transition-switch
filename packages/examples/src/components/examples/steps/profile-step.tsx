@@ -10,8 +10,8 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 
-import { AvatarInput } from './AvatarInput';
-import { StepFooter } from './StepFooter';
+import { AvatarInput } from './avatar-input';
+import { StepFooter } from './step-footer';
 import type { StepProps } from './types';
 
 export const ProfileStep = forwardRef<ElementRef<'section'>, StepProps>(

@@ -8,7 +8,7 @@ import {
   ProfileStep,
   VerificationStep,
   WelcomeStep,
-} from '@/components/examples/StepsExample';
+} from '@/components/examples/steps';
 import { ExampleLogo } from '@/components/logos';
 import { SharedAxis } from '@/components/transitions/shared-axis';
 import { cn } from '@/lib/utils';
