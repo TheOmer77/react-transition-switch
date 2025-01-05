@@ -1,3 +1,5 @@
+/* eslint-disable tailwindcss/no-custom-classname */
+
 import {
   type ComponentPropsWithoutRef,
   type ElementRef,
