@@ -1,4 +1,4 @@
-import { forwardRef, type ElementRef } from 'react';
+import { type ElementRef, forwardRef } from 'react';
 
 import { Button } from '@/components/ui/Button';
 import {
@@ -25,11 +25,11 @@ export const CredentialsStep = forwardRef<ElementRef<'section'>, StepProps>(
       <CardContent className='space-y-4'>
         <div className='flex flex-col gap-2 [&>*]:grow'>
           <Button>
-            <GoogleLogo className='me-2 h-4 w-4' />
+            <GoogleLogo className='me-2 size-4' />
             Sign up with Google
           </Button>
           <Button>
-            <GithubLogo className='me-2 h-4 w-4' />
+            <GithubLogo className='me-2 size-4' />
             Sign up with GitHub
           </Button>
         </div>

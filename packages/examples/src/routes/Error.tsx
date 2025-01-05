@@ -1,4 +1,4 @@
-import { useRouteError, type ErrorResponse } from 'react-router-dom';
+import { type ErrorResponse, useRouteError } from 'react-router-dom';
 
 const errorMessages = {
   DEFAULT: 'Well, that was unexpected.',

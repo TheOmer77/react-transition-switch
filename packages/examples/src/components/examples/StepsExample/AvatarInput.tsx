@@ -14,13 +14,13 @@ export const AvatarInput = () => {
       <Button
         tabIndex={0}
         onClick={() => inputRef.current?.click?.()}
-        className='h-32 w-32 self-center rounded-full border border-input p-0 after:z-10 [&>svg]:text-2xl'
+        className='size-32 self-center rounded-full border border-input p-0 after:z-10 [&>svg]:text-2xl'
       >
         {file && typeof fileUrl === 'string' ? (
           <img
             src={fileUrl}
             alt='Avatar'
-            className='h-full w-full object-cover'
+            className='size-full object-cover'
           />
         ) : (
           <ImagePlusIcon />

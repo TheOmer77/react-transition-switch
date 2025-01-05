@@ -1,11 +1,11 @@
-import { forwardRef, useState, type ElementRef } from 'react';
+import { type ElementRef, forwardRef, useState } from 'react';
 import {
   CameraIcon,
   CookingPotIcon,
   CpuIcon,
   HeartPulseIcon,
-  MusicIcon,
   type LucideIcon,
+  MusicIcon,
 } from 'lucide-react';
 
 import { Button } from '@/components/ui/Button';

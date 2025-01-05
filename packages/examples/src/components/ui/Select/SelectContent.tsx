@@ -1,14 +1,14 @@
 import {
-  forwardRef,
   type ComponentPropsWithoutRef,
   type ElementRef,
+  forwardRef,
 } from 'react';
-import { Portal, Content, Viewport } from '@radix-ui/react-select';
+import { Content, Portal, Viewport } from '@radix-ui/react-select';
 
 import { cn } from '@/lib/utils';
 
-import { SelectScrollUpButton } from './SelectScrollUpButton';
 import { SelectScrollDownButton } from './SelectScrollDownButton';
+import { SelectScrollUpButton } from './SelectScrollUpButton';
 
 export const SelectContent = forwardRef<
   ElementRef<typeof Content>,

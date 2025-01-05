@@ -1,6 +1,6 @@
-import plugin from 'tailwindcss/plugin';
 //@ts-expect-error No type decleration
 import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette';
+import plugin from 'tailwindcss/plugin';
 
 export const stateLayer = plugin(({ addUtilities, matchUtilities, theme }) => {
   const themeColors = flattenColorPalette(theme('colors'));

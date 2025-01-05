@@ -1,11 +1,11 @@
-import { forwardRef, type ComponentPropsWithoutRef } from 'react';
+import { type ComponentPropsWithoutRef, forwardRef } from 'react';
 import { Link } from 'react-router-dom';
 import {
   CircleUserIcon,
   FolderIcon,
   ImageIcon,
-  SettingsIcon,
   type LucideIcon,
+  SettingsIcon,
 } from 'lucide-react';
 
 import { Button } from '@/components/ui/Button';

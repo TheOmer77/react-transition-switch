@@ -1,12 +1,12 @@
 import {
+  type ComponentPropsWithoutRef,
   forwardRef,
   useMemo,
   useState,
-  type ComponentPropsWithoutRef,
 } from 'react';
+import { TransitionSwitchItem } from 'react-transition-switch';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { toWords } from 'number-to-words';
-import { TransitionSwitchItem } from 'react-transition-switch';
 
 import { Button } from '@/components/ui/Button';
 import { Checkbox } from '@/components/ui/Checkbox';
@@ -14,7 +14,7 @@ import { FormItem } from '@/components/ui/Form';
 import { Label } from '@/components/ui/Label';
 import { Radio } from '@/components/ui/Radio';
 import { Separator } from '@/components/ui/Separator';
-import { SharedAxis, type Axis } from '@/components/transitions/SharedAxis';
+import { type Axis, SharedAxis } from '@/components/transitions/SharedAxis';
 import { cn } from '@/lib/utils';
 
 const TEST_ITEMS_COUNT = 10;
@@ -39,7 +39,7 @@ const SharedAxisExample = forwardRef<
       dir={rtl ? 'rtl' : 'ltr'}
       className='flex flex-col'
     >
-      <div className='flex w-full flex-grow items-center justify-center p-4'>
+      <div className='flex w-full grow items-center justify-center p-4'>
         <SharedAxis
           axis={axis}
           fadeVariant={fadeVariant}

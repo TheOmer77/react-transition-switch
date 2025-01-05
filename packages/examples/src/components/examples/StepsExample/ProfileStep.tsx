@@ -1,4 +1,4 @@
-import { forwardRef, type ElementRef } from 'react';
+import { type ElementRef, forwardRef } from 'react';
 
 import {
   CardContent,
@@ -10,9 +10,9 @@ import { Input } from '@/components/ui/Input';
 import { Label } from '@/components/ui/Label';
 import { Textarea } from '@/components/ui/Textarea';
 
+import { AvatarInput } from './AvatarInput';
 import { StepFooter } from './StepFooter';
 import type { StepProps } from './types';
-import { AvatarInput } from './AvatarInput';
 
 export const ProfileStep = forwardRef<ElementRef<'section'>, StepProps>(
   ({ onNextClick, onPrevClick, ...props }, ref) => (

@@ -1,4 +1,4 @@
-import { forwardRef, useState, type ComponentPropsWithoutRef } from 'react';
+import { type ComponentPropsWithoutRef, forwardRef, useState } from 'react';
 import { TransitionSwitchItem } from 'react-transition-switch';
 
 import {
@@ -49,7 +49,7 @@ const StepsExample = forwardRef<
       </div>
       <SharedAxis
         value={activeIndex.toString()}
-        className='h-full w-full overflow-hidden bg-card [&>section>*]:mx-auto [&>section>*]:w-full sm:[&>section>*]:max-w-[25rem] [&>section]:flex [&>section]:h-full [&>section]:w-full [&>section]:flex-col md:[&>section]:justify-center'
+        className='size-full overflow-hidden bg-card [&>section>*]:mx-auto [&>section>*]:w-full sm:[&>section>*]:max-w-[25rem] [&>section]:flex [&>section]:size-full [&>section]:flex-col md:[&>section]:justify-center'
         autoAdjustWidth={false}
         autoAdjustHeight={false}
       >

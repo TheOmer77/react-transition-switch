@@ -1,4 +1,4 @@
-import { forwardRef, type ComponentPropsWithoutRef } from 'react';
+import { type ComponentPropsWithoutRef, forwardRef } from 'react';
 import { BoxIcon } from 'lucide-react';
 
 import { cn } from '@/lib/utils';

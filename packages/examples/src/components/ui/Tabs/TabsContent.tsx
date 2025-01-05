@@ -1,7 +1,7 @@
 import {
-  forwardRef,
   type ComponentPropsWithoutRef,
   type ElementRef,
+  forwardRef,
 } from 'react';
 import { Content } from '@radix-ui/react-tabs';
 

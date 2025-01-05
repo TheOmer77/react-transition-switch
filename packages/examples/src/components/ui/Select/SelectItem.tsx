@@ -1,7 +1,7 @@
 import {
-  forwardRef,
   type ComponentPropsWithoutRef,
   type ElementRef,
+  forwardRef,
 } from 'react';
 import { Item, ItemIndicator, ItemText } from '@radix-ui/react-select';
 import { CheckIcon } from 'lucide-react';
@@ -20,7 +20,7 @@ export const SelectItem = forwardRef<
     )}
     {...props}
   >
-    <span className='absolute start-2 flex h-3.5 w-3.5 items-center justify-center'>
+    <span className='absolute start-2 flex size-3.5 items-center justify-center'>
       <ItemIndicator>
         <CheckIcon className='text-base' />
       </ItemIndicator>

@@ -1,9 +1,9 @@
 import {
   FileIcon,
   ImageIcon,
+  type LucideIcon,
   MusicIcon,
   VideoIcon,
-  type LucideIcon,
 } from 'lucide-react';
 
 import { Button } from '@/components/ui/Button';

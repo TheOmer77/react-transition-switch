@@ -1,6 +1,6 @@
-import { forwardRef, type ComponentPropsWithoutRef, useState } from 'react';
-import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
+import { type ComponentPropsWithoutRef, forwardRef, useState } from 'react';
 import { TransitionSwitchItem } from 'react-transition-switch';
+import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
 
 import { Button } from '@/components/ui/Button';
 import { Slide } from '@/components/transitions/Slide';
@@ -64,11 +64,11 @@ const PhotosExample = forwardRef<
       >
         {images.map(({ description, author, unsplashId, url }, index) => (
           <TransitionSwitchItem key={unsplashId} value={index.toString()}>
-            <div className='h-inherit w-inherit'>
+            <div className='size-inherit'>
               <img
                 src={url}
                 alt={description}
-                className='h-full w-full object-cover'
+                className='size-full object-cover'
               />
               <a
                 href={`https://unsplash.com/photos/${unsplashId}`}

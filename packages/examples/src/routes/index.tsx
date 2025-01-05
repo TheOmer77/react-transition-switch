@@ -1,7 +1,7 @@
 import {
   createBrowserRouter,
-  useLocation,
   type RouteObject,
+  useLocation,
 } from 'react-router-dom';
 import { TransitionSwitchItem } from 'react-transition-switch';
 
@@ -29,7 +29,7 @@ const RouterRoot = () => {
     <SharedAxis
       value={pathname}
       axis='z'
-      className='min-h-dvh w-dvw overflow-hidden [&>*]:h-full [&>*]:w-full'
+      className='min-h-dvh w-dvw overflow-hidden [&>*]:size-full'
     >
       {routes.map(({ index, path, element }) => {
         const value = (index ? '/' : path) as string;

@@ -1,7 +1,7 @@
 import {
-  forwardRef,
   type ComponentPropsWithoutRef,
   type ElementRef,
+  forwardRef,
 } from 'react';
 import { Switch as SwitchRoot, SwitchThumb } from '@radix-ui/react-switch';
 

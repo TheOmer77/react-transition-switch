@@ -1,4 +1,4 @@
-import { forwardRef, type ComponentPropsWithoutRef, useState } from 'react';
+import { type ComponentPropsWithoutRef, forwardRef, useState } from 'react';
 import {
   AtSignIcon,
   BellIcon,
@@ -77,7 +77,7 @@ export const NotificationsTab = forwardRef<
               selectedOption === id && 'bg-accent'
             )}
           >
-            <Icon className='mt-px h-5 w-5 shrink-0' />
+            <Icon className='mt-px size-5 shrink-0' />
             <div className='grow space-y-1'>
               <p className='text-sm leading-none'>{title}</p>
               <p className='text-sm font-normal text-muted-foreground'>

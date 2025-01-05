@@ -1,12 +1,12 @@
-import { forwardRef, type ComponentPropsWithoutRef, useState } from 'react';
+import { type ComponentPropsWithoutRef, forwardRef, useState } from 'react';
 import { TransitionSwitchItem } from 'react-transition-switch';
 
 import { ScrollArea } from '@/components/ui/ScrollArea';
 import {
   Nav,
+  type NavItemId,
   navItems,
   Search,
-  type NavItemId,
 } from '@/components/examples/FilesExample';
 import { FadeThrough } from '@/components/transitions/FadeThrough';
 import { cn } from '@/lib/utils';

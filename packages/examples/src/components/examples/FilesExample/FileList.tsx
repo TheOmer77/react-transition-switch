@@ -7,6 +7,7 @@ import {
   VideoIcon,
 } from 'lucide-react';
 
+import { Button } from '@/components/ui/Button';
 import {
   Table,
   TableBody,
@@ -15,7 +16,6 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/Table';
-import { Button } from '@/components/ui/Button';
 
 export type FileListItem = {
   name: string;
