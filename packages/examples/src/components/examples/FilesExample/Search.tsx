@@ -1,6 +1,6 @@
 import { SearchIcon } from 'lucide-react';
 
-import { Input } from '@/components/ui/Input';
+import { Input } from '@/components/ui/input';
 
 export const Search = () => (
   <div className='flex h-16 w-full items-center justify-center px-4 md:start-80'>
