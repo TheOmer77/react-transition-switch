@@ -13,7 +13,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { FormItem } from '@/components/ui/form';
 import { Label } from '@/components/ui/label';
 import { Radio } from '@/components/ui/radio';
-import { Separator } from '@/components/ui/Separator';
+import { Separator } from '@/components/ui/separator';
 import { type Axis, SharedAxis } from '@/components/transitions/SharedAxis';
 import { cn } from '@/lib/utils';
 
