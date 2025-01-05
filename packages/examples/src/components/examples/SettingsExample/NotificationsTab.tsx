@@ -9,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Label } from '@/components/ui/Label';
+import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/Separator';
 import { Switch } from '@/components/ui/Switch';
 import { cn } from '@/lib/utils';

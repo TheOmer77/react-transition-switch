@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Label } from '@/components/ui/Label';
+import { Label } from '@/components/ui/label';
 import { OTPInput, OTPInputSlot } from '@/components/ui/OTPInput';
 
 import { StepFooter } from './StepFooter';
