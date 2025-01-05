@@ -7,12 +7,12 @@ import { TransitionSwitchItem } from 'react-transition-switch';
 
 import { SharedAxis } from '@/components/transitions/shared-axis';
 
-import ErrorPage from './Error';
-import FilesExample from './FilesExample';
-import PhotosExample from './PhotosExample';
-import Root from './Root';
-import SettingsExample from './SettingsExample';
-import StepsExample from './StepsExample';
+import ErrorPage from './error';
+import FilesExample from './files-example';
+import PhotosExample from './photos-example';
+import Root from './root';
+import SettingsExample from './settings-example';
+import StepsExample from './steps-example';
 
 const routes: RouteObject[] = [
   { index: true, element: <Root /> },
