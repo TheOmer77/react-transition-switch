@@ -1,10 +1,10 @@
 import { type ComponentPropsWithoutRef, forwardRef } from 'react';
 import { Link } from 'react-router-dom';
+import type { LucideIcon } from 'lucide-react';
 import {
   CircleUserIcon,
   FolderIcon,
   ImageIcon,
-  type LucideIcon,
   SettingsIcon,
 } from 'lucide-react';
 

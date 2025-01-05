@@ -1,10 +1,10 @@
 import { type ElementRef, forwardRef, useState } from 'react';
+import type { LucideIcon } from 'lucide-react';
 import {
   CameraIcon,
   CookingPotIcon,
   CpuIcon,
   HeartPulseIcon,
-  type LucideIcon,
   MusicIcon,
 } from 'lucide-react';
 

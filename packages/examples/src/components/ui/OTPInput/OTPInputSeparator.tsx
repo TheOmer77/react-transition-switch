@@ -3,14 +3,14 @@ import {
   type ElementRef,
   forwardRef,
 } from 'react';
-import { Dot } from 'lucide-react';
+import { DotIcon } from 'lucide-react';
 
 export const OTPInputSeparator = forwardRef<
   ElementRef<'div'>,
   ComponentPropsWithoutRef<'div'>
 >(({ ...props }, ref) => (
   <div ref={ref} role='separator' {...props}>
-    <Dot />
+    <DotIcon />
   </div>
 ));
 OTPInputSeparator.displayName = 'OTPInputSeparator';

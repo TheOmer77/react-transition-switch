@@ -5,7 +5,7 @@ import {
   useState,
 } from 'react';
 import { TransitionSwitchItem } from 'react-transition-switch';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
 import { toWords } from 'number-to-words';
 
 import { Button } from '@/components/ui/Button';
@@ -76,7 +76,7 @@ const SharedAxisExample = forwardRef<
         disabled={activeIndex <= 0}
         className='fixed start-4 top-1/2 size-10 -translate-y-1/2 px-0'
       >
-        {rtl ? <ChevronRight /> : <ChevronLeft />}
+        {rtl ? <ChevronRightIcon /> : <ChevronLeftIcon />}
       </Button>
       <Button
         size='lg'
@@ -84,7 +84,7 @@ const SharedAxisExample = forwardRef<
         disabled={activeIndex >= TEST_ITEMS_COUNT - 1}
         className='fixed end-4 top-1/2 size-10 -translate-y-1/2 px-0'
       >
-        {rtl ? <ChevronLeft /> : <ChevronRight />}
+        {rtl ? <ChevronLeftIcon /> : <ChevronRightIcon />}
       </Button>
 
       <div className='fixed bottom-0 flex w-full flex-col items-center justify-center gap-2 p-4 md:p-8'>

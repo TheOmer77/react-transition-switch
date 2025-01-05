@@ -1,10 +1,6 @@
 import { type ComponentPropsWithoutRef, forwardRef, useState } from 'react';
-import {
-  AtSignIcon,
-  BellIcon,
-  EyeOffIcon,
-  type LucideIcon,
-} from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
+import { AtSignIcon, BellIcon, EyeOffIcon } from 'lucide-react';
 
 import { Button } from '@/components/ui/Button';
 import {

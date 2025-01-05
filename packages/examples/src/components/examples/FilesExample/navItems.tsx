@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
-import { HomeIcon, type LucideIcon, Share2Icon, StarIcon } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
+import { HomeIcon, Share2Icon, StarIcon } from 'lucide-react';
 
 import { FavoritesPage } from './FavoritesPage';
 import { HomePage } from './HomePage';

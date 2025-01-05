@@ -1,10 +1,5 @@
-import {
-  FileIcon,
-  ImageIcon,
-  type LucideIcon,
-  MusicIcon,
-  VideoIcon,
-} from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
+import { FileIcon, ImageIcon, MusicIcon, VideoIcon } from 'lucide-react';
 
 import { Button } from '@/components/ui/Button';
 
