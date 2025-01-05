@@ -10,7 +10,7 @@ import { toWords } from 'number-to-words';
 
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
-import { FormItem } from '@/components/ui/Form';
+import { FormItem } from '@/components/ui/form';
 import { Label } from '@/components/ui/Label';
 import { Radio } from '@/components/ui/Radio';
 import { Separator } from '@/components/ui/Separator';
