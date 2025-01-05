@@ -11,7 +11,7 @@ import {
 
 import { cn } from '@/lib/utils';
 
-import { ScrollBar } from './ScrollBar';
+import { ScrollBar } from './scrollbar';
 
 export const ScrollArea = forwardRef<
   ElementRef<typeof ScrollAreaRoot>,

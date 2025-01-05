@@ -1,7 +1,7 @@
 import { type ComponentPropsWithoutRef, forwardRef, useState } from 'react';
 import { TransitionSwitchItem } from 'react-transition-switch';
 
-import { ScrollArea } from '@/components/ui/ScrollArea';
+import { ScrollArea } from '@/components/ui/scroll-area';
 import {
   Nav,
   type NavItemId,
