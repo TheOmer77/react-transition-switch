@@ -153,6 +153,9 @@ importers:
       '@react-transition-switch/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
+      '@react-transition-switch/tsconfig':
+        specifier: workspace:*
+        version: link:../tsconfig
       '@types/number-to-words':
         specifier: ^1.2.3
         version: 1.2.3
@@ -207,6 +210,8 @@ importers:
       react-dom:
         specifier: '>=17'
         version: 19.0.0(react@19.0.0)
+
+  packages/tsconfig: {}
 
 packages:
 
