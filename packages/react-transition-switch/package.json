@@ -51,5 +51,9 @@
   "dependencies": {
     "@radix-ui/react-presence": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.1"
+  },
+  "devDependencies": {
+    "@react-transition-switch/eslint-config": "workspace:*",
+    "@react-transition-switch/tsconfig": "workspace:*"
   }
 }
