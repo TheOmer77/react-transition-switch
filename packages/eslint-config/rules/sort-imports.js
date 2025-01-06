@@ -9,8 +9,8 @@ export const sortImports = {
       'error',
       {
         groups: [
-          ['^hono', '^react', '^next', '^next/.*', '^@?\\w'],
-          ['^@repo/.*'],
+          ['^react', '^@?\\w'],
+          ['^@react-transition-switch/.*'],
           [
             '^@/components/ui/.*',
             '^@/components/(?!ui).*',
