@@ -22,9 +22,8 @@
   "scripts": {
     "build": "tsup",
     "build:watch": "tsup --watch",
-    "lint": "tsc && eslint --max-warnings=0 src",
-    "format": "prettier --ignore-path ../../.prettierignore --write . ",
-    "format:check": "prettier --ignore-path ../../.prettierignore --check .",
+    "lint": "tsc && eslint --max-warnings=0 src && prettier --ignore-path ../../.prettierignore --check .",
+    "format": "eslint --fix src && prettier --ignore-path ../../.prettierignore --write . ",
     "exports": "attw --pack .",
     "ci": "pnpm lint && pnpm format:check && pnpm build && npm run exports"
   },
