@@ -58,16 +58,13 @@ export const TransitionSwitch = forwardRef<
     const [directionalValue, setDirectionalValue] = useState(value);
     const [direction, setDirection] = useState<TransitionSwitchDirection>();
 
-    const prevValue = useRef<typeof value>();
+    const prevValue = useRef<typeof value>(null);
     const innerRef = useRef<HTMLDivElement>(null);
     useImperativeHandle(ref, () => innerRef.current!, []);
 
     useEffect(() => {
       if (!directional) return;
-      if (
-        typeof prevValue.current === 'undefined' ||
-        prevValue.current === value
-      ) {
+      if (prevValue.current === null || prevValue.current === value) {
         prevValue.current = value;
         return;
       }
