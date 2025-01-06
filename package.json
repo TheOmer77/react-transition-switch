@@ -21,7 +21,7 @@
     "ci": "pnpm --silent ci:package && pnpm --silent ci:examples",
     "ci:package": "pnpm --silent -F react-transition-switch run ci",
     "ci:examples": "pnpm --silent -F @react-transition-switch/examples run ci",
-    "release": "pnpm run ci:package && cp README.md packages/react-transition-switch && changeset publish"
+    "release": "pnpm run ci:package && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.11",
