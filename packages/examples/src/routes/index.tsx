@@ -1,18 +1,18 @@
 import {
   createBrowserRouter,
-  useLocation,
   type RouteObject,
+  useLocation,
 } from 'react-router-dom';
 import { TransitionSwitchItem } from 'react-transition-switch';
 
-import { SharedAxis } from '@/components/transitions/SharedAxis';
+import { SharedAxis } from '@/components/transitions/shared-axis';
 
-import ErrorPage from './Error';
-import FilesExample from './FilesExample';
-import PhotosExample from './PhotosExample';
-import Root from './Root';
-import SettingsExample from './SettingsExample';
-import StepsExample from './StepsExample';
+import ErrorPage from './error';
+import FilesExample from './files-example';
+import PhotosExample from './photos-example';
+import Root from './root';
+import SettingsExample from './settings-example';
+import StepsExample from './steps-example';
 
 const routes: RouteObject[] = [
   { index: true, element: <Root /> },
@@ -29,7 +29,7 @@ const RouterRoot = () => {
     <SharedAxis
       value={pathname}
       axis='z'
-      className='min-h-dvh w-dvw overflow-hidden [&>*]:h-full [&>*]:w-full'
+      className='min-h-dvh w-dvw overflow-hidden [&>*]:size-full'
     >
       {routes.map(({ index, path, element }) => {
         const value = (index ? '/' : path) as string;

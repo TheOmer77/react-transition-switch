@@ -1,15 +1,14 @@
 {
-  "name": "examples",
+  "name": "@react-transition-switch/examples",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "tsc --noEmit && eslint --max-warnings=0 src",
-    "format": "prettier --ignore-path ../../.prettierignore --write .",
-    "format:check": "prettier --ignore-path ../../.prettierignore --check .",
-    "ci": "pnpm lint && pnpm format:check && pnpm build"
+    "lint": "tsc && eslint --max-warnings 0 src && prettier --ignore-path ../../.prettierignore --check .",
+    "format": "eslint --fix src && prettier --ignore-path ../../.prettierignore --write .",
+    "ci": "pnpm lint && pnpm build"
   },
   "dependencies": {
     "@fontsource-variable/figtree": "^5.1.2",
@@ -33,9 +32,11 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@react-transition-switch/eslint-config": "workspace:*",
     "@types/number-to-words": "^1.2.3",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
+    "eslint": "^9.17.0",
     "postcss": "^8.4.49",
     "postcss-hover-media-feature": "^1.0.2",
     "postcss-mixins": "^11.0.3",
