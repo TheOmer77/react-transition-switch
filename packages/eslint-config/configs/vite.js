@@ -6,7 +6,7 @@ import tseslint from 'typescript-eslint';
 
 import baseConfig from './base.js';
 
-const nextConfig = tseslint.config(
+const viteConfig = tseslint.config(
   ...baseConfig,
   react.configs.flat.recommended,
   react.configs.flat['jsx-runtime'],
@@ -25,4 +25,4 @@ const nextConfig = tseslint.config(
   }
 );
 
-export default nextConfig;
+export default viteConfig;
