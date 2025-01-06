@@ -55,8 +55,6 @@
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.17.2",
-    "@react-transition-switch/eslint-config": "workspace:*",
-    "@react-transition-switch/tsconfig": "workspace:*",
     "@types/node": "^22.10.5",
     "@types/react": "^19.0.3",
     "@types/react-dom": "^19.0.2",
