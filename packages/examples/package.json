@@ -33,7 +33,10 @@
   },
   "devDependencies": {
     "@react-transition-switch/eslint-config": "workspace:*",
+    "@react-transition-switch/tsconfig": "workspace:*",
     "@types/number-to-words": "^1.2.3",
+    "@types/react": "^19.0.3",
+    "@types/react-dom": "^19.0.2",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.17.0",
@@ -44,7 +47,6 @@
     "tailwindcss": "^3.4.17",
     "vite": "^6.0.7",
     "vite-plugin-checker": "^0.8.0",
-    "vite-plugin-svgr": "^4.3.0",
     "vite-tsconfig-paths": "^5.1.4"
   }
 }

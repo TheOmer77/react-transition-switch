@@ -1,7 +1,12 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Default",
   "compilerOptions": {
     "allowJs": true,
+    "composite": false,
+    "declaration": true,
     "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
@@ -11,10 +16,14 @@
     "noEmit": true,
     "noImplicitOverride": true,
     "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "es2022",
+    "target": "ES2022",
     "verbatimModuleSyntax": true
-  }
+  },
+  "exclude": ["node_modules"]
 }

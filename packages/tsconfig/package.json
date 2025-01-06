@@ -1,0 +1,7 @@
+{
+  "name": "@react-transition-switch/tsconfig",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  }
+}

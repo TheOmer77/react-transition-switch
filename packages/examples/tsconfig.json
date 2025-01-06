@@ -1,6 +1,5 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "@react-transition-switch/tsconfig/vite.json",
   "compilerOptions": { "paths": { "@/*": ["./src/*"] } },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src", "vite.config.ts"]
 }
