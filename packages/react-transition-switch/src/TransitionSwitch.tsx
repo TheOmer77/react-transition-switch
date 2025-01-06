@@ -1,12 +1,12 @@
 import {
   Children,
   forwardRef,
+  type PropsWithChildren,
+  type ReactElement,
   useEffect,
   useImperativeHandle,
   useRef,
   useState,
-  type PropsWithChildren,
-  type ReactElement,
 } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 
