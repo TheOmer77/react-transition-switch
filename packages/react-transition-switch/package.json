@@ -20,12 +20,13 @@
     "directory": "packages/react-transition-switch"
   },
   "scripts": {
+    "dev": "tsup --watch",
     "build": "tsup",
-    "build:watch": "tsup --watch",
     "lint": "tsc && eslint --max-warnings=0 src && prettier --ignore-path ../../.prettierignore --check .",
     "format": "eslint --fix src && prettier --ignore-path ../../.prettierignore --write . ",
     "exports": "attw --pack .",
-    "ci": "pnpm lint && pnpm build && npm run exports"
+    "ci": "pnpm lint && pnpm build && npm run exports",
+    "clean": "rm -rf dist"
   },
   "type": "module",
   "main": "dist/index.js",
