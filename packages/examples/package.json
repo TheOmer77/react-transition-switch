@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
     "lint": "tsc && eslint --max-warnings 0 src && prettier --ignore-path ../../.prettierignore --check .",
     "format": "eslint --fix src && prettier --ignore-path ../../.prettierignore --write .",
     "ci": "pnpm lint && pnpm build"
