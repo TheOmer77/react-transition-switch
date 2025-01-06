@@ -38,7 +38,7 @@ const StepsExample = forwardRef<
         )}
       >
         <ExampleLogo
-          className={cn('fill-primary-50 [&>.eyes]:fill-primary-700')}
+          className={cn('fill-primary-50 [&>[data-eyes]]:fill-primary-700')}
         />
         <a
           className='self-end rounded-lg text-sm text-neutral-400'
