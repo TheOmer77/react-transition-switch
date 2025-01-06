@@ -21,6 +21,9 @@
     "ci": "turbo ci",
     "ci:package": "turbo -F react-transition-switch ci",
     "ci:examples": "turbo -F @react-transition-switch/examples ci",
+    "clean": "turbo clean",
+    "clean:package": "turbo -F react-transition-switch clean",
+    "clean:examples": "turbo -F @react-transition-switch/examples clean",
     "release": "pnpm run ci:package && changeset publish"
   },
   "devDependencies": {
