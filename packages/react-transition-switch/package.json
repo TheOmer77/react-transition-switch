@@ -20,6 +20,7 @@
     "directory": "packages/react-transition-switch"
   },
   "scripts": {
+    "dev": "tsup --watch",
     "build": "tsup",
     "build:watch": "tsup --watch",
     "lint": "tsc && eslint --max-warnings=0 src && prettier --ignore-path ../../.prettierignore --check .",
