@@ -1,4 +1,4 @@
 export * from './context';
-export * from './TransitionSwitch';
-export * from './TransitionSwitchItem';
+export * from './transition-switch';
+export * from './transition-switch-item';
 export * from './types';
