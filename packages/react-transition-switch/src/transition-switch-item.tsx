@@ -5,8 +5,8 @@ import {
   useLayoutEffect,
   useRef,
 } from 'react';
-import { Slot } from '@radix-ui/react-slot';
 import { Presence } from '@radix-ui/react-presence';
+import { Slot } from '@radix-ui/react-slot';
 
 import { TransitionSwitchContext } from './context';
 import type { TransitionSwitchItemProps } from './types';
