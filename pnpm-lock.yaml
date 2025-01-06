@@ -8,33 +8,12 @@ importers:
 
   .:
     devDependencies:
-      '@arethetypeswrong/cli':
-        specifier: ^0.17.2
-        version: 0.17.2
       '@changesets/cli':
         specifier: ^2.27.11
         version: 2.27.11
-      '@types/node':
-        specifier: ^22.10.5
-        version: 22.10.5
-      '@types/react':
-        specifier: ^19.0.3
-        version: 19.0.3
-      '@types/react-dom':
-        specifier: ^19.0.2
-        version: 19.0.2(@types/react@19.0.3)
       prettier:
         specifier: ^3.4.2
         version: 3.4.2
-      react:
-        specifier: ^19.0.0
-        version: 19.0.0
-      react-dom:
-        specifier: ^19.0.0
-        version: 19.0.0(react@19.0.0)
-      tsup:
-        specifier: ^8.3.5
-        version: 8.3.5(jiti@1.21.7)(postcss@8.4.49)(typescript@5.7.2)(yaml@2.7.0)
       typescript:
         specifier: ^5.7.2
         version: 5.7.2
@@ -159,6 +138,12 @@ importers:
       '@types/number-to-words':
         specifier: ^1.2.3
         version: 1.2.3
+      '@types/react':
+        specifier: ^19.0.3
+        version: 19.0.3
+      '@types/react-dom':
+        specifier: ^19.0.2
+        version: 19.0.2(@types/react@19.0.3)
       '@vitejs/plugin-react':
         specifier: ^4.3.4
         version: 4.3.4(vite@6.0.7(@types/node@22.10.5)(jiti@1.21.7)(sugarss@4.0.1(postcss@8.4.49))(yaml@2.7.0))
@@ -201,19 +186,37 @@ importers:
       '@radix-ui/react-slot':
         specifier: ^1.1.1
         version: 1.1.1(@types/react@19.0.3)(react@19.0.0)
-      react:
-        specifier: '>=17'
-        version: 19.0.0
-      react-dom:
-        specifier: '>=17'
-        version: 19.0.0(react@19.0.0)
     devDependencies:
+      '@arethetypeswrong/cli':
+        specifier: ^0.17.2
+        version: 0.17.2
       '@react-transition-switch/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
       '@react-transition-switch/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
+      '@types/node':
+        specifier: ^22.10.5
+        version: 22.10.5
+      '@types/react':
+        specifier: ^19.0.3
+        version: 19.0.3
+      '@types/react-dom':
+        specifier: ^19.0.2
+        version: 19.0.2(@types/react@19.0.3)
+      eslint:
+        specifier: ^9.17.0
+        version: 9.17.0(jiti@1.21.7)
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.0.0(react@19.0.0)
+      tsup:
+        specifier: ^8.3.5
+        version: 8.3.5(jiti@1.21.7)(postcss@8.4.49)(typescript@5.7.2)(yaml@2.7.0)
 
   packages/tsconfig: {}
 
