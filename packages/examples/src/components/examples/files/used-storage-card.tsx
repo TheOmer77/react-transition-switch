@@ -23,7 +23,7 @@ export const UsedStorageCard = () => (
       <ProgressCircle
         value={USED_STORAGE}
         maxValue={MAX_STORAGE}
-        className='text-8xl text-primary [&>.progresscircle-full]:stroke-primary/20'
+        className='text-8xl text-primary'
       />
       <span className='absolute top-6 inline-flex aspect-square w-24 items-center justify-center'>
         {`${((USED_STORAGE / MAX_STORAGE) * 100).toFixed()}%`}

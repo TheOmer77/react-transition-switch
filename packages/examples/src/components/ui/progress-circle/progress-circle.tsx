@@ -1,5 +1,3 @@
-/* eslint-disable tailwindcss/no-custom-classname */
-
 import {
   type ComponentPropsWithoutRef,
   type ElementRef,
@@ -32,17 +30,14 @@ export const ProgressCircle = forwardRef<
     strokeWidth='2'
     strokeLinecap='round'
     strokeLinejoin='round'
-    className={cn(
-      'lucide lucide-circle [&>.progresscircle-full]:stroke-muted',
-      className
-    )}
+    className={cn('lucide lucide-circle', className)}
   >
-    <circle cx='12' cy='12' r={RADIUS} className='progresscircle-full' />
+    <circle cx='12' cy='12' r={RADIUS} className='opacity-20' />
     <circle
       cx='12'
       cy='12'
       r={RADIUS}
-      className='progresscircle-progress origin-center -rotate-90'
+      className='origin-center -rotate-90'
       strokeDasharray={`${CIRCUMFERENCE} ${CIRCUMFERENCE}`}
       strokeDashoffset={CIRCUMFERENCE - (value / maxValue) * CIRCUMFERENCE}
     />
