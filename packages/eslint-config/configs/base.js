@@ -1,6 +1,6 @@
 import eslint from '@eslint/js';
-import prettier from 'eslint-config-prettier';
 import importX from 'eslint-plugin-import-x';
+import prettier from 'eslint-config-prettier';
 import tseslint from 'typescript-eslint';
 
 import { checkFile } from '../rules/check-file.js';
