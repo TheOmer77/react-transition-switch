@@ -7,7 +7,8 @@
     "build": "vite build",
     "lint": "tsc && eslint --max-warnings 0 src && prettier --ignore-path ../../.prettierignore --check .",
     "format": "eslint --fix src && prettier --ignore-path ../../.prettierignore --write .",
-    "ci": "pnpm lint && pnpm build"
+    "ci": "pnpm lint && pnpm build",
+    "clean": "rm -rf dist"
   },
   "dependencies": {
     "@fontsource-variable/figtree": "^5.1.2",
